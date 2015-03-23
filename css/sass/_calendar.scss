@@ -1,0 +1,232 @@
+// Copyright 2015 A Travel Corporation
+
+// Project Name: travelnet
+// Project Description: The Power of Minimalist
+// File Name: calendar.less
+// Author: Yair Rodriguez
+// Version: 1.0
+
+/*
+ * Just to clear, I wrote all CONSTANT VARS in caps,
+ * like if we are doing web development with CSS.
+ * This is just to maintain good practices and have
+ * general standards.
+ */
+
+/* #Basic Setup
+================================================== */
+$SMARTPHONE-CALENDAR: 680px;
+
+/* #Datepicker
+================================================== */
+.ui-datepicker {
+	display: 					inline-block;
+	box-sizing: 				border-box;
+	padding: 					5px 0;
+	z-index: 					$ZINDEX-4 !important;
+
+	// Mixins
+	@include box-shadow  		(1px 1px 3px rgba(0, 0, 0, $OPACITY-FIVE));
+	@include round-all-borders 	(3px);
+	@include bg-gradient;
+
+	/*
+	 * Utilities
+	 *
+	 * 	background: 			rgba(39, 46, 59, 1);
+	 * 	width: 					400px;
+	 */
+}
+
+/* #Datepicker Header
+================================================== */
+.ui-datepicker-header {
+	color: 						$GENERAL-COLOR;
+}
+
+/* #Arrows to move between months
+================================================== */
+.ui-datepicker-header a {
+	display: 					inline-block;
+	width: 						20px;
+	height: 					20px;
+	line-height: 				20px;
+	margin: 					8px;
+	color: 						$GENERAL-COLOR;
+	text-align: 				center;
+	font-weight: 				bold;
+	cursor: 					pointer;
+
+	// Mixins
+	@include round-all-borders 	(50%);
+
+	/*
+	 * Utilities
+	 *
+	 * 	background: 			@GENERAL-COLOR;
+	 */
+}
+
+/* #Arrows
+================================================== */
+.ui-datepicker-prev {
+	float: 						left;
+	margin-left: 				30px;
+	text-indent: 				-1px;
+}
+
+.ui-datepicker-next {
+	float: 						right;
+	margin-right: 				30px;
+	text-indent: 				1px;
+}
+
+/* #Month
+================================================== */
+.ui-datepicker-title {
+	text-align: 				center;
+	margin: 					0 2.3em;
+
+	/*
+	 * Utilities
+	 *
+	 * 	margin: 				0 50px;
+	 * 	line-height: 			35px;
+	 */
+}
+
+.ui-datepicker-month {
+	font-size: 					18px;
+	font-weight: 				300;
+	padding-right: 				10px;
+	text-indent: 				3px;
+	text-transform: 			uppercase;
+
+	/*
+	 * Utilities
+	 *
+	 * 	font-weight: 			200px;
+	 */
+}
+
+/* #Year
+================================================== */
+.ui-datepicker-year {
+	display: 					block;
+	font-size: 					9px;
+	margin-left: 				-5px;
+
+	/*
+	 * Utilities
+	 *
+	 * 	padding-top: 			10px;
+	 */
+}
+
+/* #Calendar widget
+================================================== */
+.ui-datepicker-calendar {
+	border-collapse: 			collapse;
+	width: 						200px;
+}
+
+/* #Days of the Week (L-M-Mi-J-V-S-D)
+================================================== */
+.ui-datepicker-calendar thead {
+	line-height: 				($BIG-FONT * 2);
+	color: 						$GENERAL-COLOR;
+	font-size: 					$BIG-FONT;
+
+	span {
+		font-weight: 			$LIGHT;
+	}
+}
+
+// Hide all days before current day. Little hack.
+.ui-datepicker-calendar span.ui-state-default,
+.ui-datepicker-calendar span.ui-state-unselectable {
+	color: 						$NO-COLOR;
+}
+
+// Container of all days.
+.ui-datepicker-calendar td {
+	padding: 					0;
+	margin: 					0;
+
+	a.ui-state-hover,
+	a.ui-state-active,
+	a.ui-state-focus {
+		background: 			darken($DARK-COLOR, 25%);
+
+		// Mixins
+		@include round-all-borders			(50%);
+	}
+}
+
+.ui-datepicker-calendar th {
+	text-align: 				center;
+}
+
+// All days of widget.
+.ui-datepicker-calendar a {
+	display: 					block;
+	text-align: 				center;
+	font-size: 					$THIN-FONT;
+	color: 						$GENERAL-COLOR;
+	text-decoration: 			$FALSE;
+
+	width: 						20px;
+	margin-left: 				.3rem;
+
+	/*
+	 * Utilities
+	 *
+	 * 	width: 					100%;
+	 *  line-height: 			35px;
+	 */
+}
+
+// Setup for each month.
+.ui-datepicker-group {
+	display: 					inline-block;
+	border-left: 				1px solid rgba(255, 255, 255, $OPACITY-ONE);
+	margin-left: 				-1px;
+
+	/*
+	 * Utilities
+	 *
+	 * 	height: 				180px;
+	 */
+}
+
+/* #Responsive Web
+================================================== */
+@media only screen and (max-width: $SMARTPHONE-CALENDAR) {
+	.ui-datepicker-multi {
+		max-width: 				200px;
+		bottom: 				0;
+	}
+
+	.ui-datepicker-group {
+		max-height: 			180px;
+		border-left: 			0;
+
+		// Mixins
+		@include bg-gradient;
+	}
+	
+
+	.ui-datepicker {
+		margin-left: 			-10px;
+		max-height: 			180px;
+	}
+
+	/*
+	 * Utilities
+	 *
+	 * 	div[class~="ui-datepicker-group"] {
+			.background-gradient;
+			max-height: 180px;
+	 * }
+	 */
+}

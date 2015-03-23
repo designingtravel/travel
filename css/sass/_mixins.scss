@@ -1,0 +1,99 @@
+// Copyright 2015 A Travel Corporation
+
+// Project Name: travelnet
+// Project Description: The Power of Minimalist
+// File Name: style.less
+// Author: Yair Rodriguez
+// Version: 1.0
+
+/*
+ * Just to clear, all mixins are writen in CAPS,
+ * and prefixed with M from Mixin to keep the Style Guide.
+ */
+
+/* #Basic Setup
+================================================== */
+
+// Vendor prefixes
+$W: 											"-webkit-"; 	// webkit
+$M: 											"-moz-"; 		// moz
+$S: 											"-ms-"; 		// ms
+$O: 											"-o-"; 			// o
+
+// CSS Animations
+$TRANSITION-RULE: 								transition;
+$BORDER-RADIUS-RULE: 							border-radius;
+$LINEAR-GRADIENT-RULE: 							linear-gradient;
+$TRANSFORM-RULE: 								transform;
+$CLIP-RULE: 									background-clip;
+
+
+/* #Mixins
+================================================== */
+
+// Transition Animate
+@mixin transition($PROP: all, $TIME: 1s, $EASE: linear) {
+    	 #{$TRANSITION-RULE}: $PROP $TIME $EASE;
+    #{$W}#{$TRANSITION-RULE}: $PROP $TIME $EASE;
+    #{$M}#{$TRANSITION-RULE}: $PROP $TIME $EASE;
+    #{$S}#{$TRANSITION-RULE}: $PROP $TIME $EASE;
+    #{$O}#{$TRANSITION-RULE}: $PROP $TIME $EASE;
+}
+
+// Round Borders
+@mixin round-all-borders($RADIUS) {
+		 #{$BORDER-RADIUS-RULE}: 				$RADIUS;
+	#{$W}#{$BORDER-RADIUS-RULE}: 				$RADIUS;
+	#{$M}#{$BORDER-RADIUS-RULE}: 				$RADIUS;
+}
+
+@mixin round-borders-custom($TOPLEFT: 5px, $TOPRIGHT: 5px, $BOTTOMLEFT: 5px, $BOTTOMRIGHT: 5px) {
+		 #{$BORDER-RADIUS-RULE}: 				$TOPLEFT $TOPRIGHT $BOTTOMLEFT $BOTTOMRIGHT;
+	#{$W}#{$BORDER-RADIUS-RULE}: 				$TOPLEFT $TOPRIGHT $BOTTOMLEFT $BOTTOMRIGHT;
+	#{$M}#{$BORDER-RADIUS-RULE}: 				$TOPLEFT $TOPRIGHT $BOTTOMLEFT $BOTTOMRIGHT;
+}
+
+// Delete border and outline
+@mixin remove-border-and-outline() {
+	border: 									$FALSE;
+	outline: 									$FALSE;
+}
+
+@mixin no-border() {
+	border: 									$FALSE;
+	outline: 									$FALSE;
+}
+
+
+
+@mixin no-opacity() {
+	opacity: 									$FALSE;
+}
+
+
+@mixin bg-gradient($ORIGIN: left, $START: $THEME-COLOR, $STOP: $DARK-COLOR) {
+	background:                    -moz-linear-gradient($ORIGIN, $START, $STOP);
+	background:              	-webkit-linear-gradient($ORIGIN, $START, $STOP);
+    background:                      -o-linear-gradient($ORIGIN, $START, $STOP);
+    background:                         linear-gradient($ORIGIN, $START, $STOP);
+}
+
+@mixin box-shadow($VALUE) {
+	 -webkit-box-shadow: 						$VALUE;
+    -moz-box-shadow: 							$VALUE;
+    box-shadow: 								$VALUE;
+}
+
+@mixin translateY($VALUE) {
+	#{$W}#{$TRANSFORM-RULE}: 					translateY($VALUE);
+	#{$M}#{$TRANSFORM-RULE}: 					translateY($VALUE);
+	#{$S}#{$TRANSFORM-RULE}: 					translateY($VALUE);
+	#{$O}#{$TRANSFORM-RULE}: 					translateY($VALUE);
+		 #{$TRANSFORM-RULE}: 					translateY($VALUE);
+}
+
+@mixin background-clip($CLIP) {
+	#{$W}#{$CLIP-RULE}: 						$CLIP;
+	#{$M}#{$CLIP-RULE}: 						$CLIP;
+	 	 #{$CLIP-RULE}: 						$CLIP;
+}

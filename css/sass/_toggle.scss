@@ -1,0 +1,139 @@
+// *************************************
+//
+//   Toggle (tgl)
+//   Created by Pete Lada of Guidebook (guidebook.com)
+//   http://petelada.com
+
+// *************************************
+
+//   VARIABLES
+// -------------------------------------
+
+/*
+$toggle-height: 30px;
+$toggle-width: 60px;
+$switch-size: 30px;
+*/
+
+$toggle-height: 15px;
+$toggle-width: 30px;
+$switch-size: 15px;
+
+$anim-slight-bounce: cubic-bezier(0.34,1.61,0.7,1);
+$anim-speed-normal: 250ms;
+
+$border-color: #dadde1;
+$blue: #439fd8; // Guidebook blue
+
+//   BASE
+// -------------------------------------
+
+
+.tgl {
+
+  position: relative;
+  display: inline-block;
+  height: $toggle-height;
+  cursor: pointer;
+
+  line-height: $toggle-height;
+
+  > input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; /* Put the input behind the label so it doesn't overlay text */
+    visibility: hidden;
+  }
+
+  .tgl_body {
+    width: $toggle-width;
+    height: $toggle-height;
+    background: white;
+    border: 1px solid $border-color;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+  }
+
+  .tgl_switch {
+    width: $toggle-height;
+    height: $toggle-height;
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    border-radius: 50%;
+    border: 1px solid darken($border-color, 5%);
+    @include box-shadow(0 2px 2px rgba(0,0,0,.13));
+    transition: left $anim-slight-bounce $anim-speed-normal, transform $anim-slight-bounce $anim-speed-normal;
+    -webkit-transition: left $anim-slight-bounce $anim-speed-normal, transform $anim-slight-bounce $anim-speed-normal;
+    //@include transition(left $anim-slight-bounce $anim-speed-normal, transform $anim-slight-bounce $anim-speed-normal);
+    z-index: 1;
+  }
+
+  .tgl_track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 50px;
+  }
+
+  .tgl_bgd {
+    position: absolute;
+    right: -7px; // 10 compensates for animation bounce
+    top: 0;
+    bottom: 0;
+    width: $toggle-width - ($switch-size / 2) + 10; // 10 compensates for animation bounce
+    //@include transition(left $anim-slight-bounce $anim-speed-normal, right $anim-slight-bounce $anim-speed-normal);
+    transition: left $anim-slight-bounce $anim-speed-normal, right $anim-slight-bounce $anim-speed-normal;
+    background: $DARK-COLOR url('http://petelada.com/images/toggle/tgl_check.png') center center no-repeat;
+    background-size: 7px;
+
+    
+    //@include bg-gradient();
+  }
+
+  .tgl_bgd-negative {
+    right: auto;
+    left: -($toggle-width - ($switch-size / 2));
+    background: white url('http://petelada.com/images/toggle/tgl_x.png') center center no-repeat;
+    background-size: 7px;
+  }
+
+  &:hover {
+    .tgl_switch {
+      border-color: darken($border-color, 13%);
+      //@include transform(scale(1.06));
+      transform: scale(1.06);
+    }
+  }
+
+  &:active {
+    .tgl_switch {
+      //@include transform(scale(.95));
+      transform: scale(.95);
+    }
+  }
+
+  > :not(:checked) ~ .tgl_body {
+
+    > .tgl_switch {
+      left: $toggle-width - $switch-size;
+    }
+
+    .tgl_bgd {
+      right: -($toggle-width - ($switch-size / 2));
+
+      &.tgl_bgd-negative {
+        right: auto;
+        left: -7px;
+      }
+    }
+  }
+
+
+}

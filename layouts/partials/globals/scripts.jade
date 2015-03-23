@@ -1,0 +1,29 @@
+script(src="http://code.jquery.com/jquery-latest.min.js")
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js")
+script(src="../../js/custom.js")
+script(src="../../js/jquery.backstretch.min.js")
+script(src="../../js/datepicker.min.js")
+script(src="../../js/slide.js")
+script(src="../../js/autocomplete.min.js")
+script(src="../../js/box_hotels.js")
+script.
+	$(function(){
+		var form = $("#brokers"),
+			link = $("#show-brokers");
+			more_options = $(".more-options");
+
+		form.css("display", "none");
+
+		link.on("click", function() {
+			//form.is(":visible") ? form.fadeOut() : form.fadeIn();
+			if (form.is(":visible")) {
+				form.fadeOut();
+				more_options.removeClass("index-2");
+			}
+			else {
+				form.fadeIn();
+				more_options.addClass("index-2");
+			}
+			return false; // dont follow the link
+		});
+	});

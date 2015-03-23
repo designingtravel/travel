@@ -1,0 +1,175 @@
+// Copyright 2015 A Travel Corporation
+
+// Project Name: travelnet
+// Project Description: The Power of Minimalist
+// File Name: style.less
+// Author: Yair Rodriguez
+// Version: 1.0
+
+/*
+ * Just to clear, I wrote all CONSTANT VARS in caps,
+ * like if we are doing web development with CSS.
+ * This is just to maintain good practices and have
+ * general standards.
+ */
+
+/* #Theme Colors
+================================================== */
+@red:       		#ED1C49, #F15A52;
+@green:     		#00A99D, #22B573;
+@blue:      		#2F79F1, #2FA8F1;
+@yellow:    		#FBCE3B, #D9E021;
+@gold:      		#C69C6D, #C7B299;
+@silver:    		#BEBEBE, #E6E6E6;
+
+@dark-red:   		#ED1C49;
+@dark-green:  		#00A99D;
+@dark-blue:   		#2F79F1;
+@dark-yellow:   	#FBCE3B;
+@dark-gold:   		#C69C6D;
+@dark-silver:   	#BEBEBE;
+
+@COLORS:
+	'RED' 		#ED1C49,
+	'GREEN' 	#00A99D,
+	'BLUE'		#2F79F1,
+	'YELLOW' 	#FBCE3B,
+	'GOLD' 		#C69C6D,
+	'SILVER' 	#BEBEBE,
+	'GAY'		#050121;
+
+@DARK-COLORS:
+	'RED' 		#F15A52,
+	'GREEN' 	#22B573,
+	'BLUE' 		#2FA8F1,
+	'YELLOW' 	#D9E021,
+	'GOLD' 		#C7B299,
+	'SILVER' 	#E6E6E6,
+	'GAY' 		#E6E6E6;
+
+@RED: 			1;
+@GREEN: 		2;
+@BLUE: 			3;
+@YELLOW: 		4;
+@GOLD: 			5;
+@SILVER: 		6;
+@GAY: 			7;
+
+@BLACK-COLOR: 	rgb(0, 0, 0);
+@WHITE-COLOR: 	rgb(255, 255, 255);
+
+// SELECT JUST IN ONE PLACE THE THEME COLOR
+@THEME: @RED;
+@GENERAL-COLOR: @WHITE-COLOR;
+
+@THEME-COLOR: 		extract(extract(@COLORS, @THEME), 2);		//2 to get the second column
+@DARK-COLOR: 		extract(extract(@DARK-COLORS, @THEME), 2); 	//same above
+
+
+/* #Basic Configuration
+================================================== */
+
+// Font vars
+@import url("http://fonts.googleapis.com/css?family=Lato:100,200,300,400,700");
+
+@PRIMARY-FONT: 		"Lato", "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
+
+@HAIRLINE: 			100;
+@THIN: 				200;
+@LIGHT: 			300;
+@REGULAR: 			400;
+@MEDIUM: 			500;
+@SEMIBOLD: 			600;
+@BOLD: 				700;
+@HEAVY: 			800;
+@BLACK: 			900;
+
+
+.container {
+    width: 						95%;
+}
+
+.container-control {
+    width: 						80%;
+    margin: 					0 auto;
+}
+
+html, body {
+	width: 						100%;
+	height: 					100%;
+	margin: 					0;
+	padding: 					0;
+	-webkit-font-smoothing: 	antialiased;
+    font-family: 				@PRIMARY-FONT;
+}
+
+a {
+	color: 						@GENERAL-COLOR;
+	text-decoration: 			@FALSE;
+
+	// Mixins
+	.transition					(border-bottom 1.5s ease);
+}
+
+
+/* #Font vars
+================================================== */
+
+@font-family:   	"Lato";
+@general-color: 	#fff;
+@theme-color:   	@blue;
+@dark-color: 		@dark-blue;
+
+
+/* #Breakpoint
+================================================== */
+
+// smartphones
+@SMARTPHONE: 		"@media only screen and (min-device-width: 320px) and (max-device-width: 480px)";
+@SMARTPHONE-L: 		"@media only screen and (min-width: 321px)";
+@SMARTPHONE-P: 		"@media only screen and (max-width: 320px)";
+
+// tablets
+@TABLET: 			"@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)";
+@TABLET-L: 			"@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)";
+@TABLET-P: 			"@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)";
+
+// desktops
+@DESKTOP: 			"@media only screen and (min-width: 1224px)";
+@LARGE-SCREEN: 		"@media only screen and (min-width: 1824px)";
+@IPHONE-4: 			"@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-width-pixel-ratio: 1.5)";
+
+
+/* #CONSTANT VARS
+================================================== */
+
+@OPACITY-ONE: 		.1;
+@OPACITY-TWO: 		.2;
+@OPACITY-THREE: 	.3;
+@OPACITY-FOUR: 		.4;
+@OPACITY-FIVE: 		.5;
+@OPACITY-SIX: 		.6;
+@OPACITY-SEVEN: 	.7;
+@OPACITY-EIGHT: 	.8;
+@OPACITY-NINE: 		.9;
+@OPACITY-TEN: 		 1; // or also @NO-OPACITY
+
+@NO-OPACITY: 		 1;
+
+/* #CONSTANT UTILITIES
+================================================== */
+@NO-COLOR: 			transparent;
+@FALSE: 			none;
+
+// Font weights. Original setup in pixels, then I change to rem unit.
+@BIG: 				16px;
+@MEDIUM: 			14px;
+@THIN: 				12px;
+@LITTLE: 			10px;
+
+// z-indexes
+@ZINDEX-1: 			1;
+@ZINDEX-2: 			2;
+@ZINDEX-3: 			3;
+@ZINDEX-4: 			4;
+@ZINDEX-5: 			5;

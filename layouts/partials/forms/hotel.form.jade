@@ -1,0 +1,91 @@
+form.form.col-lg-5.col-md-6.col-sm-7.col-xs-8(action="h.html")
+	.row
+		.col-lg-12.col-md-12.col-sm-12.col-xs-12
+			label ¿A dónde quieres viajar?
+			input#destino(type="text", name='d', autocomplete="off")
+			input#citycode(type="hidden", value="", name="dc", autocomplete="off")
+
+	.row
+		.col-lg-12.col-md-12.col-sm-12.col-xs-12
+			label Nombre del Hotel (Opcional)
+			input#nh(type="text", name='nh', autocomplete="off")
+
+	.row
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Entrada
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Salida
+
+	.row.no-margin-top
+		.col-lg-1.col-md-1.col-sm-1.col-xs-1
+			i.fa.fa-calendar
+		.col-lg-5.col-md-5.col-sm-5.col-xs-5
+			input#startDate(name="sd", type="date", readonly="readonly", autocomplete="off", placeholder="Ingresa la fecha")
+		.col-lg-1.col-md-1.col-sm-1.col-xs-1
+			i.fa.fa-calendar
+		.col-lg-5.col-md-5.col-sm-5.col-xs-5
+			input#endDate(name="ed", type="date", readonly="readonly", autocomplete="off", placeholder="Ingresa la fecha")
+
+	.row
+		.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			label Habitaciones
+			select#rooms(name="r")
+				option 1
+				option 2
+				option 3
+				option 4
+				option 5
+		//- room 1
+		include ../modules/helpers/hotel/room1.jade
+
+	//- room 2
+	include ../modules/helpers/hotel/room2.jade
+
+	//- room 3
+	include ../modules/helpers/hotel/room3.jade
+
+	//- room 4
+	include ../modules/helpers/hotel/room4.jade
+
+	//- room 
+	include ../modules/helpers/hotel/room5.jade
+
+	#kidAges
+		.row
+			.col-lg-12.col-md-12.col-sm-12.col-xs-12
+				p.no-margin-bottom Edades de los menores
+				hr.hr
+
+		//- age room 1
+		include ../modules/helpers/hotel/ages1.jade
+
+		//- age room 2
+		include ../modules/helpers/hotel/ages2.jade
+
+		//- age room 3
+		include ../modules/helpers/hotel/ages3.jade
+
+		//- age room 4
+		include ../modules/helpers/hotel/ages4.jade
+
+		//- age room 5
+		include ../modules/helpers/hotel/ages5.jade
+
+	//- search button
+	.row
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			input.btn.btn-primary(type="submit", value="Iniciar la Búsqueda")
+
+	p.more-options
+		a#show-brokers(href="#") + Opciones
+
+	.brokers-relative
+		#brokers.brokers
+			p
+				span Moneda:
+				select#currency(name="currency")
+					option Dólar Estadounidense
+					option Euro
+					option(selected) Peso Mexicano
+			p
+				input(type="checkbox")

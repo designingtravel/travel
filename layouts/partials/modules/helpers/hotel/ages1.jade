@@ -1,0 +1,17 @@
+#r1kageBox
+	.row
+		.col-lg-12.col-md-12.col-sm-12.col-xs-12
+			label Habitación 1
+	.row
+		.col-lg-4.col-md-4.col-sm-4.col-xs-4
+			select#r1k1a(name="r1k1a", onchange="arg(this.id, this.value)", autocomplete="off", size="1")
+				each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+					option(value=val)= val
+		.col-lg-4.col-md-4.col-sm-4.col-xs-4
+			select#r1k2a(name="r1k2a", onchange="arg(this.id, this.value)", autocomplete="off", size="1")
+				each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+					option(value=val)= val
+		.col-lg-4.col-md-4.col-sm-4.col-xs-4
+			select#r1k3a(name="r1k3a", onchange="arg(this.id, this.value)", autocomplete="off", size="1")
+				each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+					option(value=val)= val

@@ -1,0 +1,92 @@
+// Copyright 2015 A Travel Corporation
+
+// Project Name: travelnet
+// Project Description: The Power of Minimalist
+// File Name: autocomplete.less
+// Author: Yair Rodriguez
+// Version: 1.0
+
+/*
+ * I hold all colors in vars to keep organize the
+ * theme-color and have the posibility to just
+ * change in one single place the general color.
+ */
+
+/* #Autocomplete vars
+================================================== */
+$AUTOCOMPLETE-COLOR:            $GENERAL-COLOR;
+$AUTOCOMPLETE-COLOR-BORDER:     rgba(0, 0, 0, $OPACITY-TWO);
+
+
+/* #Autocomplete
+================================================== */
+.ui-autocomplete {
+    position:                   absolute;
+    z-index:                    5 !important;
+    display:                    $FALSE;
+    min-width:                  160px;   
+    padding:                    4px 0;
+    list-style:                 $FALSE;
+    background-color:           $AUTOCOMPLETE-COLOR;
+    //
+    border-color:               $AUTOCOMPLETE-COLOR-BORDER;
+    border-style:               solid;
+    border-width:               1px;
+    *border-right-width:        2px;
+    *border-bottom-width:       2px;
+
+    // Mixins
+    @include round-all-borders  (5px);
+    @include box-shadow         (0 5px 10px $AUTOCOMPLETE-COLOR-BORDER);
+    @include background-clip    (padding-box);
+
+    /*
+     * Specific Utilities
+     *      
+     *  top:                    100%;
+     *  left:                   0;
+     *  z-index:                1000;
+     *  float:                  left;
+     *  margin:                 0 0 10px 25px;
+     *  border-color:           #ccc;
+     */
+}
+
+/* #Links - Days
+================================================== */
+.ui-menu-item > a.ui-corner-all {
+    display:                    block;
+    padding:                    3px 15px;
+    clear:                      both;
+    font-weight:                normal;
+    line-height:                18px;
+    color:                      rgb(85, 85, 85);
+    white-space:                nowrap;
+    text-decoration:            $FALSE;
+
+    &:hover {
+    	color:                  $AUTOCOMPLETE-COLOR;
+    }
+}
+
+/* #The Hover, Active and Focus Days
+================================================== */
+.ui-state-hover,
+.ui-state-active,
+.ui-state-focus {
+    color:                      $GENERAL-COLOR;
+    text-decoration:            $FALSE;
+    //background-color:           $DARK-COLOR;
+    background-image:           $FALSE;
+    cursor:                     pointer;
+
+    // Mixins
+    @include round-all-borders  (0);
+    @include bg-gradient(LEFT, $THEME-COLOR, $DARK-COLOR);
+}
+
+/* #Helper that show the results number
+================================================== */
+.ui-helper-hidden-accessible {
+	color:                      $AUTOCOMPLETE-COLOR;
+}

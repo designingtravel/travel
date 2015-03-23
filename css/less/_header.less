@@ -1,0 +1,82 @@
+// Copyright 2015 A Travel Corporation
+
+// Project Name: travelnet
+// Project Description: The Power of Minimalist
+// File Name: autocomplete.less
+// Author: Yair Rodriguez
+// Version: 1.0
+
+/*
+ * I hold all colors in vars to keep organize the
+ * theme-color and have the posibility to just
+ * change in one single place the general color.
+ */
+
+
+/* #Basic Setup
+================================================== */
+@HEADER-COLOR:          rgba(39, 46, 59, @OPACITY-NINE);
+
+
+/* #Header
+================================================== */
+.padding-header {
+    padding:            15px 0;
+}
+
+.navbar {
+    background:         @HEADER-COLOR;
+    margin-bottom:      10px;
+
+    // Mixins
+    .no-border;
+}
+
+.navbar-brand {
+    padding-top:        0;
+    padding-left:       15px;
+
+    img {
+        width:          82px;
+    }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background:         @GENERAL-COLOR; // DEFAULT COLOR
+}
+
+.navbar .navbar-nav {
+    float:              @FALSE;
+    display:            inline-block;
+    vertical-align:     top;
+}
+
+.navbar .navbar-collapse {
+    text-align:         center;
+}
+
+/* #Menu
+================================================== */
+.navbar-default .navbar-nav > li > a {
+    color:              @GENERAL-COLOR;
+    font-size:          @MEDIUM;
+    opacity:            @OPACITY-SEVEN;
+    text-transform:     capitalize;
+    padding-left:       55px;
+    padding-right:      55px;
+
+    &.active {
+        opacity:        @NO-OPACITY;
+    }
+
+    &:hover {
+        color:          @GENERAL-COLOR;
+        opacity:        @NO-OPACITY;
+
+        // Mixins
+        .M-TRANSITION   (all, 0.5s, ease-in);
+    }
+
+    // Mixins
+    .M-TRANSITION       (all, 0.5s, ease-in-out);
+}

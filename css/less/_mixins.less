@@ -1,0 +1,134 @@
+// Copyright 2015 A Travel Corporation
+
+// Project Name: travelnet
+// Project Description: The Power of Minimalist
+// File Name: style.less
+// Author: Yair Rodriguez
+// Version: 1.0
+
+/*
+ * Just to clear, all mixins are writen in CAPS,
+ * and prefixed with M from Mixin to keep the Style Guide.
+ */
+
+/* #Basic Setup
+================================================== */
+
+// Vendor prefixes
+@W: 											"-webkit-"; 	// webkit
+@M: 											"-moz-"; 		// moz
+@S: 											"-ms-"; 		// ms
+@O: 											"-o-"; 			// o
+
+// CSS Animations
+@TRANSITION-RULE: 								transition;
+@BORDER-RADIUS-RULE: 							border-radius;
+@LINEAR-GRADIENT-RULE: 							linear-gradient;
+
+/* #Mixins
+================================================== */
+
+.transition (@transition) {
+			transition: 						@transition;
+	-webkit-transition: 						@transition;
+	   -moz-transition: 						@transition;
+	     -o-transition: 						@transition;
+}
+
+
+// Transition Animate
+.M-TRANSITION(@PROP: all, @TIME: 1s, @EASE: linear) {
+	@{TRANSITION-RULE}: 						@PROP @TIME @EASE;
+	@{W}@{TRANSITION-RULE}: 					@PROP @TIME @EASE;
+	@{M}@{TRANSITION-RULE}: 					@PROP @TIME @EASE;
+	@{S}@{TRANSITION-RULE}: 					@PROP @TIME @EASE;
+	@{O}@{TRANSITION-RULE}: 					@PROP @TIME @EASE;
+}
+
+
+
+.round-borders(@RADIUS: 5px) {
+	/*
+	border-radius: 						@radius;
+	-webkit-border-radius: 				@radius;
+	-mox-border-radius: 				@radius;
+	*/
+		@{BORDER-RADIUS-RULE}: 					@RADIUS;
+	@{W}@{BORDER-RADIUS-RULE}: 					@RADIUS;
+	@{M}@{BORDER-RADIUS-RULE}: 					@RADIUS;
+}
+
+// Round Borders
+.M-ROUND-ALL-BORDERS(@RADIUS) {
+		@{BORDER-RADIUS-RULE}: 					@RADIUS;
+	@{W}@{BORDER-RADIUS-RULE}: 					@RADIUS;
+	@{M}@{BORDER-RADIUS-RULE}: 					@RADIUS;
+}
+
+.M-ROUND-BORDERS-CUSTOM(@TOPLEFT: 5px, @TOPRIGHT: 5px, @BOTTOMLEFT: 5px, @BOTTOMRIGHT: 5px) {
+		@{BORDER-RADIUS-RULE}: 					@TOPLEFT @TOPRIGHT @BOTTOMLEFT @BOTTOMRIGHT;
+	@{W}@{BORDER-RADIUS-RULE}: 					@TOPLEFT @TOPRIGHT @BOTTOMLEFT @BOTTOMRIGHT;
+	@{M}@{BORDER-RADIUS-RULE}: 					@TOPLEFT @TOPRIGHT @BOTTOMLEFT @BOTTOMRIGHT;
+}
+
+// Delete border and outline
+.M-REMOVE-BORDER-AND-OUTLINE() {
+	border: 							@FALSE;
+	outline: 							@FALSE;
+}
+
+.no-border {
+	border: 							@FALSE;
+	outline: 							@FALSE;
+}
+
+
+
+.no-opacity {
+	opacity: 							@FALSE;
+}
+
+.M-REMOVE-OPACITY() {
+	opacity: @NO-OPACITY;
+}
+
+.background-gradient {
+	background:                         -webkit-linear-gradient(left,     @theme-color);
+    background:                              -o-linear-gradient(right,    @theme-color);
+    background:                            -moz-linear-gradient(right,    @theme-color);
+    background:                                 linear-gradient(to right, @theme-color);
+}
+
+.M-BG-GRADIENT(@ORIGIN: left, @START: @THEME-COLOR, @STOP: @DARK-COLOR) {
+	background:                         -webkit-linear-gradient(@ORIGIN, @THEME-COLOR, @DARK-COLOR);
+    background:                              -o-linear-gradient(@ORIGIN, @THEME-COLOR, @DARK-COLOR);
+    background:                            -moz-linear-gradient(@ORIGIN, @THEME-COLOR, @DARK-COLOR);
+    background:                                 linear-gradient(@ORIGIN, @THEME-COLOR, @DARK-COLOR);
+}
+
+.background-gradient(@background) {
+	background:                         -webkit-linear-gradient(left,     @background);
+    background:                              -o-linear-gradient(right,    @background);
+    background:                            -moz-linear-gradient(right,    @background);
+    background:                                 linear-gradient(to right, @background);
+}
+
+.box-shadow(@value) {
+	 -webkit-box-shadow: 				@value;
+    -moz-box-shadow: 					@value;
+    box-shadow: 						@value;
+}
+
+.translateY(@value) {
+	-webkit-transform: 					translateY(@value);
+       -moz-transform: 					translateY(@value);
+        -ms-transform: 					translateY(@value);
+         -o-transform: 					translateY(@value);
+            transform: 					translateY(@value);
+}
+
+.background-clip(@clip) {
+	-webkit-background-clip: 			@clip;
+       -moz-background-clip: 			@clip;
+            background-clip: 			@clip;
+}

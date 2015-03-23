@@ -1,0 +1,71 @@
+.footer-home {
+    z-index:                    1;
+    position:                   fixed;
+    bottom:                     0;
+    right:                      0;
+    font-size:                  10px;
+    width:                      50%;
+    color:                      @GENERAL-COLOR;
+
+    .copyright-nav {
+        margin-bottom:          20px;
+
+        p {
+                                .no-margin-bottom;
+        }
+    }
+
+    .secondary-nav {
+        text-align:             right;
+                                .little-margin-bottom;
+
+        i.fa {
+            font-size:          @BIG;
+        }
+    }
+    
+    .buttons-home {
+        font-size:              @MEDIUM;
+    }
+
+    .user-home {
+        font-weight:            bold;
+    }
+
+    .uppercase {
+        text-transform:         uppercase;
+        font-size:              @LITTLE;
+    }
+
+    /*p {
+        margin-bottom: 0;
+    }*/
+
+    a  {
+        color:                  @general-color;
+        outline:                @FALSE;
+        border:                 @FALSE;
+        font-size:              @MEDIUM;
+
+        opacity:                @OPACITY-SEVEN;
+        .M-TRANSITION           (all, 0.5s, ease-in-out);
+
+        /*
+        -webkit-transition:     all 0.5s ease-in-out;
+        -moz-transition:        all 0.5s ease-in-out;
+        -o-transition:          all 0.5s ease-in-out;
+        transition:             all 0.5s ease-in-out;
+        */
+
+        &:hover {
+            opacity:                @NO-OPACITY;
+            .M-TRANSITION           (all, 0.5s, ease-in);
+            /*
+            -webkit-transition:     all 0.5s;
+            -moz-transition:        all 0.5s;
+            -o-transition:          all 0.5s;
+            transition:             all 0.5s;
+            */
+        }
+    }
+}

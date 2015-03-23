@@ -1,0 +1,440 @@
+// Copyright 2015 A Travel Corporation
+
+// Project Name: travelnet
+// Project Description: The Power of Minimalist
+// File Name: autocomplete.less
+// Author: Yair Rodriguez
+// Version: 1.0
+
+/*
+ * I hold all colors in vars to keep organize the
+ * theme-color and have the posibility to just
+ * change in one single place the general color.
+ */
+
+
+/* #Basic Setup
+================================================== */
+@BG-OPTIONS-BUTTON:                     rgb(39, 46, 59);
+@BLACK-COLOR:                           rgb(0, 0, 0);
+@WHITE-COLOR:                           rgb(255, 255, 255);
+
+/* #Search Form
+================================================== */
+
+// Inputs
+input[type="submit"] {
+    width:                              100%;
+}
+
+input[type="text"],
+select {
+    font-size:                          @THIN;
+    opacity:                            @OPACITY-SEVEN;
+    outline:                            @FALSE;
+    border-style:                       @FALSE;
+
+    cursor:                             default;
+    height:                             29px !important;
+    box-sizing:                         border-box;
+    padding:                            0 5px;
+    width:                              100%;
+
+    &:hover, &:focus {
+        opacity:                        @OPACITY-NINE;
+
+        // Mixins
+        .M-TRANSITION                   (all, 0.5s, ease-in);
+    }
+
+    // Mixins
+    .M-ROUND-ALL-BORDERS                (4px);
+    .M-TRANSITION                       (all, 0.5s, ease-in-out);
+}
+
+/* #Form
+================================================== */
+.form {
+    margin-top:                         150px;
+    padding:                            1% 2% 0 5%;
+    background:                         rgba(39, 46, 59, @OPACITY-EIGHT);
+    width:                              498px;
+
+    border-top-right-radius:            4px;
+    border-bottom-right-radius:         4px;
+
+    position:                           absolute;
+    left:                               0;
+
+    label, p, span {
+        color:                          @GENERAL-COLOR;
+        font-weight:                    @REGULAR;
+    }
+
+    // Just the rows inside .form
+    .row {
+        margin-top:                     10px;
+    }
+
+    .row.no-margin-top {
+        margin-top:                     0;
+    }
+}
+
+.input:focus,
+.input:hover {
+    opacity:                            @OPACITY-NINE;
+    outline:                            0;
+
+    // Mixins
+    .M-TRANSITION                       (all, 0.5s, ease-in);
+}
+
+i.fa {
+    color:                              @GENERAL-COLOR;
+    font-size:                          22px;
+}
+
+i.fa.fa-calendar:last-child {
+    padding:                            0 1%;
+}
+
+i {
+    margin:                             0 4px;
+}
+
+
+.btn {
+    margin:                             20px 0;
+    min-height:                         35px;
+}
+
+.btn-primary {
+    border:                             @FALSE;
+    font-size:                          @MEDIUM;
+    font:                               @BOLD;
+    color:                              @GENERAL-COLOR;
+
+    // Mixins
+    .M-BG-GRADIENT                      (left, @THEME-COLOR, @DARK-COLOR);
+    /*
+    background:                     -webkit-linear-gradient(left,     @THEME-COLOR);
+    background:                          -o-linear-gradient(right,    @THEME-COLOR);
+    background:                        -moz-linear-gradient(right,    @THEME-COLOR);
+    background:                             linear-gradient(to right, @THEME-COLOR);
+    */
+
+    text-transform:                     uppercase;
+    
+    &:hover {
+        background:                     @DARK-COLOR;
+
+        // Mixins
+        .no-opacity;
+    }
+
+    // Mixins
+    .M-ROUND-ALL-BORDERS                (2px);
+}
+
+table {
+    width:                              100%;
+}
+
+td:last-child {
+    padding-right:                      0;
+}
+
+.more-options {
+    font-weight:                        @REGULAR;
+    background:                         @BG-OPTIONS-BUTTON;
+    position:                           absolute;
+    right:                              3%;
+    padding:                            0 15px;
+    
+    a {
+        opacity:                        @OPACITY-SEVEN;
+        color:                          @GENERAL-COLOR;
+
+        &:hover {
+            opacity:                    @NO-OPACITY;
+        }
+    }
+}
+
+.brokers-relative {
+    position:                           relative;
+    width:                              100%;
+}
+
+.brokers {
+    z-index:                            @ZINDEX-1;
+    color:                              @GENERAL-COLOR;
+    position:                           absolute;
+    top:                                0;
+    width:                              100%;
+    padding:                            10px 15px;
+
+
+    // Mixins
+    .M-BG-GRADIENT                      (left, @THEME-COLOR);
+
+    // Just the select inside brokers section
+    select {
+        opacity:                        @OPACITY-SEVEN;
+        font-size:                      @MEDIUM;
+        font-weight:                    @REGULAR;
+        opacity:                        @OPACITY-EIGHT;
+        clear:                          @FALSE;
+        border-style:                   @FALSE;
+        color:                          @BLACK-COLOR;
+        width:                          50%;
+        margin-left:                    0;
+        border-width:                   0;
+        text-indent:                    6px;
+        height:                         29px;
+        padding:                        0;
+
+        // Mixins
+        .M-ROUND-ALL-BORDERS            (4px);
+    }
+
+    // Name that broker!
+    p {
+        margin-bottom:                  0;
+        margin-left:                    20px;
+
+        // Check the brokers
+        input[type="checkbox"] {
+            margin-right:               20px;
+            display:                    inline-block;
+            height:                     16px;
+            width:                      16px;
+            vertical-align:             middle;
+            margin-top:                 -2px;
+
+            // Mixins
+            .background-gradient;
+            //.M-BG-GRADIENT(left, @START, @STOP);
+            //background: red;
+        }
+
+        &:first-child {
+            margin-bottom:              15px;
+        }
+    }
+}
+
+/* #Title for every home
+================================================== */
+.title {
+    color:                              @GENERAL-COLOR;
+    font-weight:                        @LIGHT;
+    text-transform:                     lowercase;
+    font-size:                          60px;
+    margin-top:                         100px;
+    position:                           fixed;
+    right:                              3%;
+}
+
+/* #Pop Up that confirm search in Traslados Home
+================================================== */
+#complement {
+    .modal-header {
+        border-bottom:                  @FALSE;
+    }
+
+    .modal-dialog {
+        width:                          560px;
+    }
+
+    label {
+        font-size:                      @MEDIUM;
+    }
+
+    .modal-body {
+        margin-bottom:                  20px;
+    }
+}
+
+.complement {
+    background:                         @FALSE;
+    border:                             @FALSE;
+    color:                              @DARK-COLOR;
+    font-size:                          @MEDIUM;
+    text-transform:                     uppercase;
+
+    &:hover {
+        color:                          @GENERAL-COLOR;
+    }
+}
+
+i.fa.fa-arrow-right {
+    color:                              @DARK-COLOR;
+}
+
+
+/* #Panel Control
+================================================== */
+.control {
+    margin-top:                         120px;
+}
+
+.control-info {
+
+    h3, div {
+        color:                          @GENERAL-COLOR;
+        display:                        inline-block;
+        position:                       relative;
+    }
+
+    a {
+        text-decoration:                @FALSE;
+        font-size:                      @THIN;
+
+        &:hover {
+            text-decoration:            @FALSE;
+            color:                      @GENERAL-COLOR;
+        }
+    }
+
+    #show-general-data {
+        position:                       relative;
+    }
+}
+
+
+.panel-nav {
+    .no-border-left {
+        border-left:                    @FALSE;
+    }
+
+    ul {
+        list-style-type:                @FALSE;
+        padding-left:                   0;
+        margin-left:                    0;
+
+        position:                       relative;
+
+        li {
+            float:                      left;
+            text-align:                 center;
+            width:                      130px;
+
+            margin-right:               8px;
+
+
+            img {
+                width:                  130px;
+            }
+
+            a {
+                width:                  130px;
+                .M-TRANSITION           (all, 0.5s, ease-in);
+
+                &:hover {
+                    color:              @DARK-COLOR;
+                    text-decoration:    @FALSE;
+                    .M-TRANSITION       (all, 0.5s, ease-in-out);
+                }
+            }
+        }
+    }
+}
+
+
+/* #Tooltip
+================================================== */
+.wrapper {
+  position:                             relative;
+
+  /*
+   * Utilities
+   *      
+   *  text-transform:                   uppercase;
+   *  color:                            #555;
+   *  background:                       #ececec;
+   *  cursor:                           help;
+   *  font-family:                      "Gill Sans", Impact, sans-serif;
+   *  font-size:                        20px;
+   *  margin:                           100px 75px 10px 75px;
+   *  padding:                          15px 20px;
+   *  text-align:                       center;
+   *  width:                            200px;
+   *  -webkit-transform:                translateZ(0);
+   *  -webkit-font-smoothing:           antialiased;
+   */
+}
+
+.wrapper .tooltip {
+    font-family:                        @PRIMARY-FONT;
+    font-size:                          @MEDIUM;
+    pointer-events:                     @FALSE;
+    color:                              @WHITE-COLOR;
+    top:                                25px;
+    display:                            block;
+    margin-bottom:                      15px;
+    opacity:                            0;
+    padding:                            20px;
+    position:                           absolute;
+
+
+    // Mixins
+    .translateY                         (10px);
+    .transition                         (all .25s ease-out);
+    .box-shadow                         (2px 2px 6px rgba(0, 0, 0, @OPACITY-THREE));
+    .round-borders                      (5px);
+    .M-BG-GRADIENT                      (left, @THEME-COLOR, @DARK-COLOR);
+    
+}
+
+.general-data,
+.sell-polytics {
+    width:                              300px;
+}
+
+// This bridges the gap so you can mouse into the tooltip without it disappearing.
+.wrapper .tooltip:before {
+  bottom:                               -20px;
+  content:                              " ";
+  display:                              block;
+  height:                               20px;
+  left:                                 0;
+  position:                             absolute;
+  width:                                100%;
+}  
+
+// CSS Triangles
+.wrapper .tooltip:after {
+  border-left:                          solid @NO-COLOR 15px;
+  border-right:                         solid @NO-COLOR 15px;
+  border-bottom:                        solid @THEME-COLOR 15px;
+  //bottom: -10px;
+  top:                                  -12px;
+  content:                              " ";
+  height:                               0;
+  //left: 50%;
+  left:                                 10px;
+  //margin-left: -13px;
+  position:                             absolute;
+  width:                                0;
+}
+  
+.wrapper:hover .tooltip {
+  opacity:                              @NO-OPACITY;
+  pointer-events:                       auto;
+  -webkit-transform:                    translateY(10px);
+     -moz-transform:                    translateY(10px);
+      -ms-transform:                    translateY(10px);
+       -o-transform:                    translateY(10px);
+          transform:                    translateY(10px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltip {
+  display:                              @FALSE;
+}
+
+.lte8 .wrapper:hover .tooltip {
+  display:                              block;
+}
