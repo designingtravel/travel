@@ -1,4 +1,15 @@
 jQuery(document).ready(function($){
+
+	var hotel = $(".hotel__rooms");
+	hotel.css("display", "none");
+
+	$("#js-type-of-rooms").on("click", function(e) {
+		console.log(this);
+		$(".hotel__rooms").first().slideToggle("slow");
+		//$(this).parent("hotel").find(".hotel__rooms").css("display", "flex");
+		e.preventDefault();
+	});
+
 	//open/close lateral filter
 	$('.cd-filter-trigger').on('click', function(){
 		triggerFilter(true);
@@ -10,7 +21,7 @@ jQuery(document).ready(function($){
 	});
 
 	function triggerFilter($bool) {
-		var elementsToTrigger = $([$('.cd-filter-trigger'), $('.cd-filter'), $('.cd-tab-filter'), $('.cd-gallery')]);
+		var elementsToTrigger = $([$('.cd-filter-trigger'), $('.cd-filter'), $('.cd-tab-filter'), $('.cd-gallery'), $('.booking-section'), $('.footer-results')]);
 		elementsToTrigger.each(function(){
 			$(this).toggleClass('filter-is-visible', $bool);
 		});
@@ -61,7 +72,7 @@ jQuery(document).ready(function($){
 	function fixGallery() {
 		var offsetTop = $('.cd-main-content').offset().top,
 			scrollTop = $(window).scrollTop();
-			console.log(scrollTop + " " + offsetTop);
+			//console.log(scrollTop + " " + offsetTop);
 		( scrollTop >= offsetTop ) ? $('.cd-main-content').addClass('is-fixed') : $('.cd-main-content').removeClass('is-fixed');
 	}
 
@@ -128,20 +139,43 @@ jQuery(document).ready(function($){
 	});
 
 	// slider
+	var first, second;
 
 	$( "#slider-range" ).slider({
         range: true,
         min: 0,
-        max: 6000,
-        values: [ 75, 300 ],
+        max: 80000,
+        values: [ 75, 3200 ],
 
         slide: function( event, ui ) {
-          $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+          
+          //$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+
+          first = ui.values[0];
+          second = ui.values[1];
+
+          //console.log(first +" ------ " + second);
+          $("#filter-prices-min").html("$" + first + " MXN");
+          $("#filter-prices-max").html("$" + second + " MXN");
         }
       });
 
-      $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+/*
+	var hotel = $(".hotel__rooms");
+	hotel.css("display", "none");
+
+	$("#js-type-of-rooms").on("click", function(e) {
+		console.log(this);
+		//console.log();
+		//var hotel = $(this).closest(".hotel").find(".hotel__rooms");
+		//console.log(hotel);
+		//hotel.toggleClass('closed').slideToggle(800);
+		//$(this).slideToggle("slow");
+		
+		e.preventDefault();
+	});
+	*/
+	
 });
 
 /*****************************************************

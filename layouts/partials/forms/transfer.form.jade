@@ -1,1 +1,158 @@
-h6 Transfer
+form.form.col-lg-5.col-md-6.col-sm-7.col-xs-8(action="h.html")
+	.row
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Ciudad
+			input(type="text")
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Recoger en
+			select
+				option(selected="selected") Aeropuerto
+				option Hotel
+				option Puerto
+				option Estación de Tren
+				option Estación de Autobús
+
+	.row
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Ciudad
+			input(type="text")
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Dejar en
+			select
+				option(selected="selected") Aeropuerto
+				option Hotel
+				option Puerto
+				option Estación de Tren
+				option Estación de Autobús
+
+	.row
+		.col-lg-1.col-md-1.col-sm-1.col-xs-1
+			input(type="checkbox")
+		.col-lg-5.col-md-5.col-sm-5.col-xs-5
+			label ¿Incluir regreso?
+
+	.row
+		.col-lg-12.col-md-12.col-sm-12.col-xs-12
+			label Ida
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Fecha
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Hora arribo
+
+	.row.no-margin-top
+		.col-lg-1.col-md-1.col-sm-1.col-xs-1
+			i.fa.fa-calendar
+		.col-lg-5.col-md-5.col-sm-5.col-xs-5
+			input#startDate.hasDatepicker(name="sd", type="text", placeholder="Ingresa la fecha")
+		.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			select
+				option 00
+		.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			select
+				option 00
+
+	.row
+		.col-lg-12.col-md-12.col-sm-12.col-xs-12
+			label Regreso
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Fecha
+		.col-lg-6.col-md-6.col-sm-6.col-xs-6
+			label Hora arribo
+
+	.row.no-margin-top
+		.col-lg-1.col-md-1.col-sm-1.col-xs-1
+			i.fa.fa-calendar
+		.col-lg-5.col-md-5.col-sm-5.col-xs-5
+			input#endDate(name="ed", type="text", placeholder="Ingresa la fecha")
+		.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			select
+				option 00
+		.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			select
+				option 00
+
+	.row
+		//- room
+		.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			label Adultos
+			select#r1a(name="r1a", onchange="arg(this.id, this.value)", autocomplete="off")
+				option 1
+				option(selected="selected") 2
+				option(value="5") 2 (Doble)
+				option 3
+				option 4
+				option(value="5.1") 5
+				option 6
+				option 7
+				option 8
+		.col-lg-3.col-md-3.col-sm-3.col-xs-3
+			label Menores
+			select#r1k(name="r1k", onchange="arg(this.id, this.value)", autocomplete="off")
+				each val in [1, 2, 3, 4, 5, 6, 7, 8]
+					option(value=val)= val
+
+	#kidsAges
+		.row
+			.col-lg-12.col-md-12.col-sm-12.col-xs-12
+			p.no-margin-bottom Edades de los Menores
+			hr.hr.ages-kids-line-bottom
+
+			//-ages-boxes
+			#r1kageBox
+				.row
+					.col-lg-3.col-md-3.col-sm-3.col-xs-3
+						select
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+								option(value=val)= val
+					.col-lg-3.col-md-3.col-sm-3.col-xs-3
+						select
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+								option(value=val)= val
+					.col-lg-3.col-md-3.col-sm-3.col-xs-3
+						select
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+								option(value=val)= val
+					.col-lg-3.col-md-3.col-sm-3.col-xs-3
+						select
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+								option(value=val)= val
+				.row
+					.col-lg-3.col-md-3.col-sm-3.col-xs-3
+						select
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+								option(value=val)= val
+					.col-lg-3.col-md-3.col-sm-3.col-xs-3
+						select
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+								option(value=val)= val
+					.col-lg-3.col-md-3.col-sm-3.col-xs-3
+						select
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+								option(value=val)= val
+					.col-lg-3.col-md-3.col-sm-3.col-xs-3
+						select
+							each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+								option(value=val)= val
+
+			.row
+				.col-lg-6.col-md-6.col-sm-6.col-xs-6
+				#complement.modal.fade
+					.modal-dialog
+						.modal-content
+							.modal-header
+								h4.title-modal Opciones Complementarias
+							.modal-body
+								.row
+									.col-lg-5.col-md-5.col-sm-5.col-xs-5
+										label.text-center Aeropuerto
+									.col-lg-2.col-md-2.col-sm-2.col-xs-2
+									.col-lg-5.col-md-5.col-sm-5.col-xs-5
+										label.text-center Hotel
+								.row.margin-bottom
+									.col-lg-5.col-md-5.col-sm-5.col-xs-5
+										select
+									.text-center.col-lg-2.col-md-2.col-sm-2.col-xs-2
+										i.fa.fa-arrow-right
+									.col-lg-5.col-md-5.col-sm-5.col-xs-5
+										select
+								.row

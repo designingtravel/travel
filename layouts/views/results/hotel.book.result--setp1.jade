@@ -1,0 +1,153 @@
+extends ../results.master.jade
+
+block title
+	title Hoteles
+
+block content
+	main.cd-main-content
+		//-menu
+		include ../../partials/globals/results/menu.jade
+		//-result items
+		.ss
+				//- steps
+
+				//- booking section
+				.booking-section
+					//- service details
+					.booking-section__service
+						.booking-header
+							i.fa.fa-qrcode
+							h4 Detalles del Servicio
+						hr
+						.booking-content.grid
+							//- section info
+							.booking-content__info.grid-cell
+								div
+									label Hotel:
+									span Sandos Cancún Luxury Experience Resort
+								div
+									label Dirección:
+									span Retorno del Rey Mza. 23 Lote 37-1 Km 14 77500 Cancún
+								div
+									label Teléfono:
+									span (55) 61 71 7341
+								div.grid.grid--gutters.grid-flexCells
+									div.grid-cell 
+										label Habitaciones:
+										span 1
+									div.grid-cell
+										label Tipo de Habitación:
+										span Doble Superior
+								div.grid.grid--gutters.grid-flexCells
+									div.grid-cell
+										label Plan de Alimentos:
+										span Todo incluido
+									div.grid-cell
+										label Destino:
+										span Cancún
+								div.grid.grid--gutters.grid-flexCells
+									div.grid-cell
+										label Entrada:
+										span martes, 3 Febrero 2015
+									div.grid-cell
+										label Salida:
+										span miercoles, 4 Febrero 2015
+								div
+									label Noches:
+									span 1
+								div.grid.grid--gutters.grid-flexCells
+									div.grid-cell
+										label Plan de Alimentos:
+										span Disponible
+									div.grid-cell
+										label Broker:
+										span Hotelbeds
+							//-prices sections
+							.booking-content__prices.grid-cell.u-1of4
+								div
+									p Categoría
+									include ../../partials/modules/stars.jade
+								div
+									p Importe
+									span $458.62 USD
+								div
+									p Impuesto 16.00%
+									span $73.38 USD
+								div
+									p.prices__total $532.00 USD TOTAL
+									small Tarifa basada en 1 habitación ocupada por 2 adultos y 0 niños
+
+					//- passengers
+					.booking-section__passengers
+						.booking-header
+							i.fa.fa-pencil-square-o
+							h4 Nombres de Pasajeros
+						hr
+						.booking-content
+							div.passengers__room.grid
+								.grid-cell.passengers__room--labels.u-1of4
+									label Información del Titular:*
+								.grid-cell.inputs--end
+									label.no-visible Adulto 1:*
+									input(type="text", placeholder="Nombre")
+									input(type="text", placeholder="Apellido")
+							//- room 1
+							include ../../partials/globals/booking/room1.jade
+
+							//-room2
+							include ../../partials/globals/booking/room2.jade
+
+							//-room3
+							include ../../partials/globals/booking/room3.jade
+
+							//-room4
+							include ../../partials/globals/booking/room4.jade
+
+							//-room5
+							include ../../partials/globals/booking/room5.jade
+					//- personal information
+					.booking-section__info
+						.booking-header
+							i.fa.fa-user
+							h4 Información del Pasaje Titular
+						hr
+						.booking-content
+							div
+								input(type="text", placeholder="Número telefónico")
+								input(type="email", placeholder="Correo electrónico")
+								input(type="email", placeholder="Confirma correo")
+							div
+								textarea.special-request(type="text", placeholder="Peticiones especiales (No garantizadas)")
+					//- pays ways
+					//.booking-section__pays
+						.booking-header
+							
+							hr
+						.booking-content
+					//- comments
+					.booking-section__comments
+						.booking-header
+							.grid
+								.grid-cell.u-1of33
+									i.fa.fa-thumb-tack
+									h4 Comentarios del Hotel
+								.grid-cell
+									i.fa.fa-list-ul
+									h4 Políticas del Hotel
+						hr
+						.booking-content
+							.grid
+								.grid-cell.u-1of33
+									p Orientado a Adultos.
+								.grid-cell
+									p Cualquier cancelación con menos de 8 días a la fecha de entrada al hotel reservado, tiene una penalización de $5,531.23 MXN
+									p Fecha Límite de Pago: 24 Enero 2015
+							div.features
+								include ../../partials/modules/toggle-button.jade
+								span Acepto Políticas, Términos y Condiciones
+								input.btn-primary(type="submit",value="Continuar")
+		//-form
+		include ../../partials/globals/results/forms/hotel.jade
+		a.cd-filter-trigger(href="#"): <i class="icon-filter fa fa-sliders"></i> Filtrar
+		a.cd-filter-trigger-shopping(href="#"): <i class="icon-filter fa fa-shopping-cart"></i> Compras
+		a.cd-filter-trigger-auth(href="#"): <i class="icon-filter fa fa-toggle-on"></i> Sesión

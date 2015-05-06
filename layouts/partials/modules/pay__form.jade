@@ -1,0 +1,40 @@
+form.payform
+	div.payform__radios
+		input(type="radio", value="")
+		label Tarjeta de Débito
+		input(type="radio", value="")
+		label Tarjeta de Crédito
+		input(type="radio", value="")
+		label Efectivo
+	div.payform__select
+		select
+			option(value="") Visa
+			option(value="") Master Card
+	div.payform__inputs.grid
+		.grid-cell
+			p Número de Tarjeta
+			p Código de Seguridad*
+			p Fecha de Vencimiento*
+			p Nombre del Tarjetahabiente*
+			p Apellido*
+			p Dirección*
+			p País*
+			p Estado*
+			p Código Postal*
+			p Ciudad*
+			p Teléfono*
+		.grid-cell
+			input(type="text")
+			input(type="text")
+			input(type="text")
+			input(type="text")
+			input(type="text")
+			input(type="text")
+			input(type="text")
+			input(type="text")
+			input(type="text")
+			select
+				option D.F.
+			input(type="text")
+	div.payform__button
+		input.btn-primary(value="Continuar")
