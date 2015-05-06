@@ -6,23 +6,33 @@
 // Author: Yair Rodriguez
 // Version: 1.0
 
-@import "_mixins.scss";
-@import "_basic.scss";
+@import "mixins.scss";
+@import "basic.scss";
 
-@import "_header.scss";
-@import "_content.scss";
+@import "header.scss";
+@import "content.scss";
+@import "footer.scss";
 
-@import "_footer.scss";
+@import "header-results.scss";
 
-@import "_utils.scss";
+@import "toggle.scss";
+@import "calendar.scss";
+@import "autocomplete.scss";
+@import "slider.scss";
 
-@import "_layout.scss";
+@import "grid.scss";
+@import "utils.scss";
 
-@import "_form_off_canvas.scss";
-@import "_results.scss";
+@import "layout.scss";
 
+@import "form_off_canvas.scss";
+@import "results.scss";
+@import "animations.scss";
 
-@import "_toggle.scss";
-@import "_calendar.scss";
-@import "_autocomplete.scss";
-@import "_range-slider.scss";
+@import "booking.scss";
+@import "pay__form.scss";
+
+//@import "toggle.scss";
+//@import "calendar.scss";
+//@import "autocomplete.scss";
+//@import "range-slider.scss";

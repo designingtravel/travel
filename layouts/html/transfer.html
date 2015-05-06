@@ -2,10 +2,10 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-witdh, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../css/styles.min.css">
     <link rel="icon" type="image/png" href="../../images/favicon.ico">
     <title>Traslados</title>
@@ -31,6 +31,350 @@
         </nav>
       </div>
     </header>
+    <section role="main">
+      <div class="container">
+        <h2 class="pull-right title">Traslados</h2>
+        <form action="h.html" class="form col-lg-5 col-md-6 col-sm-7 col-xs-8">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <label>Ciudad</label>
+              <input type="text">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <label>Recoger en</label>
+              <select>
+                <option selected="selected">Aeropuerto</option>
+                <option>Hotel</option>
+                <option>Puerto</option>
+                <option>Estación de Tren</option>
+                <option>Estación de Autobús</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <label>Ciudad</label>
+              <input type="text">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <label>Dejar en</label>
+              <select>
+                <option selected="selected">Aeropuerto</option>
+                <option>Hotel</option>
+                <option>Puerto</option>
+                <option>Estación de Tren</option>
+                <option>Estación de Autobús</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+              <input type="checkbox">
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+              <label>¿Incluir regreso?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <label>Ida</label>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <label>Fecha</label>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <label>Hora arribo</label>
+            </div>
+          </div>
+          <div class="row no-margin-top">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><i class="fa fa-calendar"></i></div>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+              <input id="startDate" name="sd" type="text" placeholder="Ingresa la fecha" class="hasDatepicker">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+              <select>
+                <option>00</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+              <select>
+                <option>00</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <label>Regreso</label>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <label>Fecha</label>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <label>Hora arribo</label>
+            </div>
+          </div>
+          <div class="row no-margin-top">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"><i class="fa fa-calendar"></i></div>
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+              <input id="endDate" name="ed" type="text" placeholder="Ingresa la fecha">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+              <select>
+                <option>00</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+              <select>
+                <option>00</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+              <label>Adultos</label>
+              <select id="r1a" name="r1a" onchange="arg(this.id, this.value)" autocomplete="off">
+                <option>1</option>
+                <option selected="selected">2</option>
+                <option value="5">2 (Doble)</option>
+                <option>3</option>
+                <option>4</option>
+                <option value="5.1">5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+              </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+              <label>Menores</label>
+              <select id="r1k" name="r1k" onchange="arg(this.id, this.value)" autocomplete="off">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </div>
+          </div>
+          <div id="kidsAges">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+              <p class="no-margin-bottom">Edades de los Menores</p>
+              <hr class="hr ages-kids-line-bottom">
+              <div id="r1kageBox">
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+                <div id="complement" class="modal fade">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="title-modal">Opciones Complementarias</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <label class="text-center">Aeropuerto</label>
+                          </div>
+                          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+                          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <label class="text-center">Hotel</label>
+                          </div>
+                        </div>
+                        <div class="row margin-bottom">
+                          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <select></select>
+                          </div>
+                          <div class="text-center col-lg-2 col-md-2 col-sm-2 col-xs-2"><i class="fa fa-arrow-right"></i></div>
+                          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                            <select></select>
+                          </div>
+                        </div>
+                        <div class="row"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
     <footer class="footer-home">
       <div class="container">
         <div class="secondary-nav">
@@ -50,9 +394,9 @@
     <script src="../../js/custom.js"></script>
     <script src="../../js/jquery.backstretch.min.js"></script>
     <script src="../../js/datepicker.min.js"></script>
-    <script src="../../js/slide.js"></script>
     <script src="../../js/autocomplete.min.js"></script>
     <script src="../../js/box_hotels.js"></script>
+    <script src="../../js/slide.js"></script>
     <script>
       $(function(){
       	var form = $("#brokers"),
@@ -62,7 +406,6 @@
       	form.css("display", "none");
       
       	link.on("click", function() {
-      		//form.is(":visible") ? form.fadeOut() : form.fadeIn();
       		if (form.is(":visible")) {
       			form.fadeOut();
       			more_options.removeClass("index-2");

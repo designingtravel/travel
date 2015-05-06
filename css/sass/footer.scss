@@ -1,0 +1,125 @@
+.footer-home {
+    z-index:                    1;
+    position:                   fixed;
+    bottom:                     0;
+    right:                      0;
+    font-size:                  10px;
+    width:                      50%;
+    color:                      $GENERAL-COLOR;
+
+    .copyright-nav {
+        margin-bottom:          20px;
+
+        p {
+                                margin-bottom: 0;
+        }
+    }
+
+    .secondary-nav {
+        text-align:             right;
+                                margin-bottom: 15px;
+
+        i.fa {
+            font-size:          $BIG-FONT;
+        }
+    }
+    
+    .buttons-home {
+        font-size:              $MEDIUM-FONT;
+    }
+
+    .user-home {
+        font-weight:            bold;
+    }
+
+    /*p {
+        margin-bottom: 0;
+    }*/
+
+    a  {
+        color:                  $GENERAL-COLOR;
+        outline:                $FALSE;
+        border:                 $FALSE;
+        //font-size:              $MEDIUM-FONT;
+        font-size:              $LITTLE-FONT;
+
+        opacity:                $OPACITY-SEVEN;
+        @include transition     (all, 0.5s, ease-in-out);
+
+        /*
+        -webkit-transition:     all 0.5s ease-in-out;
+        -moz-transition:        all 0.5s ease-in-out;
+        -o-transition:          all 0.5s ease-in-out;
+        transition:             all 0.5s ease-in-out;
+        */
+
+        &:hover {
+            opacity:                $NO-OPACITY;
+            @include transition     (all, 0.5s, ease-in);
+            /*
+            -webkit-transition:     all 0.5s;
+            -moz-transition:        all 0.5s;
+            -o-transition:          all 0.5s;
+            transition:             all 0.5s;
+            */
+        }
+    }
+}
+
+.uppercase {
+    text-transform:         uppercase;
+    
+}
+
+.footer-results {
+    //height:                                 150px;
+    background:                             url("../images/back4.jpg");
+    background-size:                        cover;
+    background-position:                    bottom center;
+    box-shadow:                             inset 0 105px  40px rgba($DARK-COLOR, $OPACITY-THREE);
+}
+
+.footer-results {
+    color: rgb(255, 255, 255);
+    font-size: $THIN-FONT;
+}
+
+.footer-results div span {
+    margin-bottom: 20px;
+    font-size: $BIG-FONT;
+}
+
+.footer-results i {
+    font-size: 23px;
+    padding: 10px;
+}
+
+.footer-results p {
+    margin-bottom: 0;
+}
+
+.footer-results span {
+    
+
+    &:after {
+        content: " | ";
+    }
+
+    // delete vertical bar in last item
+    &:last-child:after {
+        content: "";
+    }
+
+    a {
+        font-size: $THIN-FONT;
+
+        @include transition(all, 0.5s, ease-in);
+        opacity: $OPACITY-SEVEN;
+
+        &:hover {
+            opacity: $OPACITY-TEN;
+            color: rgb(255, 255, 255);
+            @include transition(all, 0.5s, ease-in-out);
+        }
+    }
+}

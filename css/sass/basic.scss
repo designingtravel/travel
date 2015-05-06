@@ -1,0 +1,189 @@
+// Copyright 2015 A Travel Corporation
+
+// Project Name: travelnet
+// Project Description: The Power of Minimalist
+// File Name: style.less
+// Author: Yair Rodriguez
+// Version: 1.0
+
+/*
+ * Just to clear, I wrote all CONSTANT VARS in caps,
+ * like if we are doing web development with CSS.
+ * This is just to maintain good practices and have
+ * general standards.
+ */
+
+/* #Theme Colors
+================================================== */
+/*
+$RED: 							#ED1C49;
+$GREEN:							#00A99D;
+$BLUE:							#2F79F1;
+$YELLOW :						#FBCE3B;
+$GOLD: 							#C69C6D;
+$SILVER: 						#BEBEBE;
+$GAY:							#050121;
+
+*/
+ // Array to hold all colors
+ /*
+$COLORS: 		"RED" #ED1C49, "GREEN" #00A99D, "BLUE" #2F79F1, "YELLOW" #FBCE3B, "GOLD" #C69C6D, "SILVER" #BEBEBE, "GAY" #050121;
+$DARK-COLORS: 	"RED" #F15A52, "GREEN" #22B573, "BLUE" #2FA8F1, "YELLOW" #D9E021, "GOLD" #C7B299, "SILVER" #E6E6E6, "GAY" #E6E6E6;
+*/
+$COLORS: 		
+	"RED" 			rgb(237, 28, 73),
+	"GREEN" 		rgb(0, 169, 157),
+	"BLUE" 			rgb(47, 121, 241),
+	"YELLOW" 		rgb(251, 206, 59),
+	"GOLD" 			rgb(198, 156, 109),
+	"SILVER" 		rgb(190, 190, 190),
+	"HIGHWELL"		rgb(145, 120, 88);
+
+$DARK-COLORS:
+	"RED" 			rgb(241, 90, 82),
+	"GREEN" 		rgb(34, 181, 115),
+	"BLUE" 			rgb(47, 168, 241),
+	"YELLOW" 		rgb(217, 224, 33),
+	"GOLD" 			rgb(199, 178, 153),
+	"SILVER" 		rgb(230, 230, 230),
+	"HIGHWELL"		rgb(85, 10, 18);
+
+/* THEME COLORS */
+$RED: 							1;
+$GREEN: 						2;
+$BLUE: 							3;
+$YELLOW: 						4;
+$GOLD: 							5;
+$SILVER: 						6;
+$HIGHWELL:						7;
+
+// Basic colors
+$BLACK-COLOR: 					rgb(0, 0, 0);
+$WHITE-COLOR: 					rgb(255, 255, 255);
+
+
+/* #Select here the Theme Color, JUST HERE!!!
+================================================== */
+$THEME: 						$BLUE;
+$TEXT-COLOR: 					$WHITE-COLOR; // default color
+
+
+$DARK-COLOR: 					nth(nth($COLORS, $THEME), 2);
+
+$THEME-COLOR: 					nth(nth($DARK-COLORS, $THEME), 2);
+
+$GENERAL-COLOR: 				$WHITE-COLOR;
+
+
+/* #Basic Configuration
+================================================== */
+
+// Font vars
+@import url("http://fonts.googleapis.com/css?family=Lato:100,200,300,400,700");
+//@import url("http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
+
+$PRIMARY-FONT: 					"Lato", "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
+
+$HAIRLINE: 						100;
+$THIN: 							200;
+$LIGHT: 						300;
+$REGULAR: 						400;
+$MEDIUM: 						500;
+$SEMIBOLD: 						600;
+$BOLD: 							700;
+$HEAVY: 						800;
+$BLACK: 						900;
+
+/* #Breakpoint
+================================================== */
+
+$PHONE:                         400px;
+$PHABLET:                       550px;
+$TABLET:                        750px;
+$DESKTOP:                       1000px;
+$DESKTOP-HD:                    1200px;
+
+/*
+@SMARTPHONE: 		"@media only screen and (min-device-width: 320px) and (max-device-width: 480px)";
+@SMARTPHONE-L: 		"@media only screen and (min-width: 321px)";
+@SMARTPHONE-P: 		"@media only screen and (max-width: 320px)";
+
+@TABLET: 			"@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)";
+@TABLET-L: 			"@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)";
+@TABLET-P: 			"@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)";
+
+@DESKTOP: 			"@media only screen and (min-width: 1224px)";
+@LARGE-SCREEN: 		"@media only screen and (min-width: 1824px)";
+@IPHONE-4: 			"@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-width-pixel-ratio: 1.5)";
+*/
+
+/* #CONSTANT VARS
+================================================== */
+
+$OPACITY-ONE: 					.1;
+$OPACITY-TWO: 					.2;
+$OPACITY-THREE: 				.3;
+$OPACITY-FOUR: 					.4;
+$OPACITY-FIVE: 					.5;
+$OPACITY-SIX: 					.6;
+$OPACITY-SEVEN: 				.7;
+$OPACITY-EIGHT: 				.8;
+$OPACITY-NINE: 					.9;
+$OPACITY-TEN: 					 1; // or also @NO-OPACITY
+
+$NO-OPACITY: 		 			 1;
+
+/* #CONSTANT UTILITIES
+================================================== */
+$NO-COLOR: 						transparent;
+$FALSE: 						none;
+
+// Font weights. Original setup in pixels, then I change to rem unit.
+$BIG-FONT: 						16px;
+$MEDIUM-FONT: 					14px;
+$THIN-FONT: 					12px;
+$LITTLE-FONT: 					10px;
+
+// z-indexes
+$ZINDEX-1: 						1;
+$ZINDEX-2: 						2;
+$ZINDEX-3: 						3;
+$ZINDEX-4: 						4;
+$ZINDEX-5: 						5;
+
+
+/*  */
+.container {
+    width: 						95%;
+}
+
+.container-control {
+    width: 						80%;
+    margin: 					0 auto;
+}
+
+.container-results {
+	width: 100%;
+	margin: 0 auto;
+
+	@media only screen and (min-width: 950px) {
+		width: 90%;
+	}
+}
+
+html, body {
+	width: 						100%;
+	height: 					100%;
+	margin: 					0;
+	padding: 					0;
+	-webkit-font-smoothing: 	antialiased;
+    font-family: 				$PRIMARY-FONT;
+}
+
+a {
+	color: 						$TEXT-COLOR;
+	text-decoration: 			$FALSE;
+
+	// Mixins
+	@include transition(border-bottom, 1.5s, ease);
+}

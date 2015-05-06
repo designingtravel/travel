@@ -1,0 +1,42 @@
+extends ../results.master.jade
+
+block title
+	title Hoteles
+
+block content
+	main.cd-main-content
+		//-menu
+		include ../../partials/globals/results/menu.jade
+		//-result items
+		.cd-gallery
+			.container-results
+				.order-by
+					label.order-by-title Ordenar por:
+					select.order-by-select
+						option Ofertas
+						option Precios
+						option Precio Descendente
+						option Precio Ascendente
+						optoin Categoria
+						option Categoria Descendente
+						option Categoria Ascendente
+						option Nombre
+						option Nombre Descendente
+						option Nombre Ascendente
+						option Ubicación
+						optoin Ubicación Descendente
+						option Ubicación Ascendente
+				h2.found-hotels 108 hoteles encontrados
+				p.found-hotels-desc Hoteles Cancún, México jue, 11/dic/2014 al mar, 06/ene/2015, 26 noches
+			.container-results
+				//- items per search
+				include ../../partials/globals/article.jade
+				include ../../partials/globals/article.jade
+				include ../../partials/globals/article.jade
+				include ../../partials/globals/article.jade
+				include ../../partials/globals/article.jade
+		//-form
+		include ../../partials/globals/results/forms/hotel.jade
+		a.cd-filter-trigger(href="#"): <i class="icon-filter fa fa-sliders"></i> Filtrar
+		a.cd-filter-trigger-shopping(href="#"): <i class="icon-filter fa fa-shopping-cart"></i> Compras
+		a.cd-filter-trigger-auth(href="#"): <i class="icon-filter fa fa-toggle-on"></i> Sesión

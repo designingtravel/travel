@@ -1,0 +1,70 @@
+extends ../results.master.jade
+
+block title
+	title Hoteles
+
+block content
+	main.cd-main-content
+		//-menu
+		include ../../partials/globals/results/menu.jade
+		//-result items
+		.ss
+				//- steps
+
+				//- booking section
+				.booking-section
+					//- service details
+					.booking-section__service
+						.booking-header
+							i.fa.fa-qrcode
+							h4.booking__details Detalles del Servicio para Jair Rodrigez
+						hr
+						.booking-content.grid
+							//- section info
+							.booking-content__info.grid-cell
+								div.booking__pays
+									.booking__pays--hotel
+										p Sandos Cancún Luxury Experience Resort
+										include ../../partials/modules/stars.jade
+									p 1 Habitación Doble Superior Plan de Alimentos Completos
+									p martes 3 Febrero 2015 al miercoles 4 Febrero 2015, Cancún México
+									p.prices__total $532.00 USD TOTAL
+									a(href="#") Revisa tus datos apá
+									div.booking__pays-logos
+										a(href="#"): img(src="../../images/booking/visa.png")
+										a(href="#"): img(src="../../images/booking/mastercard.jpg")
+										a(href="#"): img(src="../../images/booking/discover.jpg")
+										a(href="#"): img(src="../../images/booking/paypal.jpg")
+										a(href="#"): img(src="../../images/booking/oxxo.jpg")
+										a(href="#"): img(src="../../images/booking/american.png")
+										a(href="#"): img(src="../../images/booking/dinners.jpg")
+							//-pays way
+							.booking__choose-pay.grid-cell
+								div Elige un método de pago
+								ul.choose-pays__list
+									li
+										a(href="#")
+											img(src="../../images/booking/pays--credit.png", data-name="pays--credit", alt="Pagar en Paypal")
+											p Tarjeta de Crédito
+									li
+										a(href="#")
+											img(src="../../images/booking/pays--paypal.png", data-name="pays--paypal", alt="Pagar en Paypal")
+											p Pagar en Paypal
+									li
+										a(href="#")
+											img(src="../../images/booking/pays--cash.png", data-name="pays--cash", alt="Efectivo")
+											p Efectivo
+									li
+										a(href="#")
+											img(src="../../images/booking/pays--not-yet.png", data-name="pays--pending", alt="Pago Pendiente")
+											p Pago Pendiente
+
+						//- form
+						include ../../partials/modules/pay__form.jade
+
+					
+		//-form
+		include ../../partials/globals/results/forms/hotel.jade
+		a.cd-filter-trigger(href="#"): <i class="icon-filter fa fa-sliders"></i> Filtrar
+		a.cd-filter-trigger-shopping(href="#"): <i class="icon-filter fa fa-shopping-cart"></i> Compras
+		a.cd-filter-trigger-auth(href="#"): <i class="icon-filter fa fa-toggle-on"></i> Sesión
