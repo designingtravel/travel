@@ -1,0 +1,211 @@
+$compare__modal--bg: rgba(230, 230, 230, .8);
+$compare__modal--text: #7F7F7F;
+
+#compare__hotel {
+	color: $compare__modal--text;
+	background: $compare__modal--bg;
+
+	// font awesome
+	i.fa {
+		font-size: 26px;
+		color: $DARK-COLOR;
+	}
+
+	// links
+	a {
+		font-size: 12px;
+		color: $compare__modal--text;
+		@include transition(all, 1s, ease);
+
+		&:hover {
+			opacity: .6;
+		}
+	}
+
+	// rewrite some styles
+	> .modal-dialog {
+		width: 90%;
+		margin-top: 6%;
+		//background: rgba(255, 0, 0, .95);
+		background: none;
+	}
+
+	//
+	.modal-backdrop.in {
+		background: $compare__modal--bg;
+	}
+
+	// modal-header
+	.modal-header {
+		@include no-border;
+		margin-bottom: 50px;
+	}
+
+	.modal-content {
+		@include no-border;
+		@include box-shadow(0 0 0 transparent);
+	}
+
+	.modal-body {
+		text-align: left;
+	}
+
+	//stars
+	.stars {
+		display: block;
+		text-align: center;
+		
+		i.fa {
+			font-size 			: 22px;
+		}
+	}
+}
+
+// styles to each column in modal
+.compare__hotel {
+	margin 						: 0 2px;
+	background 					: white;
+
+ 	input[type="submit"] {
+ 		@include round-borders-custom(0, 0, 0, 0);
+ 	}
+
+ 	img {
+ 		border-top-left-radius 	: 6px;
+ 		border-top-right-radius : 6px;
+ 	}
+}
+
+ .comparehotel__image {
+ 	position: relative;
+ }
+
+.comparehotel__link--close {
+ 	font-weight 				: $LIGHT;
+ 	//color 						: rgb(0, 0, 0);
+ 	position 					: absolute;
+ 	top 						: 0;
+ 	right 						: 0;
+ 	@include round-all-borders(50%);
+ 	background 					: white;
+ 	font-size 					: 22px !important;
+ 	line-height 				: 22px;
+ 	padding 					: 1px 5px;
+ 	text-decoration 			: none;
+
+ 	&:hover {
+ 		opacity 				: 1;
+ 		text-decoration 		: none;
+ 	}
+}
+
+.compare__hotel--title {
+ 	color 						: #272E3B;
+ 	font-size 					: 12px;
+ 	padding 					: 12px 6px;
+ 	line-height 				: 14px;
+ 	padding-bottom 				: 0;
+}
+ 
+.compare__hotel--moreinfo {
+ 	text-align: center;
+ 	color: #9EA6B9;
+ 	font-size: 16px !important;
+ 	display: block;
+ 	margin-top: 10px;
+}
+
+.compare__hotel--moreinfo i.fa {
+ 	color: #9EA6B9 !important;
+}
+
+.compare__hotel--moreinfo + hr {
+	margin: 15px 0;
+	border-top: 1px solid rgba(127, 127, 127, .4);
+	background: transparent;
+}
+
+.comparehotel__prices {
+	text-align: center;
+	padding-bottom: 15px;
+
+	label {
+		display: block;
+		font-weight: normal;
+		margin: 0;
+	}
+
+	font-size: 12px;
+
+	label:first-child {
+		font-size: 15px;
+	}
+
+	&:nth-child(odd) {
+		color: #9EA6B9;
+	}
+
+	&--net {
+		font-size: 18px;
+		color: #272E3B;
+	}
+	&--total {
+		font-size: 16px;
+		color: $DARK-COLOR;
+	}
+}
+
+.comparehotel__rooms--title {
+	background 							: #9EA6B9;
+	display 							: block;
+	padding 							: 10px 5px;
+	color 								: white;
+	text-transform 						: uppercase;
+	text-align 							: center;
+	font-weight 						: normal;
+	font-size 							: 16px;
+	margin-bottom 						: 0;
+}
+
+.comparehotel__rooms {
+	background 							: $compare__modal--bg;
+	padding 							: 4px;
+
+	label {
+		margin: 0;
+		font-weight: normal;
+		font-size: 10px;
+		display: block;
+		//line-height: 12px;
+	}
+
+	> label:first-child {
+		text-transform: uppercase;
+	}
+
+	label:first-child + label {
+		text-transform: uppercase;
+		color: $DARK-COLOR;
+	}
+
+	span {
+		font-size: 14px;
+		color: #272E3B;
+	}
+
+	div {
+		padding: 10px 0;
+	}
+
+	hr {
+		margin: 12px 0;
+		border-top: 1px solid rgba(127, 127, 127, .4);
+	}
+}
+
+.comparehotel__button {
+	font-size 							: 20px;
+	height 								: 35px;
+	line-height 						: 35px;
+	text-transform 						: capitalize;
+}

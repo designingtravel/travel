@@ -1,0 +1,61 @@
+p: a(href="#", data-toggle="modal", data-target="#moreinfo__modal", style="color:black;") Más info apá
+
+#moreinfo__modal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+	.modal-dialog
+		.modal-content
+			//-.modal-header
+				button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span(aria-hidden="true") &times;
+			.modal-body.grid
+				.moreinfo__tabs.grid-cell.u-1of4
+					h3 MÁS INFO.
+					nav
+						ul.nav.nav-tabs.tabs__navigation
+							li(role="presentation", class="active"): a(href="#moreinfo-description", aria-controls="home", role="tab", data-toggle="tab") Descripción
+							li(role="presentation"): a(href="#moreinfo-photos", aria-controls="profile", role="tab", data-toggle="tab") Fotografías
+							li(role="presentation"): a(href="#moreinfo-facilities", aria-controls="messages", role="tab", data-toggle="tab") Facilidades
+							li(role="presentation"): a(href="#moreinfo-map", aria-controls="settings", role="tab", data-toggle="tab") Mapa
+							li(role="presentation"): a(href="#moreinfo-comments", aria-controls="settings", role="tab", data-toggle="tab") Comentarios
+							li(role="presentation"): a(href="#moreinfo-info", aria-controls="settings", role="tab", data-toggle="tab") Información
+							li(role="presentation"): a(href="#moreinfo-friend", aria-controls="settings", role="tab", data-toggle="tab") Enviar a un Amigo
+					input.btn-primary(type="submit", value="Reservar")
+				.moreinfo__content.grid-cell
+					div.tab-content
+						div#moreinfo-description.tab-pane.active(role="tabpanel")
+							button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span.moreinfo__content--close(aria-hidden="true") &times;
+							p.moreinfo__content--title CasaMagna Marriot Cancun
+							include stars.jade
+							ul.tab-content
+								li(data-content="description", class="selected").grid
+									.grid-cell
+										label Dirección
+										p BLVD. KUKULKAN KM 14.5 RETORNO CHAC. MZ23 Lote 41 77500 CANCUN
+										label Teléfono
+										p (01) 998 881 20 00
+										p(role="description") Bienvenido a este magnífico hotel familiar de Cancún, ubicado en el corazón de la zona hotelera: el CasaMagna Marriott Cancun Resort. Con una magnífica ubicación frente al mar, el resort de cuatro diamantes de la AAA ofrece ofertas de todo incluido, por lo que es la opción ideal para escapadas de fin de semana, vacaciones en familia y eventos grupales. Este resort familiar en Cancún ofrece amplias habitaciones con balcones privados que cuentan con extraordinarias vistas a las aguas turquesas del Caribe, a la laguna de Nichupté y al precioso entorno cuidado. Organice una boda de ensueño en la pérgola para bodas frente al mar, con fantásticas playas de arena blanca como telón de fondo.
+									.grid-cell
+										.moreinfo__content--map
+											h4 Mapa
+						div#moreinfo-photos.tab-pane(role="tabpanel") Fotografías 
+						div#moreinfo-facilities.tab-pane(role="tabpanel") Facilidades
+						div#moreinfo-map.tab-pane(role="tabpanel") Map
+						div#moreinfo-comments.tab-pane(role="tabpanel") Comentarios
+						div#moreinfo-info.tab-pane(role="tabpanel") Información
+						div#moreinfo-friend.tab-pane(role="tabpanel") Enviar a un Amigo
+
+				//-.moreinfo__content.grid-cell
+					button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span.moreinfo__content--close(aria-hidden="true") &times;
+					p.moreinfo__content--title CasaMagna Marriot Cancun
+					include stars.jade
+					ul.tab-content
+						li(data-content="description", class="selected").grid
+							.grid-cell
+								label Dirección
+								p BLVD. KUKULKAN KM 14.5 RETORNO CHAC. MZ23 Lote 41 77500 CANCUN
+								label Teléfono
+								p (01) 998 881 20 00
+								p(role="description") Bienvenido a este magnífico hotel familiar de Cancún, ubicado en el corazón de la zona hotelera: el CasaMagna Marriott Cancun Resort. Con una magnífica ubicación frente al mar, el resort de cuatro diamantes de la AAA ofrece ofertas de todo incluido, por lo que es la opción ideal para escapadas de fin de semana, vacaciones en familia y eventos grupales. Este resort familiar en Cancún ofrece amplias habitaciones con balcones privados que cuentan con extraordinarias vistas a las aguas turquesas del Caribe, a la laguna de Nichupté y al precioso entorno cuidado. Organice una boda de ensueño en la pérgola para bodas frente al mar, con fantásticas playas de arena blanca como telón de fondo.
+							.grid-cell
+								.moreinfo__content--map
+									h4 Mapa
+						li(data-content="photos")
+							p hola photos

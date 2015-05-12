@@ -175,6 +175,8 @@ jQuery(document).ready(function($){
 		e.preventDefault();
 	});
 	*/
+
+	// tabs in moreinfo popup
 	
 });
 
