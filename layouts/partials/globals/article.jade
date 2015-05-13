@@ -16,9 +16,9 @@ article.grid.grid--gutters.grid-flexCells.u-textCenter.hotel
 			span ¡Muy bueno!
 			p Basado en 2241 opiniones de viajeros
 		ul.hotel--list-more-info
-			li: a(href="#"): <i class="fa fa-book"></i> Más info
-			li: a(href="#"): <i class="fa fa-map-marker"></i> Mapa
-			li: a(href="#"): <i class="fa fa-picture-o"></i> Fotos
+			li: a(href="#", data-toggle="modal", data-target="#moreinfo__modal"): <i class="fa fa-book"></i> Más info
+			li: a(href="#moreinfo-map", data-toggle="modal", data-target="#moreinfo__modal"): <i class="fa fa-map-marker"></i> Mapa
+			li: a(href="#moreinfo-photos", data-toggle="modal", data-target="#moreinfo__modal"): <i class="fa fa-picture-o"></i> Fotos
 			li: a#js-type-of-rooms(href="#"): <i class="fa fa-bed"></i> Tipos de Habitación
 	.grid-cell.u-1of3.order1.hotel--prices
 		p Tarifa Neta

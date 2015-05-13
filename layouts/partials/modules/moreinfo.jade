@@ -1,5 +1,3 @@
-p: a(href="#", data-toggle="modal", data-target="#moreinfo__modal", style="color:black;") Más info apá
-
 #moreinfo__modal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
 	.modal-dialog
 		.modal-content
@@ -35,27 +33,113 @@ p: a(href="#", data-toggle="modal", data-target="#moreinfo__modal", style="color
 									.grid-cell
 										.moreinfo__content--map
 											h4 Mapa
-						div#moreinfo-photos.tab-pane(role="tabpanel") Fotografías 
-						div#moreinfo-facilities.tab-pane(role="tabpanel") Facilidades
-						div#moreinfo-map.tab-pane(role="tabpanel") Map
-						div#moreinfo-comments.tab-pane(role="tabpanel") Comentarios
-						div#moreinfo-info.tab-pane(role="tabpanel") Información
-						div#moreinfo-friend.tab-pane(role="tabpanel") Enviar a un Amigo
-
-				//-.moreinfo__content.grid-cell
-					button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span.moreinfo__content--close(aria-hidden="true") &times;
-					p.moreinfo__content--title CasaMagna Marriot Cancun
-					include stars.jade
-					ul.tab-content
-						li(data-content="description", class="selected").grid
-							.grid-cell
-								label Dirección
-								p BLVD. KUKULKAN KM 14.5 RETORNO CHAC. MZ23 Lote 41 77500 CANCUN
-								label Teléfono
-								p (01) 998 881 20 00
-								p(role="description") Bienvenido a este magnífico hotel familiar de Cancún, ubicado en el corazón de la zona hotelera: el CasaMagna Marriott Cancun Resort. Con una magnífica ubicación frente al mar, el resort de cuatro diamantes de la AAA ofrece ofertas de todo incluido, por lo que es la opción ideal para escapadas de fin de semana, vacaciones en familia y eventos grupales. Este resort familiar en Cancún ofrece amplias habitaciones con balcones privados que cuentan con extraordinarias vistas a las aguas turquesas del Caribe, a la laguna de Nichupté y al precioso entorno cuidado. Organice una boda de ensueño en la pérgola para bodas frente al mar, con fantásticas playas de arena blanca como telón de fondo.
-							.grid-cell
-								.moreinfo__content--map
-									h4 Mapa
-						li(data-content="photos")
-							p hola photos
+						div#moreinfo-photos.tab-pane(role="tabpanel")
+							p.moreinfo__content--title CasaMagna Marriot Cancun
+							include stars.jade
+							.grid
+								.grid-cell
+									ul.slides-list
+										li: img(src="../../images/moreinfo/1.jpg", alt="Hotel 1")
+										li: img(src="../../images/moreinfo/2.jpg", alt="Hotel 2")
+										li: img(src="../../images/moreinfo/3.jpg", alt="Hotel 3")
+										li: img(src="../../images/moreinfo/4.jpg", alt="Hotel 4")
+										li: img(src="../../images/moreinfo/5.jpg", alt="Hotel 5")
+										li: img(src="../../images/moreinfo/6.jpg", alt="Hotel 6")
+										li: img(src="../../images/moreinfo/7.jpg", alt="Hotel 7")
+								.grid-cell.slides--big-image
+									img(src="../../images/moreinfo/big/3.jpg", alt="Hotel 3")
+						//-facilities
+						div#moreinfo-facilities.tab-pane(role="tabpanel")
+							button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span.moreinfo__content--close(aria-hidden="true") &times;
+							p.moreinfo__content--title CasaMagna Marriot Cancun
+							include stars.jade
+							//-tabs
+							.grid
+								div(role="tabpanel").grid-cell.u-1of3
+									ul.nav.nav-tabs.tabs_facilities(role="tablist")
+										li(role="presentation", class="active"): a(href="#facilities-hotel", aria-controls="home", role="tab", data-toggle="tab") Hotel
+										li(role="presentation"): a(href="#facilities-room", aria-controls="profile", role="tab", data-toggle="tab") Habitación
+								.tab-content.grid-cell.tabs_facilities--content
+									#facilities-hotel(role="tabpanel", class="tab-pane active")
+										ul.tabs_facilities--list
+											li Centro de negocios
+											li Salón de belleza
+											li Cuidado de niños
+											li Aparcamiento (A pagar en el hotel si se aplica)
+											li Accesible para minusválidos
+											li Apertura de check-in 15:00
+											li Golf
+											li Gimnasio
+											li Aparcamiento de Autobuses
+											li 1 piscina cubierta (climatizada)
+											li 1 piscina infantil (climatizada)
+											li 3 ascensores
+											li 1 piscina descubierta (climatizada)
+											li Sauna
+											li Tenis
+											li Aire Acondicionado
+											li Película de Video
+											li Secador de pelo
+											li Conexión para portátil
+											li Mini bar
+											li Televisión por satélite
+											li Televisión
+									#facilities-room(role="tabpanel", class="tab-pane")
+										ul.tabs_facilities--list
+											li Aire Acondicionado
+											li Película de Video
+											li Secador de pelo
+											li Conexión para portátil
+											li Mini bar
+											li Televisión por satélite
+											li Televisión
+						div#moreinfo-map.tab-pane(role="tabpanel")
+							button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span.moreinfo__content--close(aria-hidden="true") &times;
+							p.moreinfo__content--title CasaMagna Marriot Cancun
+							include stars.jade
+							//aqui va el mapa
+							p aqui va el mapa
+						div#moreinfo-comments.tab-pane(role="tabpanel")
+							button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span.moreinfo__content--close(aria-hidden="true") &times;
+							p.moreinfo__content--title CasaMagna Marriot Cancun
+							include stars.jade
+							p comentarios
+						div#moreinfo-info.tab-pane(role="tabpanel")
+							button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span.moreinfo__content--close(aria-hidden="true") &times;
+							p.moreinfo__content--title CasaMagna Marriot Cancun
+							include stars.jade
+							//-tabs
+							.grid
+								div(role="tabpanel").grid-cell.u-1of3
+									ul.nav.nav-tabs.tabs_facilities(role="tablist")
+										li(role="presentation", class="active"): a(href="#infotabs--room", aria-controls="infotabs--room", role="tab", data-toggle="tab") Habitación
+										li(role="presentation"): a(href="#infotabs--restaurant", aria-controls="infotabs--restaurant", role="tab", data-toggle="tab") Restaurant
+										li(role="presentation"): a(href="#infotabs--exterior", aria-controls="infotabs--exterior", role="tab", data-toggle="tab") Exterior
+										li(role="presentation"): a(href="#infotabs--court", aria-controls="infotabs--court", role="tab", data-toggle="tab") Vestíbulo
+										li(role="presentation"): a(href="#infotabs--aditional", aria-controls="infotabs--aditional", role="tab", data-toggle="tab") Adicional
+								.tab-content.grid-cell.tabs_facilities--content
+									#infotabs--room(role="tabpanel", class="tab-pane active")
+										p Habitación: Todas las habitaciones de matrimonio ofrecen un diseño contemporáneo único, interiores modernos y tentadores extras como lujosos albornoces y zapatillas, gran LCD y puerto para iPod, WiFi, llamas locales y un saludable minibar (zumos ecológicos, agua y aperitivos) incluidos en el precio. Los baños se caracterizan por sus baldosas de ladrillo del suelo al techo y por la bañera ecológica de llenado rápido con secatoallas.
+									#infotabs--restaurant(role="tabpanel", class="tab-pane")
+										p Selección excepcional de restaurantes y bares. El restaurante y bar 1901 ofrece buena cocina moderna en un local grande y cómodo. El Miyako ofrece cocian japonesa y se especializa en sushi, sashimi y tempura. El restaurante Catch Fish y el bar de champán Catch, dos salas restauradas de forma agradable, ofrecen una magnífica muestra de crustáceos como punto central y el increíble bar de champán con forma de herradura con 50 plazas ofrece un mosaico aguamarina y plata. El Eastway abre todo el día y ofrece aperitivos ligeros y saludables y deliciosos postres y, por último, el pub George, la quintaesencia británica, con sus tradicionales paredes con paneles de roble y el techo trabajado, es una de las mejores reproducciones de interiores tudorbethan de Londres.
+									#infotabs--exterior(role="tabpanel", class="tab-pane")
+										p La fachada del hotel es de ladrillo rojo ornamental, típico del edificio victoriano que data de 1884.
+									#infotabs--court(role="tabpanel", class="tab-pane")
+										p El vestíbulo es de tamaño medio y tiene un atrio alto. Se ha renovado por completo con varias zonas de asientos.
+									#infotabs--aditional(role="tabpanel", class="tab-pane")
+										p Los clientes que se alojen en el hotel el viernes/sábado/domingo entre el 14 de diciemre de 2012 al 1 de abril del 2013 recibirán un pase VIP Westfield con descuentos exclusivos para tiendas y restaurantes de la ciudad de Westfield Stratford. A 10 minutos en tren del hotel. (El descuento de 10-30% dependerá del establecimiento - disponible en Westfield Stratford CIty solo los fines de semana, no válido en conjunción con otras ofertas o descuentos)
+										
+						div#moreinfo-friend.tab-pane(role="tabpanel")
+							button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span.moreinfo__content--close(aria-hidden="true") &times;
+							p.moreinfo__content--title CasaMagna Marriot Cancun
+							include stars.jade
+							//form
+							form.moreinfo__form
+								h4 Envío de Información de Hotel
+								label(for="") Para:
+								input(type="email", placeholder="Introduce correo")
+								label(for="") Copia:
+								input(type="email", placeholder="Introduce correo")
+								label(for="") Asunto:
+								input(type="email", placeholder="Información de Hotel")
+								input.btn-primary(type="submit", value="Enviar")
