@@ -1,5 +1,6 @@
 .grid {
-  display: flex;
+  //display: flex;
+  @include flexbox();
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
@@ -68,6 +69,14 @@
 
 .u-1of3 {
   width: 20%;
+  -webkit-box-flex: 0!important;
+  -webkit-flex: none!important;
+  -ms-flex: none!important;
+  flex: none!important;
+}
+
+.u-1of6 {
+  width: 60%;
   -webkit-box-flex: 0!important;
   -webkit-flex: none!important;
   -ms-flex: none!important;

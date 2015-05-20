@@ -21,3 +21,51 @@
 		opacity: 1;		
 	}
 }
+
+@keyframes offer-exclamation-animate {
+	0% {
+		color: red;
+	}
+
+	100% {
+		color: yellow;
+	}
+}
+
+
+$color--animate-exclamation-start: #ff3d49;
+$color--animate-exclamation-end: #ff9021;
+
+
+@-webkit-keyframes color_change--offer {
+	from { color: $color--animate-exclamation-start; }
+	to { color: $color--animate-exclamation-end; }
+}
+
+@-moz-keyframes color_change {
+	from { color: $color--animate-exclamation-start; }
+	to { color: $color--animate-exclamation-end; }
+}
+
+@-ms-keyframes color_change {
+	from { color: $color--animate-exclamation-start; }
+	to { color: $color--animate-exclamation-end; }
+}
+
+@-o-keyframes color_change {
+	from { color: $color--animate-exclamation-start; }
+	to { color: $color--animate-exclamation-end; }
+}
+
+@keyframes color_change {
+	from { color: $color--animate-exclamation-start; }
+	to { color: $color--animate-exclamation-end; }
+}
+
+.offer-exclamation i.fa {
+	-webkit-animation 			: color_change--offer 1s infinite alternate;
+	-moz-animation 				: color_change--offer 1s infinite alternate;
+	-ms-animation 				: color_change--offer 1s infinite alternate;
+	-o-animation 				: color_change--offer 1s infinite alternate;
+	animation 					: color_change--offer 1s infinite alternate
+}

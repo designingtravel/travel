@@ -64,7 +64,7 @@ $WHITE-COLOR: 					rgb(255, 255, 255);
 
 /* #Select here the Theme Color, JUST HERE!!!
 ================================================== */
-$THEME: 						$BLUE;
+$THEME: 						$RED;
 $TEXT-COLOR: 					$WHITE-COLOR; // default color
 
 
@@ -186,4 +186,6 @@ a {
 
 	// Mixins
 	@include transition(border-bottom, 1.5s, ease);
+	outline 					: none;
+	border 						: none;
 }

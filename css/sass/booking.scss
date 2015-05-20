@@ -1,7 +1,7 @@
 .booking-section {
 
 	//booking section
-	padding: 3em 0;
+	padding: 3em 0 0 0;
 	color: rgb(67, 76, 87);
 	font-size: 12px;
 
@@ -103,6 +103,7 @@
 	}
 	.booking-content {
 		@extend .booking-header;
+		//padding-bottom: 3em;
 
 		.booking-content__prices {
 			@media only screen and (min-width: 550px) {
@@ -132,7 +133,9 @@
 	.booking-section__info {}
 
 	.booking-section__comments {
-		color: rgb(154, 159, 170);
+		color: white;
+		@include bg-gradient(to right, $DARK-COLOR, $THEME-COLOR);
+		//opacity: .82;
 
 		label.tgl {
 			bottom: -2px;
@@ -153,17 +156,49 @@
 			padding: 8px;
 			margin-left: 40px;
 
-			@include round-borders-custom(0, 0, 0, 0);
+			//@include bg-gradient(left, $DARK-COLOR, $THEME-COLOR);
+			//@include round-borders-custom(0, 0, 0, 0);
+
+			background: $DARK-COLOR;
+			@include transition(all, .3s, ease);
+
+			&:hover {
+				opacity: .8;
+			}
 		}
 
 		.features {
 			text-align: right;
 		}
+
+		h4 {
+			//color: #434C57;
+		}
+
+		i.fa {
+			color: white;
+		}
 	}
 
 }
 
+.booking-section--inputs {
+	display: flex;
+	justify-content: space-between;
+
+	label:first-child {
+		width: 90px;
+	}
+
+	label:not(:first-child) {
+		width: 245px;
+		color: black;
+	}
+}
+
 .booking-section__passengers {
+	
+/*
 	.passengers__room  {
 			&--labels {
 
@@ -177,6 +212,7 @@
 				}
 			}
 		}
+		*/
 	}
 
 .inputs--end {
@@ -204,7 +240,7 @@
 
 	a {
 		display: block;
-		color: #2F79F1;
+		color: $DARK-COLOR;
 	}
 }
 
@@ -224,7 +260,7 @@
 }
 
 .booking__details {
-	color: #2F79F1;
+	color: $DARK-COLOR;
 }
 
 .booking__pays-logos a {
@@ -237,7 +273,7 @@
 
 	div {
 		text-align: center;
-		color: #2F79F1;
+		color: $DARK-COLOR;
 	}
 }
 
@@ -275,11 +311,21 @@
 	}
 }
 
-.red {
-	background: red;
+.limit-pay-date {
+	font-weight: 700;
+	color: yellow;
 }
 
-.blue {
-	background: blue;
+.limit-pay-date--theme {
+	font-weight: 700;
+	color: $DARK-COLOR;
 }
 
+.booking-section__markup {
+	font-size: 15px;
+
+	p,
+	label {
+		margin: 0;
+	}
+}

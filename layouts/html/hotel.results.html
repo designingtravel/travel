@@ -52,15 +52,15 @@
         </div>
         <div class="container-results">
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -73,8 +73,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -86,7 +84,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -96,37 +94,34 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
           </div>
           <hr>
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -139,8 +134,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -152,7 +145,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -162,37 +155,34 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
           </div>
           <hr>
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -205,8 +195,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -218,7 +206,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -228,37 +216,34 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
           </div>
           <hr>
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -271,8 +256,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -284,7 +267,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -294,37 +277,34 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
           </div>
           <hr>
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -337,8 +317,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -350,7 +328,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -360,37 +338,34 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
           </div>
           <hr>
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -403,8 +378,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -416,7 +389,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -426,37 +399,34 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
           </div>
           <hr>
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -469,8 +439,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -482,7 +450,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -492,37 +460,34 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
           </div>
           <hr>
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -535,8 +500,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -548,7 +511,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -558,37 +521,34 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
           </div>
           <hr>
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -601,8 +561,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -614,7 +572,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -624,37 +582,34 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
           </div>
           <hr>
           <div class="grid hotel--header">
-            <div class="grid-cell">
-              <h4>CasaMagna Marriot Cancun Resort</h4>
-            </div>
-            <div class="grid-cell u-1of3">
-              <div class="hotel--header-ui">
+            <div class="grid-cell grid">
+              <h4 class="grid-cell">CasaMagna Marriot Cancun Resort</h4>
+              <div class="hotel--header-toggle grid-cell">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+                </label><a href="#" data-toggle="modal" data-target="#compare__hotel">Comparar</a>
               </div>
+            </div>
+            <div style="text-align:right;" class="grid-cell u-1of3"><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
             </div>
           </div>
           <article class="grid grid--gutters grid-flexCells u-textCenter hotel">
@@ -667,8 +622,6 @@
               </div>
               <ul class="hotel--list-more-info">
                 <li><a href="#" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-book"></i> Más info</a></li>
-                <li><a href="#moreinfo-map" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-map-marker"></i> Mapa</a></li>
-                <li><a href="#moreinfo-photos" data-toggle="modal" data-target="#moreinfo__modal"><i class="fa fa-picture-o"></i> Fotos</a></li>
                 <li><a id="js-type-of-rooms" href="#"><i class="fa fa-bed"></i> Tipos de Habitación</a></li>
               </ul>
             </div>
@@ -680,7 +633,7 @@
               </div>
               <p>$50,487 MXN</p>
               <p>Total de Estancia</p>
-              <p><a href="#">Ver desglose</a></p>
+              <p><a href="#" data-toggle="modal" data-target="#seebreakdown__modal" style="color:black;">Ver desglose</a></p>
               <p>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
@@ -690,22 +643,19 @@
             <div class="grid-cell u-1of3"></div>
             <div class="grid-cell hotel__rooms--offers">
               <p><span>Tipo de Habitación / Plan / Disponibilidad</span><span>Precio por estancia</span></p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
-                <input type="submit" value="Reservar" class="btn-primary">
-              </p>
-              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span><a><i class="fa fa-list-ul"></i></a></span><span>$1,046 USD</span><span><a><i class="fa fa-info"></i></a></span>
+              <p><span>Sanctuary / Desayuno buffet / Disponible</span><span class="offer-tag"><a><i class="fa fa-tags"></i></a></span><span>$1,046 USD</span><span class="offer-exclamation"><a><i class="fa fa-exclamation-triangle"></i></a></span>
                 <input type="submit" value="Reservar" class="btn-primary">
               </p>
             </div>
@@ -965,14 +915,14 @@
           <div class="cd-filter-block">
             <h4>Filtrar por<i class="fa fa-filter"></i></h4>
             <div class="cd-filter-content filter-by">
-              <div class="f_row">
-                <input type="text" placeholder="Entrada" class="input-with-icon">
+              <div class="filter-by--search">
+                <input type="text" placeholder="Nombre del Hotel" class="input-with-icon">
                 <input type="submit" value="Filtrar" class="btn btn-primary">
               </div>
-              <div class="f_row align-to-end">
+              <div class="f_row only-offers">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label>
+                </label><span>Solo ofertas</span>
               </div>
               <h5 class="off-canvas-subtle">Rango de precios</h5>
               <div class="f_row">
@@ -1048,6 +998,69 @@
                       <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
                     </label><span class="stars"><i class="fa fa-star"></i></span><span class="filter-category-hotels">288 hoteles</span>
                   </div>
+                  <h5 class="off-canvas-subtle">Ubicación</h5>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Todos</span><span class="filter-category-hotels">550 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Airport</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Downtown</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Islas Mujeres</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Hotel Zone/Zone H</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <h5 class="off-canvas-subtle">Plan de Alimentos</h5>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Todos</span><span class="filter-category-hotels">550 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Todo incluido</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Solo desayuno</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Sin alimentos</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <h5 class="off-canvas-subtle">Brokers</h5>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Todos</span><span class="filter-category-hotels">550 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Hotelbeds</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Tourico</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1057,7 +1070,6 @@
           </div>
         </form><a href="" class="cd-close"><i class="fa fa-close"></i></a>
       </div><a href="#" class="cd-filter-trigger"><i class="icon-filter fa fa-sliders"></i> Filtrar</a><a href="#" class="cd-filter-trigger-shopping"><i class="icon-filter fa fa-shopping-cart"></i> Compras</a><a href="#" class="cd-filter-trigger-auth"><i class="icon-filter fa fa-toggle-on"></i> Sesión</a>
-      <p><a href="#" data-toggle="modal" data-target="#compare__hotel" style="color:black;">Políticas de Reservación</a></p>
       <div id="compare__hotel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -1275,90 +1287,8 @@
                   <input type="submit" value="Reservar" class="btn-primary comparehotel__button">
                 </div>
               </div>
-              <div class="compare__hotel grid-cell">
-                <div class="comparehotel__image"><a href="#" class="comparehotel__link--close">&times;</a><img src="../../images/compare-hotel/1.jpg"></div>
-                <p class="compare__hotel--title">CasaMagna Marriott Cancun Resort</p><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
-                <!--a.compare__hotel--moreinfo(href="#"): <i class="fa fa-book"></i> Mas Info-->
-                <hr>
-                <div class="comparehotel__prices">
-                  <label>Tarifa Neta</label>
-                  <label class="comparehotel__prices--net">$5,241 MXN</label>
-                  <label>Promedio P/Noche</label>
-                  <label class="comparehotel__prices--total">$36,719 MXN</label>
-                  <label>Total Estancia</label>
-                </div>
-                <label class="comparehotel__rooms--title">Habitaciones</label>
-                <div class="comparehotel__rooms">
-                  <label>Doble Estandard</label>
-                  <label>Disponible</label>
-                  <label>Solo Habitación</label>
-                  <div>
-                    <label>Total Estancia<span>$837 MXN</span></label>
-                  </div>
-                  <input type="submit" value="Reservar" class="btn-primary comparehotel__button">
-                </div>
-                <div class="comparehotel__rooms">
-                  <hr>
-                  <label>Doble Estandard</label>
-                  <label>Disponible</label>
-                  <label>Solo Habitación</label>
-                  <div>
-                    <label>Total Estancia<span>$837 MXN</span></label>
-                  </div>
-                  <input type="submit" value="Reservar" class="btn-primary comparehotel__button">
-                </div>
-                <div class="comparehotel__rooms">
-                  <label>Doble Estandard</label>
-                  <label>Disponible</label>
-                  <label>Solo Habitación</label>
-                  <div>
-                    <label>Total Estancia<span>$837 MXN</span></label>
-                  </div>
-                  <input type="submit" value="Reservar" class="btn-primary comparehotel__button">
-                </div>
-              </div>
-              <div class="compare__hotel grid-cell">
-                <div class="comparehotel__image"><a href="#" class="comparehotel__link--close">&times;</a><img src="../../images/compare-hotel/1.jpg"></div>
-                <p class="compare__hotel--title">CasaMagna Marriott Cancun Resort</p><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
-                <!--a.compare__hotel--moreinfo(href="#"): <i class="fa fa-book"></i> Mas Info-->
-                <hr>
-                <div class="comparehotel__prices">
-                  <label>Tarifa Neta</label>
-                  <label class="comparehotel__prices--net">$5,241 MXN</label>
-                  <label>Promedio P/Noche</label>
-                  <label class="comparehotel__prices--total">$36,719 MXN</label>
-                  <label>Total Estancia</label>
-                </div>
-                <label class="comparehotel__rooms--title">Habitaciones</label>
-                <div class="comparehotel__rooms">
-                  <label>Doble Estandard</label>
-                  <label>Disponible</label>
-                  <label>Solo Habitación</label>
-                  <div>
-                    <label>Total Estancia<span>$837 MXN</span></label>
-                  </div>
-                  <input type="submit" value="Reservar" class="btn-primary comparehotel__button">
-                </div>
-                <div class="comparehotel__rooms">
-                  <hr>
-                  <label>Doble Estandard</label>
-                  <label>Disponible</label>
-                  <label>Solo Habitación</label>
-                  <div>
-                    <label>Total Estancia<span>$837 MXN</span></label>
-                  </div>
-                  <input type="submit" value="Reservar" class="btn-primary comparehotel__button">
-                </div>
-                <div class="comparehotel__rooms">
-                  <label>Doble Estandard</label>
-                  <label>Disponible</label>
-                  <label>Solo Habitación</label>
-                  <div>
-                    <label>Total Estancia<span>$837 MXN</span></label>
-                  </div>
-                  <input type="submit" value="Reservar" class="btn-primary comparehotel__button">
-                </div>
-              </div>
+              <!--include compare-hotels-column.jade-->
+              <!--include compare-hotels-column.jade-->
             </div>
             <div class="modal-footer">
             </div>
@@ -1534,6 +1464,60 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="seebreakdown__modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>Cancún: <span> Lun, 9/Feb/2015 al Mar, 10/Feb/2015 </span></p>
+              <p>Hotel: <span class="seebreakdown__main-hotel"> Banyan Tree Mayakoba - Demo </span></p><span class="stars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
+              <div class="grid">
+                <div class="column__separate grid-cell">
+                  <p>Habitación</p>
+                  <p class="seebreakdown__hotel">Luxury</p>
+                </div>
+                <div class="column__separate grid-cell">
+                  <p>Lunes</p>
+                  <p><span class="seebreakdown__date">9/02</span><span class="seebreakdown__price">1,068</span></p>
+                  <p><span class="seebreakdown__date">16/02</span><span class="seebreakdown__price">1,068</span></p>
+                </div>
+                <div class="column__separate grid-cell">
+                  <p>Martes</p>
+                  <p><span class="seebreakdown__date">10/02</span><span class="seebreakdown__price">1,068</span></p>
+                  <p><span class="seebreakdown__date">17/02</span><span class="seebreakdown__price">1,068</span></p>
+                </div>
+                <div class="column__separate grid-cell">
+                  <p>Miercoles</p>
+                  <p><span class="seebreakdown__date">11/02</span><span class="seebreakdown__price">1,068</span></p>
+                </div>
+                <div class="column__separate grid-cell">
+                  <p>Jueves</p>
+                  <p><span class="seebreakdown__date">12/02</span><span class="seebreakdown__price">1,068</span></p>
+                </div>
+                <div class="column__separate grid-cell">
+                  <p>Viernes</p>
+                  <p><span class="seebreakdown__date">13/02</span><span class="seebreakdown__price">1,068</span></p>
+                </div>
+                <div class="column__separate grid-cell">
+                  <p>Sábado</p>
+                  <p><span class="seebreakdown__date">14/02</span><span class="seebreakdown__price">1,068</span></p>
+                </div>
+                <div class="column__separate grid-cell">
+                  <p>Domingo</p>
+                  <p><span class="seebreakdown__date">15/02</span><span class="seebreakdown__price">1,068</span></p>
+                </div>
+                <div class="column__separate grid-cell">
+                  <p>Tarifa Total</p>
+                  <p>$10,675 USD</p>
+                </div>
+              </div>
+              <p class="seebreakdown__total">$10,675 USD</p>
             </div>
           </div>
         </div>

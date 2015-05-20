@@ -72,10 +72,10 @@ $CLIP-RULE: 									background-clip;
 
 
 @mixin bg-gradient($ORIGIN: left, $START: $THEME-COLOR, $STOP: $DARK-COLOR) {
-	background:                    -moz-linear-gradient($ORIGIN, $START, $STOP);
-	background:              	-webkit-linear-gradient($ORIGIN, $START, $STOP);
-    background:                      -o-linear-gradient($ORIGIN, $START, $STOP);
-    background:                         linear-gradient($ORIGIN, $START, $STOP);
+	background:                    -moz-linear-gradient($ORIGIN, $START, $STOP 100%);
+	background:              	-webkit-linear-gradient($ORIGIN, $START, $STOP 100%);
+    background:                      -o-linear-gradient($ORIGIN, $START, $STOP 100%);
+    background:                         linear-gradient($ORIGIN, $START, $STOP 100%);
 }
 
 @mixin box-shadow($VALUE) {
@@ -96,4 +96,12 @@ $CLIP-RULE: 									background-clip;
 	#{$W}#{$CLIP-RULE}: 						$CLIP;
 	#{$M}#{$CLIP-RULE}: 						$CLIP;
 	 	 #{$CLIP-RULE}: 						$CLIP;
+}
+
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
 }

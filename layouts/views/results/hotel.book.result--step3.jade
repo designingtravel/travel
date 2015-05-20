@@ -10,7 +10,25 @@ block content
 		//-result items
 		.ss
 				//- steps
-				include ../../partials/modules/step1.jade
+				include ../../partials/modules/step3.jade
+
+				//-confirmation
+				.confirmation__book
+					p Confirmación de Reserva no pagada
+					p Válida únicamente como referencia de pago
+					img(src="../../images/confirmation-yes.svg")
+					p 69-1577693
+					p Clave de reservación para los siguientes servicios
+				.confirmation__options
+					p
+						label Titular:
+						span Yair Rodriguez
+					p
+						label Fecha de reservación:
+						span 19/ene/2015
+					a(href="#"): <i class="fa fa-print"></i> Imprimir cupón
+					a(href="#"): <i class="fa fa-envelope"></i> Enviar cupón
+					a.print-ticket(href="#"): <i class="fa fa-file-text"></i> ¿Quieres facturar?
 				//- booking section
 				.booking-section
 					//- service details
@@ -86,13 +104,13 @@ block content
 						.booking-content
 							div.passengers__room.grid
 								.grid-cell.passengers__room--labels.u-1of4
-									label Habitación (Titular):*
+									label Titular:*
 								.grid-cell.booking-section--inputs
 									label Adulto 1:*
-									input(type="text", placeholder="Nombre")
-									input(type="text", placeholder="Apellido")
+									label Dream
+									label Team
 							//- room 1
-							include ../../partials/globals/booking/room1.jade
+							include ../../partials/globals/booking/room1-labels.jade
 
 							//-room2
 							//-include ../../partials/globals/booking/room2.jade
@@ -113,11 +131,22 @@ block content
 						hr
 						.booking-content
 							div
-								input(type="text", placeholder="Número telefónico")
-								input(type="email", placeholder="Correo electrónico")
-								input(type="email", placeholder="Confirma correo")
+								p
+									label Nombre
+									span Alejandro
+								p
+									label Apellido
+									span Díaz
+								p
+									label Teléfono
+									span 5518823985
 							div
-								textarea.special-request(type="text", placeholder="Peticiones especiales (No garantizadas)")
+								p
+									label Correo Electrónico
+									span adiaz@mig.com.mx
+								p
+									label Peticiones Especiales
+									span Ninguna
 					//- pays ways
 					//.booking-section__pays
 						.booking-header
@@ -125,28 +154,44 @@ block content
 							hr
 						.booking-content
 					//- comments
-					.booking-section__comments
+					.booking-section__markup
 						.booking-header
 							.grid
-								.grid-cell.u-1of33
-									i.fa.fa-thumb-tack
-									h4 Comentarios del Hotel
 								.grid-cell
 									i.fa.fa-list-ul
 									h4 Políticas del Hotel
-						//-hr
+								.grid-cell.u-1of6
+									i.fa.fa-pie-chart
+									h4 Markup
+						hr
 						.booking-content
 							.grid
-								.grid-cell.u-1of33
-									p Orientado a Adultos.
 								.grid-cell
-									p Cualquier cancelación con menos de 8 días a la fecha de entrada al hotel reservado, tiene una penalización de $5,531.23 MXN
-									p.limit-pay-date Fecha Límite de Pago: 24 Enero 2015
-							div.features
+									p Cualquier cancelación con menos de 8 días a la fecha de entrada al hotel reservado, tiene una penalización de $5,531.26 MXN.
+									p.limit-pay-date--theme Fecha Límite de Pago: 24 enero 2015
+								.grid-cell.u-1of6
+									p
+										label Tarifa Neta
+										span 5985.06 MXN
+									p
+										label Tipo de Cambio Personalizado
+										span 0.0769
+									p
+										label Tarifa Neta Convertida
+										span 460.39 USD
+									p
+										label Markup Operadora 20.00%
+										span 115.10 USD
+									p
+										label Markup Agencia 0.00%
+										span 0.00 USD
+									p
+										label Total
+										span 576.00 USD
+							//-div.features
 								include ../../partials/modules/toggle-button.jade
 								span Acepto Políticas, Términos y Condiciones
 								input.btn-primary(type="submit",value="Continuar")
-						hr
 		//-form
 		include ../../partials/globals/results/forms/hotel.jade
 		a.cd-filter-trigger(href="#"): <i class="icon-filter fa fa-sliders"></i> Filtrar

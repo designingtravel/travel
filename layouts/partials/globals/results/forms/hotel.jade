@@ -211,11 +211,12 @@
 			h4 Filtrar por
 				i.fa.fa-filter
 			.cd-filter-content.filter-by
-				.f_row
-					input.input-with-icon(type="text", placeholder="Entrada")
+				.filter-by--search
+					input.input-with-icon(type="text", placeholder="Nombre del Hotel")
 					input.btn.btn-primary(type="submit", value="Filtrar")
-				.f_row.align-to-end
+				.f_row.only-offers
 					include ../../../modules/toggle-button.jade
+					span Solo ofertas
 				h5.off-canvas-subtle Rango de precios
 				.f_row
 					#slider-range
@@ -276,7 +277,60 @@
 							include ../../../modules/toggle-button.jade
 							include ../../../modules/stars/one.jade
 							span.filter-category-hotels 288 hoteles
-				//-falta todo el filterby
+						//-falta todo el filterby
+						h5.off-canvas-subtle Ubicación
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Todos
+							span.filter-category-hotels 550 hoteles
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Airport
+							span.filter-category-hotels 288 hoteles
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Downtown
+							span.filter-category-hotels 288 hoteles
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Islas Mujeres
+							span.filter-category-hotels 288 hoteles
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Hotel Zone/Zone H
+							span.filter-category-hotels 288 hoteles
+						//-food filters
+						h5.off-canvas-subtle Plan de Alimentos
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Todos
+							span.filter-category-hotels 550 hoteles
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Todo incluido
+							span.filter-category-hotels 288 hoteles
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Solo desayuno
+							span.filter-category-hotels 288 hoteles
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Sin alimentos
+							span.filter-category-hotels 288 hoteles
+						//-broker filters
+						h5.off-canvas-subtle Brokers
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Todos
+							span.filter-category-hotels 550 hoteles
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Hotelbeds
+							span.filter-category-hotels 288 hoteles
+						.filter-category-star
+							include ../../../modules/toggle-button.jade
+							span Tourico
+							span.filter-category-hotels 288 hoteles
 		.cd-filter-block
 			h4 Mapa
 				i.fa.fa-map-marker

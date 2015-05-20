@@ -94,7 +94,28 @@ $ITEM-BORDER-BOTTOM:                        rgb(227, 228, 231);
     }
 }
 
+.hotel--header-toggle {
+    @include flexbox();
+    align-items: center;
+    justify-content: flex-end;
 
+    .tgl {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+    a {
+        @include transition(all, .5s, ease);
+        color: #9EA6B9;
+        font-size: 12px;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+}
+
+/*
 .hotel--header-ui {
     position: relative;
 }
@@ -103,6 +124,7 @@ $ITEM-BORDER-BOTTOM:                        rgb(227, 228, 231);
     position: absolute;
     right: 0;
 }
+*/
 
 
 .hotel a {
@@ -120,14 +142,19 @@ $ITEM-BORDER-BOTTOM:                        rgb(227, 228, 231);
 .hotel--content {
     border-right: 1px solid rgb(230, 230, 230);
     padding-left: 10px;
+
+    //flexbox
+    @include flexbox();
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel--list-more-info {
     list-style-type: none;
     padding-left: 0;
     text-align: center;
-    position: absolute;
-    bottom: 0;
+    display: flex;
+    align-items: flex-end;
 }
 
 .hotel--list-more-info li {
@@ -150,7 +177,6 @@ $ITEM-BORDER-BOTTOM:                        rgb(227, 228, 231);
 
 .hotel--content {
     font-size: $THIN-FONT;
-    position: relative;
 }
 
 .hotel--prices {
@@ -266,6 +292,18 @@ $ITEM-BORDER-BOTTOM:                        rgb(227, 228, 231);
         @include no-border();    
         @include round-borders-custom(0, 0, 0, 0);
         //padding: 4px;
+    }
+
+    i.fa {
+        font-size: 20px;
+    }
+
+    .offer-exclamation {
+        i.fa {color: red;}
+    }
+
+    .offer-tag {
+        i.fa {color: #272e3b;}
     }
 }
 
@@ -703,7 +741,7 @@ article {
 .cd-tab-filter-wrapper {
     background-color:                       #ffffff;
     box-shadow:                             0 3px 3px rgba(0, 0, 0, 0.08);
-    z-index:                                1;
+    z-index:                                2;
     background:                             #f6f7f8;
 }
 
@@ -1118,19 +1156,19 @@ a.cd-filter-trigger-auth {
 .cd-filter-trigger-shopping {
     position:                               absolute;
     top:                                    0;
-    right:                                  100px;
+    right:                                  55px;
 }
 
 .cd-filter-trigger-auth {
     position:                               absolute;
     top:                                    0;
-    right:                                  0;
+    right:                                  10px;
 }
 
 .cd-filter-trigger {
     position:                               absolute;
     top:                                    0;
-    left:                                   0;
+    left:                                   10px;
 }
 
 .cd-filter-trigger,
@@ -1205,15 +1243,15 @@ a.cd-filter-trigger-auth {
     }
 
     .cd-filter-trigger {
-        left:                               2%;
+        left:                               10px;
     }
 
     .cd-filter-trigger-auth {
-        right:                              2%;
+        right:                              10px;
     }
 
     .cd-filter-trigger-shopping {
-        right:                              6%;
+        right:                              55px;
     }
 
     .no-touch
@@ -1241,4 +1279,13 @@ a.cd-filter-trigger-auth {
         color:                              #ffffff;
     }
     */
+}
+
+.offer {
+    background: #fdfb80;
+    border: 5px solid #ffff00;
+
+    .hotel--prices div {
+        background: #fdfb80;
+    }
 }

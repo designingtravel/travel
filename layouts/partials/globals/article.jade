@@ -1,8 +1,12 @@
 .grid.hotel--header
-	.grid-cell
-		h4 CasaMagna Marriot Cancun Resort
-	.grid-cell.u-1of3
-		.hotel--header-ui
+	.grid-cell.grid
+		h4.grid-cell CasaMagna Marriot Cancun Resort
+		div.hotel--header-toggle.grid-cell
+			include ../../partials/modules/toggle-button.jade
+			a(href="#", data-toggle="modal", data-target="#compare__hotel") Comparar
+	.grid-cell.u-1of3(style="text-align:right;")
+		include ../../partials/modules/stars.jade
+		//-.hotel--header-ui
 			include ../../partials/modules/toggle-button.jade
 			include ../../partials/modules/stars.jade
 article.grid.grid--gutters.grid-flexCells.u-textCenter.hotel
@@ -17,8 +21,8 @@ article.grid.grid--gutters.grid-flexCells.u-textCenter.hotel
 			p Basado en 2241 opiniones de viajeros
 		ul.hotel--list-more-info
 			li: a(href="#", data-toggle="modal", data-target="#moreinfo__modal"): <i class="fa fa-book"></i> Más info
-			li: a(href="#moreinfo-map", data-toggle="modal", data-target="#moreinfo__modal"): <i class="fa fa-map-marker"></i> Mapa
-			li: a(href="#moreinfo-photos", data-toggle="modal", data-target="#moreinfo__modal"): <i class="fa fa-picture-o"></i> Fotos
+			//-li: a(href="#moreinfo-map", data-toggle="modal", data-target="#moreinfo__modal"): <i class="fa fa-map-marker"></i> Mapa
+			//-li: a(href="#moreinfo-photos", data-toggle="modal", data-target="#moreinfo__modal"): <i class="fa fa-picture-o"></i> Fotos
 			li: a#js-type-of-rooms(href="#"): <i class="fa fa-bed"></i> Tipos de Habitación
 	.grid-cell.u-1of3.order1.hotel--prices
 		p Tarifa Neta
@@ -27,7 +31,7 @@ article.grid.grid--gutters.grid-flexCells.u-textCenter.hotel
 			p Promedio P/Noche
 		p $50,487 MXN
 		p Total de Estancia
-		p: a(href="#") Ver desglose
+		p: a(href="#", data-toggle="modal", data-target="#seebreakdown__modal", style="color:black;") Ver desglose
 		p: input.btn-primary(type="submit", value="Reservar")
 //- rooms table
 .grid.grid--gutters.grid-flexCells.hotel__rooms
@@ -40,39 +44,33 @@ article.grid.grid--gutters.grid-flexCells.u-textCenter.hotel
 		//- content
 		p
 			span Sanctuary / Desayuno buffet / Disponible
-			span: a: i.fa.fa-list-ul
+			span.offer-tag: a: i.fa.fa-tags
 			span $1,046 USD
-			span: a: i.fa.fa-info
+			span.offer-exclamation: a: i.fa.fa-exclamation-triangle
 			input.btn-primary(type="submit", value="Reservar")
 		p
 			span Sanctuary / Desayuno buffet / Disponible
-			span: a: i.fa.fa-list-ul
+			span.offer-tag: a: i.fa.fa-tags
 			span $1,046 USD
-			span: a: i.fa.fa-info
+			span.offer-exclamation: a: i.fa.fa-exclamation-triangle
 			input.btn-primary(type="submit", value="Reservar")
 		p
 			span Sanctuary / Desayuno buffet / Disponible
-			span: a: i.fa.fa-list-ul
+			span.offer-tag: a: i.fa.fa-tags
 			span $1,046 USD
-			span: a: i.fa.fa-info
+			span.offer-exclamation: a: i.fa.fa-exclamation-triangle
 			input.btn-primary(type="submit", value="Reservar")
 		p
 			span Sanctuary / Desayuno buffet / Disponible
-			span: a: i.fa.fa-list-ul
+			span.offer-tag: a: i.fa.fa-tags
 			span $1,046 USD
-			span: a: i.fa.fa-info
+			span.offer-exclamation: a: i.fa.fa-exclamation-triangle
 			input.btn-primary(type="submit", value="Reservar")
 		p
 			span Sanctuary / Desayuno buffet / Disponible
-			span: a: i.fa.fa-list-ul
+			span.offer-tag: a: i.fa.fa-tags
 			span $1,046 USD
-			span: a: i.fa.fa-info
-			input.btn-primary(type="submit", value="Reservar")
-		p
-			span Sanctuary / Desayuno buffet / Disponible
-			span: a: i.fa.fa-list-ul
-			span $1,046 USD
-			span: a: i.fa.fa-info
+			span.offer-exclamation: a: i.fa.fa-exclamation-triangle
 			input.btn-primary(type="submit", value="Reservar")
 hr
 

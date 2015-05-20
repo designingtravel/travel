@@ -1,0 +1,59 @@
+//-a(href="#", data-toggle="modal", data-target="#seebreakdown__modal", style="color:black;") Ver...
+#seebreakdown__modal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+	.modal-dialog
+		.modal-content
+			.modal-header
+				button(type="button", class="close", data-dismiss="modal", aria-label="Close"): span(aria-hidden="true") &times;
+			.modal-body
+				p Cancún: <span> Lun, 9/Feb/2015 al Mar, 10/Feb/2015 </span>
+				p Hotel: <span class="seebreakdown__main-hotel"> Banyan Tree Mayakoba - Demo </span>
+				include stars.jade
+				.grid
+					.column__separate.grid-cell
+						p Habitación
+						p.seebreakdown__hotel Luxury
+					.column__separate.grid-cell
+						p Lunes
+						p
+							span.seebreakdown__date 9/02
+							span.seebreakdown__price 1,068
+						p
+							span.seebreakdown__date 16/02
+							span.seebreakdown__price 1,068
+					.column__separate.grid-cell
+						p Martes
+						p
+							span.seebreakdown__date 10/02
+							span.seebreakdown__price 1,068
+						p
+							span.seebreakdown__date 17/02
+							span.seebreakdown__price 1,068
+					.column__separate.grid-cell
+						p Miercoles
+						p
+							span.seebreakdown__date 11/02
+							span.seebreakdown__price 1,068
+					.column__separate.grid-cell
+						p Jueves
+						p
+							span.seebreakdown__date 12/02
+							span.seebreakdown__price 1,068
+					.column__separate.grid-cell
+						p Viernes
+						p
+							span.seebreakdown__date 13/02
+							span.seebreakdown__price 1,068
+					.column__separate.grid-cell
+						p Sábado
+						p
+							span.seebreakdown__date 14/02
+							span.seebreakdown__price 1,068
+					.column__separate.grid-cell
+						p Domingo
+						p
+							span.seebreakdown__date 15/02
+							span.seebreakdown__price 1,068
+					.column__separate.grid-cell
+						p Tarifa Total
+						p $10,675 USD
+				p.seebreakdown__total $10,675 USD

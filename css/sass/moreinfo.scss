@@ -36,7 +36,20 @@ $color__link--hover: rgb(67, 76, 87);
 
 		// rewrite some styles
 	> .modal-dialog {
-		width 								: 65%;
+		width 								: 98%;
+
+		@media only screen and (min-width: 450px) {
+			width 							: 85%;
+		}
+
+		@media only screen and (min-width: 850px) {
+			width 							: 88%;
+		}
+
+		@media only screen and (min-width: 1000px) {
+			width 							: 65%;
+		}
+
 		margin-top 							: 6%;
 		//background: rgba(255, 0, 0, .95);
 		background 							: white;
@@ -61,9 +74,17 @@ $color__link--hover: rgb(67, 76, 87);
 .moreinfo__tabs {
 	//width: 26%;
 	//background: red;
-	border-right 							: 1px solid $color__tab;
+	border-bottom 							: 1px solid $color__tab;
 	text-align 								: center;
 	padding 								: 28px;
+	width: 100%;
+
+	
+	@media only screen and (min-width: 700px) {
+		width 								: 30%;
+		border-right 						: 1px solid $color__tab;
+	}
+	
 
 	input[type="submit"] {
 		font-size 							: 20px;
@@ -75,9 +96,20 @@ $color__link--hover: rgb(67, 76, 87);
 	}
 
 	.nav-tabs > li {
-		float 								: none;
-		margin 								: 0;
+		//float 								: none;
+		//margin 								: 0 8px;
+		//display 							: block;
+		//float 								: none;
+		margin 								: 0 5px;
 		display 							: block;
+
+		
+		@media only screen and (min-width: 700px) {
+			float 							: none;
+			margin 							: 0;
+			display 						: block;
+		}
+		
 
 		a {
 			//reset
@@ -110,8 +142,12 @@ $color__link--hover: rgb(67, 76, 87);
 	}
 
 	ul.nav {
-		margin 								: 60px 0;
+		margin 								: 10px 0;
 		border 								: 0;
+
+		@media only screen and (min-width: 700px) {
+			margin 							: 60px 0;
+		}
 	}
 
 	li {
@@ -275,7 +311,11 @@ $color__link--hover: rgb(67, 76, 87);
 		border-bottom: 1px solid;
 		font-size: 15px;
 		margin: 6px 0;
-		width: 60%;
+		width: 95%;
+
+		@media only screen and (min-width: 850px) {
+			width: 60%;
+		}
 
 		::-webkit-input-placeholder {
 		   color: $color__form;
@@ -309,4 +349,8 @@ $color__link--hover: rgb(67, 76, 87);
 		margin: 4px;
 		padding: 0;
 	}
+}
+
+.slides--big-image img {
+	width: 100%;
 }

@@ -28,6 +28,22 @@
         </div>
       </div>
       <div class="ss">
+        <div class="steps">
+          <div class="step1">
+            <div class="step__square selected">1</div>
+            <p>Ingresa tus datos</p>
+            <div class="line--gradient"></div>
+          </div>
+          <div class="step2">
+            <div class="step__square">2</div>
+            <p>Método de pago</p>
+            <div class="line--default"></div>
+          </div>
+          <div class="step3">
+            <div class="step__square">3</div>
+            <p>Ticket de Reserva</p>
+          </div>
+        </div>
         <div class="booking-section">
           <div class="booking-section__service">
             <div class="booking-header"><i class="fa fa-qrcode"></i>
@@ -105,19 +121,9 @@
             <div class="booking-content">
               <div class="passengers__room grid">
                 <div class="grid-cell passengers__room--labels u-1of4">
-                  <label>Información del Titular:*</label>
+                  <label>Habitación (Titular):*</label>
                 </div>
-                <div class="grid-cell inputs--end">
-                  <label class="no-visible">Adulto 1:*</label>
-                  <input type="text" placeholder="Nombre">
-                  <input type="text" placeholder="Apellido">
-                </div>
-              </div>
-              <div class="passengers__room grid">
-                <div class="grid-cell passengers__room--labels u-1of4">
-                  <label>Habitación 1:*</label>
-                </div>
-                <div class="grid-cell passengers__room--inputs">
+                <div class="grid-cell booking-section--inputs">
                   <label>Adulto 1:*</label>
                   <input type="text" placeholder="Nombre">
                   <input type="text" placeholder="Apellido">
@@ -127,7 +133,7 @@
                 <div class="grid-cell passengers__room--labels u-1of4">
                   <label class="no-visible">Habitación 1:*</label>
                 </div>
-                <div class="grid-cell passengers__room--inputs">
+                <div class="grid-cell booking-section--inputs">
                   <label>Adulto 2:*</label>
                   <input type="text" placeholder="Nombre">
                   <input type="text" placeholder="Apellido">
@@ -137,7 +143,7 @@
                 <div class="grid-cell passengers__room--labels u-1of4">
                   <label class="no-visible">Habitación 1:*</label>
                 </div>
-                <div class="grid-cell passengers__room--inputs">
+                <div class="grid-cell booking-section--inputs">
                   <label>Adulto 3:*</label>
                   <input type="text" placeholder="Nombre">
                   <input type="text" placeholder="Apellido">
@@ -147,7 +153,7 @@
                 <div class="grid-cell passengers__room--labels u-1of4">
                   <label class="no-visible">Habitación 1:*</label>
                 </div>
-                <div class="grid-cell passengers__room--inputs">
+                <div class="grid-cell booking-section--inputs">
                   <label>Adulto 4:*</label>
                   <input type="text" placeholder="Nombre">
                   <input type="text" placeholder="Apellido">
@@ -157,7 +163,7 @@
                 <div class="grid-cell passengers__room--labels u-1of4">
                   <label class="no-visible">Habitación 1:*</label>
                 </div>
-                <div class="grid-cell passengers__room--inputs">
+                <div class="grid-cell booking-section--inputs">
                   <label>Niño 1:*</label>
                   <input type="text" placeholder="Nombre">
                   <input type="text" placeholder="Apellido">
@@ -167,7 +173,7 @@
                 <div class="grid-cell passengers__room--labels u-1of4">
                   <label class="no-visible">Habitación 1:*</label>
                 </div>
-                <div class="grid-cell passengers__room--inputs">
+                <div class="grid-cell booking-section--inputs">
                   <label>Niño 2:*</label>
                   <input type="text" placeholder="Nombre">
                   <input type="text" placeholder="Apellido">
@@ -177,16 +183,12 @@
                 <div class="grid-cell passengers__room--labels u-1of4">
                   <label class="no-visible">Habitación 1:*</label>
                 </div>
-                <div class="grid-cell passengers__room--inputs">
+                <div class="grid-cell booking-section--inputs">
                   <label>Niño 3:*</label>
                   <input type="text" placeholder="Nombre">
                   <input type="text" placeholder="Apellido">
                 </div>
               </div>
-              <!--include ../../partials/globals/booking/room2.jade-->
-              <!--include ../../partials/globals/booking/room3.jade-->
-              <!--include ../../partials/globals/booking/room4.jade-->
-              <!--include ../../partials/globals/booking/room5.jade-->
             </div>
           </div>
           <div class="booking-section__info">
@@ -222,7 +224,6 @@
                 </div>
               </div>
             </div>
-            <hr>
             <div class="booking-content">
               <div class="grid">
                 <div class="grid-cell u-1of33">
@@ -230,7 +231,7 @@
                 </div>
                 <div class="grid-cell">
                   <p>Cualquier cancelación con menos de 8 días a la fecha de entrada al hotel reservado, tiene una penalización de $5,531.23 MXN</p>
-                  <p>Fecha Límite de Pago: 24 Enero 2015</p>
+                  <p class="limit-pay-date">Fecha Límite de Pago: 24 Enero 2015</p>
                 </div>
               </div>
               <div class="features">
@@ -240,6 +241,7 @@
                 <input type="submit" value="Continuar" class="btn-primary">
               </div>
             </div>
+            <hr>
           </div>
         </div>
       </div>
@@ -495,14 +497,14 @@
           <div class="cd-filter-block">
             <h4>Filtrar por<i class="fa fa-filter"></i></h4>
             <div class="cd-filter-content filter-by">
-              <div class="f_row">
-                <input type="text" placeholder="Entrada" class="input-with-icon">
+              <div class="filter-by--search">
+                <input type="text" placeholder="Nombre del Hotel" class="input-with-icon">
                 <input type="submit" value="Filtrar" class="btn btn-primary">
               </div>
-              <div class="f_row align-to-end">
+              <div class="f_row only-offers">
                 <label class="tgl">
                   <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
-                </label>
+                </label><span>Solo ofertas</span>
               </div>
               <h5 class="off-canvas-subtle">Rango de precios</h5>
               <div class="f_row">
@@ -577,6 +579,69 @@
                     <label class="tgl">
                       <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
                     </label><span class="stars"><i class="fa fa-star"></i></span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <h5 class="off-canvas-subtle">Ubicación</h5>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Todos</span><span class="filter-category-hotels">550 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Airport</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Downtown</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Islas Mujeres</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Hotel Zone/Zone H</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <h5 class="off-canvas-subtle">Plan de Alimentos</h5>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Todos</span><span class="filter-category-hotels">550 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Todo incluido</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Solo desayuno</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Sin alimentos</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <h5 class="off-canvas-subtle">Brokers</h5>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Todos</span><span class="filter-category-hotels">550 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Hotelbeds</span><span class="filter-category-hotels">288 hoteles</span>
+                  </div>
+                  <div class="filter-category-star">
+                    <label class="tgl">
+                      <input type="checkbox"><span class="tgl_body"><span class="tgl_switch"></span><span class="tgl_track"><span class="tgl_bgd"></span><span class="tgl_bgd tgl_bgd-negative"></span></span></span>
+                    </label><span>Tourico</span><span class="filter-category-hotels">288 hoteles</span>
                   </div>
                 </div>
               </div>

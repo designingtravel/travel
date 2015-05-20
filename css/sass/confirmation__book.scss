@@ -1,0 +1,100 @@
+.confirmation__book {
+	width: 90%;
+	//background: rgba(255, 0, 0, .7);
+	background: url("../images/ticketpaper.png");
+	margin: 45px auto 25px;
+	padding: 25px 0;
+	font-size: 20px;
+	line-height: 24px;
+	color: #1E2127;
+	text-align: center;
+	border-bottom: 1px solid #E5E5E5;
+
+	// no margin to p
+	p {
+		margin: 5px 0;
+	}
+
+	//the next paragh
+	p + p {
+		color: #9A9FAA;
+		font-size: 14px;
+	}
+
+
+	@media only screen and (min-width: 800px) {
+		width: 685px;
+	}
+}
+
+.confirmation__options {
+	$color--confirmation__options: #9A9FAA;
+	width: 100%;
+	margin: 0 auto;
+	//background: lighten(red, 15%);
+	@include flexbox();
+	justify-content: space-between;
+	color: $color--confirmation__options;
+	line-height: 26px;
+
+	@media only screen and (min-width: 1170px) {
+		width: 80%;
+		padding: 0 5%;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	
+	label {
+		margin-right: 8px;
+	}
+	
+
+	span {
+		color: #7F7F7F;
+	}
+
+
+	i.fa {
+		font-size: 26px;
+	}
+
+	a {
+		text-decoration: none;
+		color: $color--confirmation__options;
+		//line-height: 26px;
+
+		&:hover {
+			color: black;
+
+			i.fa {
+				color:black;
+			}
+		}
+
+		@include transition(color, .3s, ease);
+	}
+}
+
+&.print-ticket {
+	//background: $DARK-COLOR;
+	@include bg-gradient(to right, $DARK-COLOR, $THEME-COLOR);
+	@include transition(all, .3s, ease-in-out);
+	color: white !important;
+	padding: 0 20px;
+	@include round-all-borders(10px);
+
+	i.fa {
+		font-size: 13px;
+	}
+
+	&:hover {
+		background: $DARK-COLOR;
+	
+		i.fa {
+			color: white !important;
+		}
+	}
+}

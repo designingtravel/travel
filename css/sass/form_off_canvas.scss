@@ -35,6 +35,14 @@
 	}
 
 	.filter-by {
+		.filter-by--search {
+			text-align: right;
+
+			input[type="submit"] {
+				margin: 5px 0;
+			}
+		}
+
 		input[type="submit"] {
 			margin-left: 5px;
 			margin-top: 0;
@@ -358,5 +366,15 @@
 	.filter-category-hotels {
 		position: absolute;
 		right: 0;
+	}
+}
+
+.only-offers {
+	label.tgl {
+		margin-right: 6px;
+	}
+
+	span {
+		color: #929292;
 	}
 }

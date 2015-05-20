@@ -65,6 +65,7 @@ $compare__modal--text: #7F7F7F;
 .compare__hotel {
 	margin 						: 0 2px;
 	background 					: white;
+	//width: 170px;
 
  	input[type="submit"] {
  		@include round-borders-custom(0, 0, 0, 0);
@@ -73,6 +74,7 @@ $compare__modal--text: #7F7F7F;
  	img {
  		border-top-left-radius 	: 6px;
  		border-top-right-radius : 6px;
+ 		width: 100%;
  	}
 }
 
