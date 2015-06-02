@@ -20,7 +20,8 @@
 @import "autocomplete.scss";
 @import "slider.scss";
 
-@import "grid.scss";
+//@import "grid.scss";
+@import "grid__safari.scss";
 @import "utils.scss";
 
 @import "layout.scss";
@@ -35,6 +36,7 @@
 @import "moreinfo.scss";
 @import "modals-polytics";
 @import "_seebreakdown";
+@import "paginator";
 
 @import "steps-square";
 @import "confirmation__book";

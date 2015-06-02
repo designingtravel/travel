@@ -44,7 +44,7 @@ $ITEM-BORDER-BOTTOM:                        rgb(227, 228, 231);
 }
 
 .order-by-select {
-    color:                              $TEXT-COLOR;
+    color:                              #a7a7a7;
     display:                            inline-block;
     width:                              180px;
     @include bg-gradient                (left, $THEME-COLOR, $DARK-COLOR);
@@ -706,7 +706,7 @@ article {
     height:                                 100vh;
     overflow:                               hidden;
 }
-.cd-main-content.is-fixed .cd-filter form {
+.cd-main-content.is-fixed .cd-filter .ff_box {
     height:                                 100vh;
     overflow:                               auto;
     -webkit-overflow-scrolling:             touch;

@@ -1,0 +1,27 @@
+ul.paginator {
+	list-style-type: none;
+	position: fixed;
+	//top: 10px;
+	//top: 100px;
+	right: 15px;
+
+
+	a {
+		color: #7F7F7F;
+		padding: 2px 6px;
+		text-decoration: none;
+		@include transition(all, .4s, ease);
+
+		&:hover {
+			background: $DARK-COLOR;
+			color: white;
+			text-decoration: none;
+		}
+	}
+
+	
+	.current-page {
+		font-weight: bold;
+		color: $DARK-COLOR;
+	}
+}

@@ -1,0 +1,4400 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:100,200,300,400,700");
+/*
+ * Just to clear, all mixins are writen in CAPS,
+ * and prefixed with M from Mixin to keep the Style Guide.
+ */
+/* #Basic Setup
+================================================== */
+/* #Mixins
+================================================== */
+/*
+ * Just to clear, I wrote all CONSTANT VARS in caps,
+ * like if we are doing web development with CSS.
+ * This is just to maintain good practices and have
+ * general standards.
+ */
+/* #Theme Colors
+================================================== */
+/*
+$RED: 							#ED1C49;
+$GREEN:							#00A99D;
+$BLUE:							#2F79F1;
+$YELLOW :						#FBCE3B;
+$GOLD: 							#C69C6D;
+$SILVER: 						#BEBEBE;
+$GAY:							#050121;
+
+*/
+/*
+$COLORS: 		"RED" #ED1C49, "GREEN" #00A99D, "BLUE" #2F79F1, "YELLOW" #FBCE3B, "GOLD" #C69C6D, "SILVER" #BEBEBE, "GAY" #050121;
+$DARK-COLORS: 	"RED" #F15A52, "GREEN" #22B573, "BLUE" #2FA8F1, "YELLOW" #D9E021, "GOLD" #C7B299, "SILVER" #E6E6E6, "GAY" #E6E6E6;
+*/
+/* THEME COLORS */
+/* #Select here the Theme Color, JUST HERE!!!
+================================================== */
+/* #Basic Configuration
+================================================== */
+/* #Breakpoint
+================================================== */
+/*
+@SMARTPHONE: 		"@media only screen and (min-device-width: 320px) and (max-device-width: 480px)";
+@SMARTPHONE-L: 		"@media only screen and (min-width: 321px)";
+@SMARTPHONE-P: 		"@media only screen and (max-width: 320px)";
+
+@TABLET: 			"@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)";
+@TABLET-L: 			"@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)";
+@TABLET-P: 			"@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)";
+
+@DESKTOP: 			"@media only screen and (min-width: 1224px)";
+@LARGE-SCREEN: 		"@media only screen and (min-width: 1824px)";
+@IPHONE-4: 			"@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-width-pixel-ratio: 1.5)";
+*/
+/* #CONSTANT VARS
+================================================== */
+/* #CONSTANT UTILITIES
+================================================== */
+/*  */
+/* line 156, C:/Users/yquido/Desktop/travelnet/css/sass/basic.scss */
+.container {
+  width: 95%; }
+
+/* line 160, C:/Users/yquido/Desktop/travelnet/css/sass/basic.scss */
+.container-control {
+  width: 80%;
+  margin: 0 auto; }
+
+/* line 165, C:/Users/yquido/Desktop/travelnet/css/sass/basic.scss */
+.container-results {
+  width: 100%;
+  margin: 0 auto; }
+  @media only screen and (min-width: 950px) {
+    .container-results {
+      width: 90%; } }
+
+/* line 174, C:/Users/yquido/Desktop/travelnet/css/sass/basic.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Arial, sans-serif; }
+
+/* line 183, C:/Users/yquido/Desktop/travelnet/css/sass/basic.scss */
+a {
+  color: white;
+  text-decoration: none;
+  transition: border-bottom 1.5s ease;
+  -webkit-transition: border-bottom 1.5s ease;
+  -moz-transition: border-bottom 1.5s ease;
+  -ms-transition: border-bottom 1.5s ease;
+  -o-transition: border-bottom 1.5s ease;
+  outline: none;
+  border: none; }
+
+/*
+ * I hold all colors in vars to keep organize the
+ * theme-color and have the posibility to just
+ * change in one single place the general color.
+ */
+/* #Basic Setup
+================================================== */
+/* #Header
+================================================== */
+/* line 23, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+.padding-header {
+  padding: 15px 0; }
+
+/* line 27, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+.navbar {
+  background: rgba(39, 46, 59, 0.9);
+  margin-bottom: 10px;
+  border: none;
+  outline: none; }
+
+/* line 34, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+.navbar-brand {
+  padding-top: 0;
+  padding-left: 15px; }
+  /* line 38, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+  .navbar-brand img {
+    width: 82px; }
+
+/* line 43, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+.navbar-default .navbar-toggle .icon-bar {
+  background: white; }
+
+/* line 47, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+.navbar .navbar-nav {
+  float: none;
+  display: inline-block;
+  vertical-align: top; }
+
+/* line 53, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+.navbar .navbar-collapse {
+  text-align: center; }
+
+/* #Menu
+================================================== */
+/* line 59, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-size: 500;
+  opacity: 0.7;
+  text-transform: capitalize;
+  padding-left: 55px;
+  padding-right: 55px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out; }
+  /* line 67, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+  .navbar-default .navbar-nav > li > a.active {
+    opacity: 1; }
+  /* line 71, C:/Users/yquido/Desktop/travelnet/css/sass/header.scss */
+  .navbar-default .navbar-nav > li > a:hover {
+    color: white;
+    opacity: 1;
+    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in; }
+
+/*
+ * I hold all colors in vars to keep organize the
+ * theme-color and have the posibility to just
+ * change in one single place the general color.
+ */
+/* #Basic Setup
+================================================== */
+/* #Search Form
+================================================== */
+/* line 24, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+input[type="submit"] {
+  width: 100%; }
+
+/* line 30, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+input[type="text"], input[type="date"], select {
+  font-size: 12px;
+  opacity: 0.7;
+  outline: none;
+  border-style: none;
+  cursor: default;
+  height: 29px !important;
+  box-sizing: border-box;
+  padding: 0 5px;
+  width: 100%;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out; }
+  /* line 42, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  input[type="text"]:hover, input[type="text"]:focus, input[type="date"]:hover, input[type="date"]:focus, select:hover, select:focus {
+    opacity: 0.9;
+    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in; }
+
+/* #Form
+================================================== */
+/* line 56, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.form {
+  margin-top: 150px;
+  padding: 1% 2% 0 5%;
+  background: rgba(39, 46, 59, 0.8);
+  width: 498px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  position: absolute;
+  left: 0; }
+  /* line 68, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .form label, .form p, .form span {
+    color: white;
+    font-weight: 400;
+    display: block; }
+  /* line 75, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .form .row {
+    margin-top: 10px; }
+  /* line 79, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .form .row.no-margin-top {
+    margin-top: 0; }
+  /* line 83, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .form i.fa {
+    color: white;
+    font-size: 22px; }
+
+/* line 90, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.input:focus, .input:hover {
+  opacity: 0.9;
+  outline: 0;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in; }
+
+/*
+i.fa {
+    color:                              $GENERAL-COLOR;
+    font-size:                          22px;
+}
+*/
+/* line 103, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+i.fa.fa-calendar:last-child {
+  padding: 0 1%; }
+
+/* line 107, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+i {
+  margin: 0 4px; }
+
+/* line 112, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.btn {
+  margin: 20px 0; }
+
+/* line 117, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.btn-primary {
+  border: none;
+  font-size: 500;
+  font: 700;
+  color: white;
+  background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: linear-gradient(left, #f15a52, #ed1c49 100%);
+  text-transform: uppercase;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px; }
+  /* line 128, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .btn-primary:hover {
+    background: #ed1c49;
+    color: white;
+    opacity: none; }
+
+/* line 140, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+table {
+  width: 100%; }
+
+/* line 144, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+td:last-child {
+  padding-right: 0; }
+
+/* line 148, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.more-options {
+  font-weight: 400;
+  background: #272e3b;
+  position: absolute;
+  right: 3%;
+  padding: 0 15px; }
+  /* line 155, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .more-options a {
+    opacity: 0.7;
+    color: white; }
+    /* line 159, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+    .more-options a:hover {
+      opacity: 1; }
+
+/* line 165, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.brokers-relative {
+  position: relative;
+  width: 100%; }
+
+/* line 170, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.brokers {
+  z-index: 1;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px 15px;
+  background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: linear-gradient(left, #f15a52, #ed1c49 100%); }
+  /* line 183, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .brokers select {
+    opacity: 0.7;
+    font-size: 500;
+    font-weight: 400;
+    opacity: 0.8;
+    clear: none;
+    border-style: none;
+    color: black;
+    width: 50%;
+    margin-left: 0;
+    border-width: 0;
+    text-indent: 6px;
+    height: 29px;
+    padding: 0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px; }
+  /* line 203, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .brokers p {
+    margin-bottom: 0;
+    margin-left: 20px;
+    color: white; }
+    /* line 209, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+    .brokers p input[type="checkbox"] {
+      margin-right: 20px;
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      vertical-align: middle;
+      margin-top: -2px;
+      background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+      background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+      background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+      background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+      background: linear-gradient(left, #f15a52, #ed1c49 100%); }
+    /* line 223, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+    .brokers p:first-child {
+      margin-bottom: 15px; }
+
+/* #Title for every home
+================================================== */
+/* line 231, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.title {
+  color: white;
+  font-weight: 300;
+  text-transform: lowercase;
+  font-size: 60px;
+  margin-top: 100px;
+  position: fixed;
+  right: 3%; }
+
+/* #Pop Up that confirm search in Traslados Home
+================================================== */
+/* line 244, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+#complement .modal-header {
+  border-bottom: none; }
+/* line 248, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+#complement .modal-dialog {
+  width: 560px; }
+/* line 252, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+#complement label {
+  font-size: 500; }
+/* line 256, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+#complement .modal-body {
+  margin-bottom: 20px; }
+
+/* line 261, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.complement {
+  background: none;
+  border: none;
+  color: #ed1c49;
+  font-size: 500;
+  text-transform: uppercase; }
+  /* line 268, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .complement:hover {
+    color: white; }
+
+/* line 273, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+i.fa.fa-arrow-right {
+  color: #ed1c49; }
+
+/* #Panel Control
+================================================== */
+/* line 280, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.control {
+  margin-top: 120px; }
+
+/* line 286, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.control-info h3, .control-info div {
+  color: white;
+  display: inline-block;
+  position: relative; }
+/* line 292, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.control-info a {
+  text-decoration: none;
+  font-size: 200;
+  color: white;
+  text-transform: capitalize; }
+  /* line 298, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .control-info a:hover {
+    text-decoration: none; }
+/* line 304, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.control-info #show-general-data {
+  position: relative; }
+
+/* line 311, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.panel-nav .no-border-left {
+  border-left: none; }
+/* line 315, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.panel-nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  position: relative; }
+  /* line 322, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+  .panel-nav ul li {
+    float: left;
+    text-align: center;
+    width: 130px;
+    margin-right: 8px; }
+    /* line 329, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+    .panel-nav ul li img {
+      width: 130px; }
+    /* line 333, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+    .panel-nav ul li a {
+      width: 130px;
+      color: white;
+      transition: all 0.5s ease-in;
+      -webkit-transition: all 0.5s ease-in;
+      -moz-transition: all 0.5s ease-in;
+      -ms-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in; }
+      /* line 338, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+      .panel-nav ul li a:hover {
+        color: #ed1c49;
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out; }
+
+/* #Tooltip
+================================================== */
+/* line 351, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.wrapper {
+  position: relative;
+  /*
+   * Utilities
+   *      
+   *  text-transform:                   uppercase;
+   *  color:                            #555;
+   *  background:                       #ececec;
+   *  cursor:                           help;
+   *  font-family:                      "Gill Sans", Impact, sans-serif;
+   *  font-size:                        20px;
+   *  margin:                           100px 75px 10px 75px;
+   *  padding:                          15px 20px;
+   *  text-align:                       center;
+   *  width:                            200px;
+   *  -webkit-transform:                translateZ(0);
+   *  -webkit-font-smoothing:           antialiased;
+   */ }
+
+/* line 372, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.wrapper .tooltip {
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Arial, sans-serif;
+  font-size: 500;
+  pointer-events: none;
+  color: white;
+  top: 25px;
+  display: block;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  position: absolute;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+  transition: all 0.25s ease-out 1s linear;
+  -webkit-transition: all 0.25s ease-out 1s linear;
+  -moz-transition: all 0.25s ease-out 1s linear;
+  -ms-transition: all 0.25s ease-out 1s linear;
+  -o-transition: all 0.25s ease-out 1s linear;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: linear-gradient(left, #f15a52, #ed1c49 100%); }
+
+/* line 394, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.general-data, .sell-polytics {
+  width: 300px; }
+
+/* line 399, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%; }
+
+/* line 410, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.wrapper .tooltip:after {
+  border-left: solid transparent 15px;
+  border-right: solid transparent 15px;
+  border-bottom: solid #f15a52 15px;
+  top: -12px;
+  content: " ";
+  height: 0;
+  left: 10px;
+  position: absolute;
+  width: 0; }
+
+/* line 425, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px); }
+
+/* IE can just show/hide with no transition */
+/* line 436, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.lte8 .wrapper .tooltip {
+  display: none; }
+
+/* line 440, C:/Users/yquido/Desktop/travelnet/css/sass/content.scss */
+.lte8 .wrapper:hover .tooltip {
+  display: block; }
+
+/* line 1, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.footer-home {
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 10px;
+  width: 50%;
+  color: white;
+  /*p {
+        margin-bottom: 0;
+    }*/ }
+  /* line 10, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+  .footer-home .copyright-nav {
+    margin-bottom: 20px; }
+    /* line 13, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+    .footer-home .copyright-nav p {
+      margin-bottom: 0; }
+  /* line 18, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+  .footer-home .secondary-nav {
+    text-align: right;
+    margin-bottom: 15px; }
+    /* line 22, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+    .footer-home .secondary-nav i.fa {
+      font-size: 16px; }
+  /* line 27, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+  .footer-home .buttons-home {
+    font-size: 14px; }
+  /* line 31, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+  .footer-home .user-home {
+    font-weight: bold; }
+  /* line 39, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+  .footer-home a {
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 10px;
+    opacity: 0.7;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    /*
+        -webkit-transition:     all 0.5s ease-in-out;
+        -moz-transition:        all 0.5s ease-in-out;
+        -o-transition:          all 0.5s ease-in-out;
+        transition:             all 0.5s ease-in-out;
+        */ }
+    /* line 56, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+    .footer-home a:hover {
+      opacity: 1;
+      transition: all 0.5s ease-in;
+      -webkit-transition: all 0.5s ease-in;
+      -moz-transition: all 0.5s ease-in;
+      -ms-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      /*
+            -webkit-transition:     all 0.5s;
+            -moz-transition:        all 0.5s;
+            -o-transition:          all 0.5s;
+            transition:             all 0.5s;
+            */ }
+
+/* line 69, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.uppercase {
+  text-transform: uppercase; }
+
+/* line 74, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.footer-results {
+  background: url("../images/back4.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  box-shadow: inset 0 105px 40px rgba(237, 28, 73, 0.3); }
+
+/* line 82, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.footer-results {
+  color: white;
+  font-size: 12px; }
+
+/* line 87, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.footer-results div span {
+  margin-bottom: 20px;
+  font-size: 16px; }
+
+/* line 92, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.footer-results i {
+  font-size: 23px;
+  padding: 10px; }
+
+/* line 97, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.footer-results p {
+  margin-bottom: 0; }
+
+/* line 104, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.footer-results span:after {
+  content: " | "; }
+/* line 109, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.footer-results span:last-child:after {
+  content: ""; }
+/* line 113, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+.footer-results span a {
+  font-size: 12px;
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  opacity: 0.7; }
+  /* line 119, C:/Users/yquido/Desktop/travelnet/css/sass/footer.scss */
+  .footer-results span a:hover {
+    opacity: 1;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out; }
+
+/* line 1, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+.header-results {
+  height: 150px;
+  background: url("../images/back4.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  box-shadow: inset 0 -45px 40px rgba(237, 28, 73, 0.3);
+  /*
+    img {
+        margin-top:                         20px;
+    }
+
+    a {
+        color:                              $GENERAL-COLOR;
+        outline:                            $FALSE;
+        border:                             $FALSE;
+        padding-top:                        30px;
+        float:                              right;
+        font-size:                          $MEDIUM-FONT;
+        opacity:                            $OPACITY-SEVEN;
+        @include transition(all, 0.5s, ease-in-out);
+
+        &:hover {
+            opacity:                        $NO-OPACITY;
+            @include transition(all, 0.5s, ease-in);
+        }
+
+        span {
+            font-weight:                    bold;
+        }
+    }
+    */ }
+  /* line 8, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+  .header-results img {
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%); }
+  /* line 12, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+  .header-results .breadbrumb--tags {
+    -webkit-transform: translateY(250%);
+    -moz-transform: translateY(250%);
+    -ms-transform: translateY(250%);
+    -o-transform: translateY(250%);
+    transform: translateY(250%);
+    color: #BDCFD1;
+    font-size: 12px; }
+    /* line 17, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+    .header-results .breadbrumb--tags a {
+      color: #BDCFD1;
+      text-decoration: none; }
+      /* line 20, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+      .header-results .breadbrumb--tags a:hover {
+        text-decoration: none;
+        color: white; }
+  /* line 27, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+  .header-results a.current-bread {
+    color: white; }
+
+/* line 58, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+.header-results {
+  position: relative; }
+
+/* line 62, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+.link-currency-type {
+  font-size: 12px;
+  font-weight: 300;
+  padding: 5px 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: linear-gradient(left, #f15a52, #ed1c49 100%); }
+  /* line 75, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+  .link-currency-type:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer; }
+
+/* line 83, C:/Users/yquido/Desktop/travelnet/css/sass/header-results.scss */
+#value_exhange_rate {
+  color: white;
+  text-align: right; }
+
+/*
+$toggle-height: 30px;
+$toggle-width: 60px;
+$switch-size: 30px;
+*/
+/* line 32, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+.tgl {
+  position: relative;
+  display: inline-block;
+  height: 15px;
+  cursor: pointer;
+  line-height: 15px; }
+  /* line 41, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl > input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    /* Put the input behind the label so it doesn't overlay text */
+    visibility: hidden; }
+  /* line 48, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl .tgl_body {
+    width: 30px;
+    height: 15px;
+    background: white;
+    border: 1px solid #dadde1;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px; }
+  /* line 58, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl .tgl_switch {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    border-radius: 50%;
+    border: 1px solid #ccd0d6;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13);
+    transition: left cubic-bezier(0.34, 1.61, 0.7, 1) 250ms, transform cubic-bezier(0.34, 1.61, 0.7, 1) 250ms;
+    -webkit-transition: left cubic-bezier(0.34, 1.61, 0.7, 1) 250ms, transform cubic-bezier(0.34, 1.61, 0.7, 1) 250ms;
+    z-index: 1; }
+  /* line 75, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl .tgl_track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 50px; }
+  /* line 85, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl .tgl_bgd {
+    position: absolute;
+    right: -7px;
+    top: 0;
+    bottom: 0;
+    width: 32.5px;
+    transition: left cubic-bezier(0.34, 1.61, 0.7, 1) 250ms, right cubic-bezier(0.34, 1.61, 0.7, 1) 250ms;
+    background: #ed1c49 url('http://petelada.com/images/toggle/tgl_check.png') center center no-repeat;
+    background-size: 7px; }
+  /* line 100, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl .tgl_bgd-negative {
+    right: auto;
+    left: -22.5px;
+    background: white url('http://petelada.com/images/toggle/tgl_x.png') center center no-repeat;
+    background-size: 7px; }
+  /* line 108, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl:hover .tgl_switch {
+    border-color: #b5bbc3;
+    transform: scale(1.06); }
+  /* line 116, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl:active .tgl_switch {
+    transform: scale(0.95); }
+  /* line 124, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl > :not(:checked) ~ .tgl_body > .tgl_switch {
+    left: 15px; }
+  /* line 128, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+  .tgl > :not(:checked) ~ .tgl_body .tgl_bgd {
+    right: -22.5px; }
+    /* line 131, C:/Users/yquido/Desktop/travelnet/css/sass/toggle.scss */
+    .tgl > :not(:checked) ~ .tgl_body .tgl_bgd.tgl_bgd-negative {
+      right: auto;
+      left: -7px; }
+
+/*
+ * Just to clear, I wrote all CONSTANT VARS in caps,
+ * like if we are doing web development with CSS.
+ * This is just to maintain good practices and have
+ * general standards.
+ */
+/* #Basic Setup
+================================================== */
+/* #Datepicker
+================================================== */
+/* line 22, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px 0;
+  z-index: 4 !important;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: linear-gradient(left, #f15a52, #ed1c49 100%);
+  /*
+	 * Utilities
+	 *
+	 * 	background: 			rgba(39, 46, 59, 1);
+	 * 	width: 					400px;
+	 */ }
+
+/* #Datepicker Header
+================================================== */
+/* line 43, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-header {
+  color: white; }
+
+/* #Arrows to move between months
+================================================== */
+/* line 49, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-header a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: 8px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  /*
+	 * Utilities
+	 *
+	 * 	background: 			@GENERAL-COLOR;
+	 */ }
+
+/* #Arrows
+================================================== */
+/* line 72, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-prev {
+  float: left;
+  margin-left: 30px;
+  text-indent: -1px; }
+
+/* line 78, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-next {
+  float: right;
+  margin-right: 30px;
+  text-indent: 1px; }
+
+/* #Month
+================================================== */
+/* line 86, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-title {
+  text-align: center;
+  margin: 0 2.3em; }
+
+/* line 91, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-month {
+  font-size: 18px;
+  font-weight: 300;
+  padding-right: 10px;
+  text-indent: 3px;
+  text-transform: uppercase; }
+
+/* #Year
+================================================== */
+/* line 101, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-year {
+  display: block;
+  font-size: 9px;
+  margin-left: -5px;
+  /*
+	 * Utilities
+	 *
+	 * 	padding-top: 			10px;
+	 */ }
+
+/* #Calendar widget
+================================================== */
+/* line 115, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-calendar {
+  border-collapse: collapse;
+  width: 200px; }
+
+/* #Days of the Week (L-M-Mi-J-V-S-D)
+================================================== */
+/* line 122, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-calendar thead {
+  line-height: 32px;
+  color: white;
+  font-size: 16px; }
+  /* line 127, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+  .ui-datepicker-calendar thead span {
+    font-weight: 300; }
+
+/* line 134, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-calendar span.ui-state-default, .ui-datepicker-calendar span.ui-state-unselectable {
+  color: transparent; }
+
+/* line 139, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-calendar td {
+  padding: 0;
+  margin: 0; }
+  /* line 145, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+  .ui-datepicker-calendar td a.ui-state-hover, .ui-datepicker-calendar td a.ui-state-active, .ui-datepicker-calendar td a.ui-state-focus {
+    background: #7f0a23;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%; }
+
+/* line 153, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-calendar th {
+  text-align: center; }
+
+/* line 158, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-calendar a {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  width: 20px;
+  margin-left: 0.3rem;
+  /*
+	 * Utilities
+	 *
+	 * 	width: 					100%;
+	 *  line-height: 			35px;
+	 */ }
+
+/* line 177, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+.ui-datepicker-group {
+  display: inline-block;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: -1px;
+  /*
+	 * Utilities
+	 *
+	 * 	height: 				180px;
+	 */ }
+
+/* #Responsive Web
+================================================== */
+@media only screen and (max-width: 680px) {
+  /* line 192, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+  .ui-datepicker-multi {
+    max-width: 200px;
+    bottom: 0; }
+
+  /* line 197, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+  .ui-datepicker-group {
+    max-height: 180px;
+    border-left: 0;
+    background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+    background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+    background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+    background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+    background: linear-gradient(left, #f15a52, #ed1c49 100%); }
+
+  /* line 206, C:/Users/yquido/Desktop/travelnet/css/sass/calendar.scss */
+  .ui-datepicker {
+    margin-left: -10px;
+    max-height: 180px; }
+
+  /*
+	 * Utilities
+	 *
+	 * 	div[class~="ui-datepicker-group"] {
+			.background-gradient;
+			max-height: 180px;
+	 * }
+	 */ }
+
+/*
+ * I hold all colors in vars to keep organize the
+ * theme-color and have the posibility to just
+ * change in one single place the general color.
+ */
+/* #Autocomplete vars
+================================================== */
+/* #Autocomplete
+================================================== */
+/* line 23, C:/Users/yquido/Desktop/travelnet/css/sass/autocomplete.scss */
+.ui-autocomplete {
+  position: absolute;
+  z-index: 5 !important;
+  display: none;
+  min-width: 160px;
+  padding: 4px 0;
+  list-style: none;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  /*
+     * Specific Utilities
+     *      
+     *  top:                    100%;
+     *  left:                   0;
+     *  z-index:                1000;
+     *  float:                  left;
+     *  margin:                 0 0 10px 25px;
+     *  border-color:           #ccc;
+     */ }
+
+/* #Links - Days
+================================================== */
+/* line 57, C:/Users/yquido/Desktop/travelnet/css/sass/autocomplete.scss */
+.ui-menu-item > a.ui-corner-all {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #555555;
+  white-space: nowrap;
+  text-decoration: none; }
+  /* line 67, C:/Users/yquido/Desktop/travelnet/css/sass/autocomplete.scss */
+  .ui-menu-item > a.ui-corner-all:hover {
+    color: white; }
+
+/* #The Hover, Active and Focus Days
+================================================== */
+/* line 76, C:/Users/yquido/Desktop/travelnet/css/sass/autocomplete.scss */
+.ui-state-hover, .ui-state-active, .ui-state-focus {
+  color: white;
+  text-decoration: none;
+  background-image: none;
+  cursor: pointer;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  background: -moz-linear-gradient(LEFT, #f15a52, #ed1c49 100%);
+  background: -webkit-linear-gradient(LEFT, #f15a52, #ed1c49 100%);
+  background: -o-linear-gradient(LEFT, #f15a52, #ed1c49 100%);
+  background-image: -ms-linear-gradient(LEFT, #f15a52, #ed1c49 100%);
+  background: linear-gradient(LEFT, #f15a52, #ed1c49 100%); }
+
+/* #Helper that show the results number
+================================================== */
+/* line 90, C:/Users/yquido/Desktop/travelnet/css/sass/autocomplete.scss */
+.ui-helper-hidden-accessible {
+  color: white; }
+
+/* line 1, C:/Users/yquido/Desktop/travelnet/css/sass/slider.scss */
+.ui-slider {
+  position: relative;
+  text-align: left; }
+
+/* line 6, C:/Users/yquido/Desktop/travelnet/css/sass/slider.scss */
+.ui-slider-horizontal {
+  height: 0.4em;
+  background: #d9d9de;
+  border-radius: 4px; }
+
+/* line 12, C:/Users/yquido/Desktop/travelnet/css/sass/slider.scss */
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: 0.7em;
+  display: block;
+  border: 0;
+  background-position: 0 0; }
+
+/* line 21, C:/Users/yquido/Desktop/travelnet/css/sass/slider.scss */
+.ui-slider .ui-widget-content {
+  border: 1px solid #aaa; }
+
+/* line 25, C:/Users/yquido/Desktop/travelnet/css/sass/slider.scss */
+.ui-slider .ui-widget-header {
+  color: #222222;
+  height: 0.5em;
+  background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: linear-gradient(left, #f15a52, #ed1c49 100%); }
+
+/* line 36, C:/Users/yquido/Desktop/travelnet/css/sass/slider.scss */
+.ui-slider .ui-corner-all, .ui-slider .ui-corner-top, .ui-slider .ui-corner-left, .ui-slider .ui-corner-tl {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
+
+/* line 44, C:/Users/yquido/Desktop/travelnet/css/sass/slider.scss */
+.ui-slider .ui-state-default, .ui-slider .ui-widget-content .ui-state-default, .ui-slider .ui-widget-header .ui-state-default {
+  border: 1px solid #d3d3d3;
+  background: #e6e6e6;
+  font-weight: normal;
+  color: #555555; }
+
+/* line 51, C:/Users/yquido/Desktop/travelnet/css/sass/slider.scss */
+.ui-slider-horizontal .ui-slider-handle {
+  top: -0.3em;
+  margin-left: -0.6em; }
+
+/* line 56, C:/Users/yquido/Desktop/travelnet/css/sass/slider.scss */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  cursor: default;
+  -ms-touch-action: none;
+  touch-action: none;
+  background: #fff;
+  outline: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 5px #ddd;
+  -moz-box-shadow: 1px 1px 5px #ddd;
+  box-shadow: 1px 1px 5px #ddd; }
+
+/* line 1, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (doesn't work very well) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 10, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid-cell {
+  -webkit-box-flex: 1;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;
+  /* OLD - Firefox 19- */
+  -webkit-flex: 1;
+  /* Chrome */
+  -ms-flex: 1;
+  /* IE 10 */
+  flex: 1; }
+
+/* line 15, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--flexCells > .grid-cell {
+  display: flex; }
+
+/* line 20, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--top {
+  align-items: flex-start; }
+
+/* line 24, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--bottom {
+  align-items: flex-end; }
+
+/* line 28, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--center {
+  align-items: center; }
+
+/* line 32, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--justifyCenter {
+  justify-content: center; }
+
+/* line 36, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid-cell--top {
+  align-self: flex-start; }
+
+/* line 40, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid-cell--bottom {
+  align-self: flex-end; }
+
+/* line 44, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid-cell--center {
+  align-self: center; }
+
+/* line 48, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid-cell--autoSize {
+  flex: none; }
+
+/* line 53, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--fit > .grid-cell {
+  flex: 1; }
+
+/* line 58, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--full > .grid-cell {
+  flex: 0 0 100%; }
+
+/* line 63, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--1of2 > .grid-cell {
+  flex: 0 0 50%; }
+
+/* line 68, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--1of3 > .grid-cell {
+  flex: 0 0 33.3333%; }
+
+/* line 73, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.grid--1of4 > .grid-cell {
+  flex: 0 0 25%; }
+
+/* line 78, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.u-1of3 {
+  width: 20%;
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important; }
+
+/* line 88, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.u-1of6 {
+  width: 60%;
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important; }
+
+/* line 98, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.u-1of33 {
+  width: 33.3%;
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important; }
+
+/* line 108, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.u-1of4 {
+  -webkit-box-flex: 0 !important;
+  -webkit-flex: none !important;
+  -ms-flex: none !important;
+  flex: none !important; }
+  @media only screen and (min-width: 550px) {
+    .u-1of4 {
+      transition: all 1s ease-in-out;
+      -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out; } }
+  @media only screen and (min-width: 800px) {
+    .u-1of4 {
+      width: 25%;
+      transition: all 1s ease-in-out;
+      -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out; } }
+
+@media (max-width: 550px) {
+  /* line 130, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .grid {
+    flex-direction: column; }
+
+  /* line 134, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .order1 {
+    -webkit-order: 1;
+    order: 1; }
+
+  /* line 139, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .order2 {
+    -webkit-order: 2;
+    order: 2; }
+
+  /* line 144, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .order3 {
+    -webkit-order: 3;
+    order: 3; }
+
+  /* line 149, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .u-1of3 {
+    width: 100%; }
+ }
+
+@media (break-sm) {
+  /* line 155, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--fit > .Grid-cell {
+    flex: 1; }
+
+  /* line 158, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--full > .Grid-cell {
+    flex: 0 0 100%; }
+
+  /* line 161, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%; }
+
+  /* line 164, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%; }
+
+  /* line 167, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%; }
+ }
+
+@media (--break-md) {
+  /* line 173, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--fit > .Grid-cell {
+    flex: 1; }
+
+  /* line 176, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--full > .Grid-cell {
+    flex: 0 0 100%; }
+
+  /* line 179, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%; }
+
+  /* line 182, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%; }
+
+  /* line 185, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%; }
+ }
+
+@media (--break-lg) {
+  /* line 191, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--fit > .Grid-cell {
+    flex: 1; }
+
+  /* line 194, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--full > .Grid-cell {
+    flex: 0 0 100%; }
+
+  /* line 197, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%; }
+
+  /* line 200, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%; }
+
+  /* line 203, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%; }
+ }
+
+/*
+.Grid--gutters {
+  margin: -1em 0 1em -1em;
+}
+.Grid--gutters > .Grid-cell {
+  padding: 1em 0 0 1em;
+}
+*/
+/* line 215, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.Grid--guttersLg {
+  margin: -1.5em 0 1.5em -1.5em; }
+
+/* line 218, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.Grid--guttersLg > .Grid-cell {
+  padding: 1.5em 0 0 1.5em; }
+
+/* line 222, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.Grid--guttersXl {
+  margin: -2em 0 2em -2em; }
+
+/* line 225, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+.Grid--guttersXl > .Grid-cell {
+  padding: 2em 0 0 2em; }
+
+@media (break-sm) {
+  /* line 230, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--gutters {
+    margin: -1em 0 1em -1em; }
+
+  /* line 233, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--gutters > .Grid-cell {
+    padding: 1em 0 0 1em; }
+
+  /* line 236, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--guttersLg {
+    margin: -1.5em 0 1.5em -1.5em; }
+
+  /* line 239, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--guttersLg > .Grid-cell {
+    padding: 1.5em 0 0 1.5em; }
+
+  /* line 242, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--guttersXl {
+    margin: -2em 0 2em -2em; }
+
+  /* line 245, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .small-Grid--guttersXl > .Grid-cell {
+    padding: 2em 0 0 2em; }
+ }
+
+@media (--break-md) {
+  /* line 251, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--gutters {
+    margin: -1em 0 1em -1em; }
+
+  /* line 254, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--gutters > .Grid-cell {
+    padding: 1em 0 0 1em; }
+
+  /* line 257, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--guttersLg {
+    margin: -1.5em 0 1.5em -1.5em; }
+
+  /* line 260, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--guttersLg > .Grid-cell {
+    padding: 1.5em 0 0 1.5em; }
+
+  /* line 263, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--guttersXl {
+    margin: -2em 0 2em -2em; }
+
+  /* line 266, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .med-Grid--guttersXl > .Grid-cell {
+    padding: 2em 0 0 2em; }
+ }
+
+@media (--break-lg) {
+  /* line 272, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--gutters {
+    margin: -1em 0 1em -1em; }
+
+  /* line 275, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--gutters > .Grid-cell {
+    padding: 1em 0 0 1em; }
+
+  /* line 278, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--guttersLg {
+    margin: -1.5em 0 1.5em -1.5em; }
+
+  /* line 281, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--guttersLg > .Grid-cell {
+    padding: 1.5em 0 0 1.5em; }
+
+  /* line 284, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--guttersXl {
+    margin: -2em 0 2em -2em; }
+
+  /* line 287, C:/Users/yquido/Desktop/travelnet/css/sass/grid__safari.scss */
+  .large-Grid--guttersXl > .Grid-cell {
+    padding: 2em 0 0 2em; }
+ }
+
+/*
+ * Just to clear, I wrote all CONSTANT VARS in caps,
+ * like if we are doing web development with CSS.
+ * This is just to maintain good practices and have
+ * general standards.
+ */
+/* #Classes that help
+================================================== */
+/* line 19, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.no-margin-bottom {
+  margin-bottom: 0; }
+
+/* line 23, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.padding-top {
+  padding-top: 10px; }
+
+/* line 27, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.hr {
+  margin: 5px;
+  opacity: 0.7; }
+
+/* line 32, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.little-margin-bottom {
+  margin-bottom: 15px; }
+
+/* line 37, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.modal-dialog {
+  width: 65%;
+  /*height: 85%;*/
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 10%;
+  border: none;
+  box-shadow: none;
+  background: #272e3b; }
+
+/* line 49, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.modal-header {
+  border-bottom: 1px solid #ed1c49;
+  padding: 0 15px; }
+
+/* line 54, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.modal-content {
+  /*height: 100%;*/
+  padding: 0 0 20px 0;
+  border-radius: 0;
+  background: transparent; }
+
+/* line 61, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.modal-body {
+  font-size: 12px;
+  text-align: justify;
+  /*width: 60%;*/
+  margin: 0 auto;
+  /*padding-top: 60px;*/
+  margin-bottom: 40px; }
+  /* line 69, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+  .modal-body p {
+    margin-bottom: 10px; }
+
+/* line 75, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.title-modal {
+  color: #ed1c49; }
+
+/* line 79, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.element-hidden {
+  display: none; }
+
+/* line 83, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.index-2 {
+  z-index: 2; }
+
+/* line 87, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.index-0 {
+  z-index: 0; }
+
+/* line 91, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.margin-bottom {
+  margin-bottom: 35px; }
+
+/* line 95, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+i.text-small {
+  font-size: 12px; }
+
+/* line 99, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.no-border-left {
+  border-left: none; }
+
+/* line 103, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+.overlay-opacity {
+  background: rgba(39, 46, 59, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+/* line 112, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+#slider-range {
+  width: 100%; }
+
+/* line 116, C:/Users/yquido/Desktop/travelnet/css/sass/utils.scss */
+#amount {
+  border: 0;
+  color: #f6931f;
+  font-weight: bold;
+  background: transparent; }
+
+/*
+ * Just to clear, I wrote all CONSTANT VARS in caps,
+ * like if we are doing web development with CSS.
+ * This is just to maintain good practices and have
+ * general standards.
+ */
+/* #Theme Colors
+================================================== */
+@media (max-width: 1200px) {
+  /* line 26, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .navbar-default .navbar-nav > li > a {
+    padding-left: 20px;
+    padding-right: 20px;
+    /*margin-left: 20px;*/ }
+
+  /*.brokers {
+        top: 11px;
+    }*/ }
+
+@media (max-width: 881px) {
+  /* line 44, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .form {
+    margin-top: 150px; }
+
+  /* line 48, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .title {
+    margin-top: 85px; }
+
+  /* line 52, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .footer-home {
+    display: none; }
+ }
+
+@media (max-width: 767px) {
+  /* line 58, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .navbar-default .navbar-toggle {
+    /*margin-bottom: 60px;*/
+    border: none; }
+    /* line 63, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+      background-color: transparent; }
+
+  /* line 68, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  section[role="main"] {
+    width: 85%;
+    margin: 0 auto; }
+
+  /* line 73, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .navbar-default .navbar-nav > li > a {
+    border: none; }
+
+  /* line 77, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .navbar-collapse {
+    margin-top: 10px;
+    border: none; }
+
+  /* line 82, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .footer-home {
+    display: none; }
+ }
+
+@media (max-width: 515px) {
+  /* line 94, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .form {
+    width: 100%; }
+ }
+
+@media (max-width: 499px) {
+  /* line 103, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  section[role=main] {
+    /*width: 90%;*/
+    /*margin: 0 auto;*/ }
+
+  /* line 108, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .footer-home {
+    display: none; }
+
+  /*.form {
+        width: 100%;
+    }*/
+  /* line 116, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .brokers, .ui-datepicker {
+    width: 100%; }
+
+  /* line 120, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .brokers {
+    padding-top: 25px; }
+
+  /* line 124, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .title {
+    font-size: 50px; }
+
+  /* line 129, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .form label, p {
+    font-size: 1.3rem; }
+
+  /* line 133, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .btn-primary {
+    font-size: 1.1rem; }
+
+  /*
+    .more-options {
+        bottom: -28px;
+    }*/
+  /*.brokers {
+        top: 4px;
+    }*/ }
+
+@media (max-width: 383px) {
+  /* line 149, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .title {
+    font-size: 35px; }
+
+  /* line 154, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .form label, p {
+    font-size: 1.2rem; }
+
+  /* line 158, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .btn-primary {
+    font-size: 0.9rem; }
+
+  /*
+    .more-options {
+        bottom: -27px;
+    }
+    */
+  /* line 171, C:/Users/yquido/Desktop/travelnet/css/sass/layout.scss */
+  .col-lg-1, .col-md-1, .col-sm-1, .col-xs-1 {
+    padding-left: 5px; }
+ }
+
+/* line 1, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.ff_box {
+  padding-top: 15%;
+  @-moz-document url-prefix() {
+    /* line 292, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+    .cd-filter-block .cd-select::after {
+      display: none; } }
+ }
+  /* line 4, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box hr {
+    border-color: #ddd;
+    margin-top: 0; }
+  /* line 9, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .off-canvas-subtle {
+    padding: 5px 0;
+    text-align: center;
+    color: #929292;
+    margin: 10px 0;
+    border-top: 1px solid rgba(146, 146, 146, 0.6);
+    border-bottom: 1px solid rgba(146, 146, 146, 0.6); }
+  /* line 18, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block {
+    margin-bottom: 1.6em; }
+    /* line 21, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+    .ff_box .cd-filter-block label {
+      font-weight: 400;
+      font-size: 12px;
+      color: #929292; }
+    /* line 27, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+    .ff_box .cd-filter-block input[type="submit"] {
+      width: 100px;
+      height: 25px;
+      padding: 0;
+      line-height: 20px;
+      margin-top: 10px;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px; }
+  /* line 37, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .filter-by {
+    /*.category-filters {
+			label.tgl {
+				margin-top: 2px;
+			}
+
+			i.fa {
+				margin: 0 1px;
+				color: $DARK-COLOR;
+			}
+
+			p {
+				color: rgb(170, 181, 197);
+				font-size: $THIN-FONT;
+			}
+		}
+		*/ }
+    /* line 38, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+    .ff_box .filter-by .filter-by--search {
+      text-align: right; }
+      /* line 41, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+      .ff_box .filter-by .filter-by--search input[type="submit"] {
+        margin: 5px 0; }
+    /* line 46, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+    .ff_box .filter-by input[type="submit"] {
+      margin-left: 5px;
+      margin-top: 0;
+      height: 29px; }
+  /* line 70, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block h4 {
+    position: relative;
+    margin-bottom: 0.2em;
+    padding: 10px 0 10px 20px;
+    color: #ed1c49;
+    font-weight: 400;
+    font-size: 1.3rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer; }
+  /* line 86, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .no-touch .cd-filter-block h4:hover {
+    color: #41307c; }
+  /* line 90, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: url("../images/cd-icon-arrow.svg") no-repeat center center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s; }
+  /* line 109, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block h4.closed::before {
+    -webkit-transform: translateY(-50%) rotate(-90deg);
+    -moz-transform: translateY(-50%) rotate(-90deg);
+    -ms-transform: translateY(-50%) rotate(-90deg);
+    -o-transform: translateY(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(-90deg); }
+  /* line 130, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block input[type="search"], .ff_box .cd-filter-block input[type="text"], .ff_box .cd-filter-block select {
+    width: 100%;
+    padding: 0 6px;
+    box-shadow: none; }
+  /* line 145, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block input[type='search']:focus, .ff_box .cd-filter-block input[type='text']:focus, .ff_box .cd-filter-block select:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #41307c; }
+  /* line 151, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block input[type='search'] {
+    border: none;
+    height: 29px;
+    line-height: 29px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    font-size: 1.2rem !important; }
+  /* line 163, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block input[type='search']::-webkit-search-cancel-button {
+    display: none; }
+  /* line 167, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .cd-select {
+    position: relative; }
+  /* line 172, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .cd-select::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    right: 14px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/cd-icon-arrow.svg") no-repeat center center;
+    pointer-events: none; }
+  /* line 191, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block select {
+    cursor: pointer;
+    font-size: 1.4rem; }
+  /* line 196, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block select::-ms-expand {
+    display: none; }
+  /* line 200, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .list li {
+    position: relative;
+    margin-bottom: 0.8em; }
+  /* line 205, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .list li:last-of-type {
+    margin-bottom: 0; }
+  /* line 210, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block input[type=radio], .ff_box .cd-filter-block input[type=checkbox] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    z-index: 2; }
+  /* line 222, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .checkbox-label, .ff_box .cd-filter-block .radio-label {
+    padding-left: 24px;
+    font-size: 1.4rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  /* line 233, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .checkbox-label::before, .ff_box .cd-filter-block .checkbox-label::after, .ff_box .cd-filter-block .radio-label::before, .ff_box .cd-filter-block .radio-label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  /* line 247, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .checkbox-label::before, .ff_box .cd-filter-block .radio-label::before {
+    width: 16px;
+    height: 16px;
+    left: 0; }
+  /* line 254, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .checkbox-label::after, .ff_box .cd-filter-block .radio-label::after {
+    display: none; }
+  /* line 259, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .checkbox-label::after {
+    width: 16px;
+    height: 16px;
+    background: url("../images/cd-icon-check.svg") no-repeat center center; }
+  /* line 267, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .radio-label::before, .ff_box .cd-filter-block .radio-label::after {
+    border-radius: 50%; }
+  /* line 271, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block .radio-label::after {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    left: 5px; }
+  /* line 280, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block input[type=radio]:checked + label::before, .ff_box .cd-filter-block input[type=checkbox]:checked + label::before {
+    border-color: #41307c;
+    background-color: #41307c; }
+  /* line 286, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .cd-filter-block input[type=radio]:checked + label::after, .ff_box .cd-filter-block input[type=checkbox]:checked + label::after {
+    display: block; }
+  /* line 297, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+  .ff_box .types-of-rooms {
+    background: #ededed; }
+
+/* flexbox stuff */
+/* line 303, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.f_row {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row; }
+
+/* line 310, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.align-to-end {
+  justify-content: flex-end; }
+
+/* line 314, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.f_col {
+  flex-direction: column; }
+
+/* line 318, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.input-icon {
+  background: #ddd; }
+
+/* line 322, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.input-with-icon {
+  border: none;
+  flex: 1; }
+
+/* line 327, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.input-icon, .input-with-icon {
+  padding: 4px; }
+
+/* line 331, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.item-third + .item-third {
+  margin-left: 5px; }
+
+/* line 335, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.item-third {
+  width: 33%; }
+
+/* line 339, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.filter-prices {
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  position: relative;
+  color: #929292; }
+
+/* line 347, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+#filter-prices-max {
+  position: absolute;
+  right: 0; }
+
+/* line 352, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.filter-category {
+  display: block;
+  width: 100%;
+  position: relative;
+  color: #929292; }
+
+/* line 360, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.filter-category-star .tgl {
+  margin-right: 5px; }
+/* line 363, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.filter-category-star .stars i {
+  color: #ed1c49; }
+/* line 366, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.filter-category-star .filter-category-hotels {
+  position: absolute;
+  right: 0; }
+
+/* line 373, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.only-offers label.tgl {
+  margin-right: 6px; }
+/* line 377, C:/Users/yquido/Desktop/travelnet/css/sass/form_off_canvas.scss */
+.only-offers span {
+  color: #929292; }
+
+/*
+ * Just to clear, I wrote all CONSTANT VARS in caps,
+ * like if we are doing web development with CSS.
+ * This is just to maintain good practices and have
+ * general standards.
+ */
+/* #Basic Colors Theme in rgba value
+================================================== */
+/* #Theme Colors
+================================================== */
+/* line 27, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.icon-filter {
+  color: #ed1c49;
+  display: block;
+  padding-top: 10px;
+  text-decoration: none;
+  outline: none; }
+
+/* #Order by component
+================================================== */
+/* line 37, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.order-by {
+  text-align: right; }
+
+/* line 41, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.order-by-title {
+  font-weight: normal;
+  font-size: 14px; }
+
+/* line 46, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.order-by-select {
+  color: #a7a7a7;
+  display: inline-block;
+  width: 180px;
+  background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: linear-gradient(left, #f15a52, #ed1c49 100%); }
+
+/* #Title that show number of results
+================================================== */
+/* line 55, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.found-hotels {
+  color: #9a9faa;
+  font-size: 30px;
+  font-weight: 300; }
+
+/* #Paragraph next to results
+================================================== */
+/* line 63, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.found-hotels-desc {
+  color: #7f7f7f;
+  font-size: 14px;
+  font-weight: 300; }
+
+/* #stars
+================================================== */
+/* line 71, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.stars {
+  color: #ed1c49; }
+
+/* #hotel
+================================================== */
+/* line 80, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel {
+  background: whitesmoke;
+  color: #7f7f7f; }
+
+/* line 89, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel--header {
+  color: #ed1c49; }
+  /* line 92, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--header div + div {
+    padding-top: 10px; }
+
+/* line 97, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel--header-toggle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  /* line 102, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--header-toggle .tgl {
+    margin-bottom: 0;
+    margin-right: 15px; }
+  /* line 107, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--header-toggle a {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    color: #9EA6B9;
+    font-size: 12px; }
+    /* line 112, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+    .hotel--header-toggle a:hover {
+      opacity: 0.6; }
+
+/*
+.hotel--header-ui {
+    position: relative;
+}
+
+.hotel--header-ui .stars {
+    position: absolute;
+    right: 0;
+}
+*/
+/* line 130, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel a {
+  color: #000; }
+
+/* line 134, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel--image img {
+  width: 100%; }
+  @media only screen and (min-width: 550px) {
+    .hotel--image img {
+      height: 200px; } }
+
+/* line 142, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel--content {
+  border-right: 1px solid #e6e6e6;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+/* line 152, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel--list-more-info {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+  display: flex;
+  align-items: flex-end; }
+
+/* line 160, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel--list-more-info li {
+  display: inline-block;
+  padding: 0 5px; }
+  /* line 164, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--list-more-info li i.fa {
+    font-size: 16px; }
+  /* line 168, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--list-more-info li a {
+    color: #7f7f7f;
+    font-size: 12px; }
+    /* line 172, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+    .hotel--list-more-info li a:hover {
+      color: #434c57; }
+
+/* line 178, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel--content {
+  font-size: 12px; }
+
+/* line 182, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel--prices {
+  padding-left: 0;
+  padding-right: 0;
+  color: #7f7f7f;
+  border-left: 1px solid #e6e6e6;
+  text-align: center;
+  font-size: 14px; }
+  /* line 191, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--prices p {
+    margin-bottom: 0; }
+  /* line 195, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--prices > p:first-child {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 5px 0; }
+  /* line 202, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--prices div {
+    background: white;
+    font-size: 1.2em;
+    color: #1e2127;
+    margin-bottom: 8px;
+    padding: 5px 0; }
+    @media only screen and (min-width: 770px) {
+      .hotel--prices div {
+        font-size: 1.7em; } }
+  /* line 215, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--prices a {
+    color: #1e2127;
+    text-decoration: underline; }
+  /* line 220, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--prices p + p {
+    color: #7f7f7f; }
+  /* line 225, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--prices p + p, .hotel--prices a {
+    font-size: 12px; }
+  /* line 229, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel--prices input[type="submit"] {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    height: 43px;
+    border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0;
+    margin-bottom: 0; }
+
+/* line 239, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.is-hotel__rooms {
+  display: none !important; }
+
+/* line 243, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel__rooms {
+  background: #ededed;
+  color: #7f8290;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  animation: bounceIn 2s;
+  -webkit-animation: bounceIn 2s; }
+  /* line 248, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel__rooms div:first-child {
+    background: white; }
+
+/* line 259, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.hotel__rooms--offers {
+  text-align: center;
+  position: relative;
+  padding: 12px 0; }
+  /* line 264, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel__rooms--offers a {
+    color: #cccccc;
+    cursor: pointer; }
+  /* line 269, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel__rooms--offers p {
+    display: flex;
+    margin-bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px; }
+  /* line 277, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel__rooms--offers p:first-child {
+    width: 75%;
+    justify-content: space-around;
+    color: #ed1c49; }
+  /* line 283, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel__rooms--offers p:not(:first-child) {
+    justify-content: space-between;
+    padding-left: 20px; }
+  /* line 288, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel__rooms--offers input {
+    width: 25%;
+    font-size: 10px;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0; }
+  /* line 297, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel__rooms--offers i.fa {
+    font-size: 20px; }
+  /* line 302, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel__rooms--offers .offer-exclamation i.fa {
+    color: red; }
+  /* line 306, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .hotel__rooms--offers .offer-tag i.fa {
+    color: #272e3b; }
+
+/*
+article {
+    margin-top:                             15px;
+    padding-bottom:                         20px;
+    border-bottom:                          1px solid $ITEM-BORDER-BOTTOM;
+
+    @media only screen and (min-width: 1030px) {
+         .item .row .col-lg-3,
+         .item .row .col-md-3,
+         .item .row .col-sm-3 {
+            width: 22%;
+
+            @media screen and (max-width: $PHONE) {
+                width: 22%;
+            }
+
+            @media screen and (max-width: $PHABLET) {
+                width: 22%;
+            }
+
+            @media screen and (max-width: $TABLET) {
+                width: 22%;
+            }
+
+            @media screen and (max-width: $DESKTOP) {
+                width: 22%;
+            }
+
+            @media screen and (max-width: $DESKTOP-HD) {
+                width: 22%;
+            }
+         }
+
+         .item .row .col-lg-3.prices,
+         .item .row .col-md-3.prices,
+         .item .row .col-sm-3.prices {
+            width: 23%;
+
+            @media screen and (max-width: $PHONE) {
+                width: 23%;
+            }
+
+            @media screen and (max-width: $PHABLET) {
+                width: 23%;
+            }
+
+            @media screen and (max-width: $TABLET) {
+                width: 23%;
+            }
+
+            @media screen and (max-width: $DESKTOP) {
+                width: 23%;
+            }
+
+            @media screen and (max-width: $DESKTOP-HD) {
+                width: 23%;
+            }
+         }
+
+         .item .row .col-lg-6,
+         .item .row .col-md-6,
+         .item .row .col-sm-6 {
+            width: 55%;
+
+            @media screen and (max-width: $PHONE) {
+                width: 55%;
+            }
+
+            @media screen and (max-width: $PHABLET) {
+                width: 55%;
+            }
+
+            @media screen and (max-width: $TABLET) {
+                width: 55%;
+            }
+
+            @media screen and (max-width: $DESKTOP) {
+                width: 55%;
+            }
+
+            @media screen and (max-width: $DESKTOP-HD) {
+                width: 55%;
+            }
+         }
+
+         .types-of-rooms {
+            background: transparent;
+
+            .info_rooms {
+                background: #ededed;
+            }
+
+            .info_rooms--title {
+                color: $DARK-COLOR;
+            }
+
+            p {
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+                line-height: 30px;
+                margin-bottom: 0;
+                font-size: 14px;
+            }
+
+            .prices_rooms {
+                background: #ededed;
+                padding-right: 0;
+                
+                p:first-child {
+                    text-indent: -9999px;
+                }
+                
+
+                p {
+                    border-bottom: none;
+                }
+
+                input[type="submit"] {
+
+                }
+            }
+         }
+
+         // types of room
+         .types-of-rooms .col-lg-6 .col-lg-6,
+         .types-of-rooms .col-lg-6 .col-lg-6,
+         .types-of-rooms .col-lg-6 .col-lg-6 {
+            width: 50%;
+
+            @media screen and (max-width: $PHONE) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: $PHABLET) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: $TABLET) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: $DESKTOP) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: $DESKTOP-HD) {
+                width: 50%;
+            }
+         }
+    }
+
+
+
+    // header
+    header {
+        h4 {
+            color:                          $DARK-COLOR;
+        }
+    }
+    // body
+
+    section {
+        background:                         $BG-ITEM;
+        margin-left:                        0;
+        margin-right:                       0;
+
+        .row {
+            margin-left:                    0;
+            margin-right:                   0;
+        }
+
+        .thumb {
+            padding-left:                   0;
+        }
+
+        .thumb img {
+            width:                          205px;
+        }
+
+        .info {
+            font-size:                      $THIN-FONT;
+            padding-left:                   0;
+            color:                          $PRICES-COLOR;
+
+            p + div {
+                //background: red;
+                margin: 25px 0;
+            }
+
+            i.fa {
+                font-size: 17px;
+            }
+
+            a, i.fa {
+                color:                      $PRICES-COLOR;
+            }
+
+            li {
+                margin-right:               15px;
+                float:                      left;
+
+                &:last-child {
+                    margin-right:           0;
+                    float:                  right;
+                }
+
+                &:hover a,
+                &:hover i.fa, {
+                    color:                  $INFO-ITEM-HOVER;
+                }
+            }
+        }
+
+        .prices {
+            padding-left:                   0;
+            padding-right:                  0;
+            color:                          $PRICES-COLOR;
+
+            border-left:                    1px solid $PRICES-BORDER-LEFT;
+            text-align:                     center;
+            font-size:                      $MEDIUM-FONT;
+
+            p {
+                margin-bottom:              0;
+            }
+
+            > p:first-child {
+                //color:                      blue;
+                font-size:                  18px;
+                font-weight:                $REGULAR;
+                line-height:                22px;
+                margin:                 5px 0;
+            }
+
+            div {
+                background:                 rgb(255, 255, 255);
+                font-size:                  24px;
+                color:                      $BIG-PRICE;
+                margin-bottom: 8px;
+                padding: 5px 0;
+                //margin-left:                15px;
+                //margin-right:               15px;
+            }
+
+            a {
+                color:                      $BIG-PRICE;
+                text-decoration: underline;
+            }
+
+            p + p {
+                color:                      $PRICES-COLOR;
+            }
+
+            p + p,
+            a {                
+                font-size:                  $THIN-FONT;
+            }
+
+            input[type="submit"] {
+                text-transform:             capitalize;
+                font-size:                  20px;
+                font-weight:                $REGULAR;
+                line-height:                24px;
+                height:                     43px;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+
+*/
+/* #block with a info result
+================================================== */
+/*
+article {
+    // set default height
+    $HEIGHT-ARTICLE-HEAD: 49px;
+    $HEIGHT-ARTICLE-BODY: 220px;
+    height: ( $HEIGHT-ARTICLE-HEAD + $HEIGHT-ARTICLE-BODY );
+
+    font-size:                              $MEDIUM-FONT;
+    color:                                  #7f7f7f;
+	// general background to all element
+    //background:                             #fafafa;
+    background: orange;
+
+    img {
+        width: 220px;
+        margin-top: 0;
+    }
+
+    header {
+		// no background to header
+        //background:                         #fff;
+	}
+
+	h4 {
+        color:                              $DARK-COLOR;
+	}
+
+    .info {
+        font-size:                          $THIN-FONT;
+        
+        p {
+            padding-top:                    5px;
+        }
+    }
+    .prices {
+
+        background: blue;
+        //padding: 0;
+        padding-right: 0;
+
+        text-align:                         center;
+        border-left:                        1px solid rgba(0, 0, 0, .2);
+        padding-left:                       0;
+        margin-left: 0;
+        font-size:                          $MEDIUM-FONT;
+
+        // delete all margin from p tags
+        p {
+            margin-bottom:                  0;
+        }
+
+        > p:first-child {
+            color: blue;
+            font-size:                      2rem;
+        }
+
+        div {
+            font-size:                      24px;
+        }
+
+        p + p {
+            color:                          red;
+            font-size:                      $THIN-FONT;
+        }
+
+        input[type="submit"] {
+            height:                         43px;
+            color:                          $TEXT-COLOR;
+            font-size:                      20px;
+            text-transform:                 capitalize;
+        }
+
+        a {
+            font-size:                      $THIN-FONT;
+        }
+    }
+
+}
+*/
+/* line 663, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-header h1 {
+  color: #ffffff;
+  line-height: 150px;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 300; }
+
+@media only screen and (min-width: 1170px) {
+  /* line 675, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-header {
+    height: 160px; }
+
+  /* line 678, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-header h1 {
+    line-height: 180px; }
+ }
+
+/* #Navigation Styles
+================================================== */
+/* line 685, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-main-content {
+  position: relative;
+  min-height: 100vh; }
+
+/* line 689, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-main-content:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 694, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-main-content.is-fixed .cd-tab-filter-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; }
+
+/* line 701, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-main-content.is-fixed .cd-gallery {
+  padding-top: 76px; }
+
+/* line 704, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-main-content.is-fixed .cd-filter {
+  position: fixed;
+  height: 100vh;
+  overflow: hidden; }
+
+/* line 709, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-main-content.is-fixed .cd-filter .ff_box {
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+/*
+.cd-main-content.is-fixed .cd-filter-trigger {
+    position:                               fixed;
+}
+*/
+/* line 723, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-main-content.is-fixed .cd-filter-trigger, .cd-main-content.is-fixed .cd-filter-trigger-shopping, .cd-main-content.is-fixed .cd-filter-trigger-auth {
+  position: fixed; }
+
+@media only screen and (min-width: 768px) {
+  /* line 729, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-main-content.is-fixed .cd-gallery {
+    padding-top: 90px; }
+ }
+
+@media only screen and (min-width: 1170px) {
+  /* line 734, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-main-content.is-fixed .cd-gallery {
+    padding-top: 100px; }
+ }
+
+/* #Filter Tab
+================================================== */
+/* line 741, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter-wrapper {
+  background-color: #ffffff;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  background: #f6f7f8; }
+
+/* line 748, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter-wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 754, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter {
+  /* tabbed navigation style on mobile - dropdown */
+  position: relative;
+  height: 50px;
+  width: 140px;
+  margin: 0 auto;
+  z-index: 1; }
+
+/* line 763, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter::after {
+  /* small arrow icon */
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /*
+    -webkit-transform:                      translateY(-50%);
+    -moz-transform:                         translateY(-50%);
+    -ms-transform:                          translateY(-50%);
+    -o-transform:                           translateY(-50%);
+    transform:                              translateY(-50%);
+    */
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/cd-icon-arrow.svg") no-repeat center center;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  /*
+    -webkit-transition:                     all 0.3s;
+    -moz-transition:                        all 0.3s;
+    transition:                             all 0.3s;
+    */
+  pointer-events: none; }
+
+/* line 791, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: inset 0 -2px 0 #41307c; }
+
+/* line 799, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter li {
+  display: none; }
+
+/* line 803, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter li:first-child {
+  /* this way the placehodler is alway visible */
+  display: block; }
+
+/* line 808, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter a {
+  display: block;
+  /* set same size of the .cd-tab-filter */
+  height: 50px;
+  width: 140px;
+  line-height: 50px;
+  padding-left: 14px; }
+
+/* line 817, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter a.selected {
+  background: #41307c; }
+
+/* line 822, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter.is-open::after {
+  /* small arrow rotation */
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+  -moz-transform: translateY(-50%) rotate(-180deg);
+  -ms-transform: translateY(-50%) rotate(-180deg);
+  -o-transform: translateY(-50%) rotate(-180deg);
+  transform: translateY(-50%) rotate(-180deg); }
+
+/* line 831, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter.is-open ul {
+  box-shadow: inset 0 -2px 0 #41307c, 0 2px 10px rgba(0, 0, 0, 0.2); }
+
+/* line 835, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter.is-open ul li {
+  display: block; }
+
+/* line 839, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-tab-filter.is-open .placeholder a {
+  /* reduces the opacity of the placeholder on mobile when the menu is open */
+  opacity: 0.4; }
+
+@media only screen and (min-width: 768px) {
+  /* line 845, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter {
+    /* tabbed navigation style on medium devices */
+    width: auto;
+    cursor: auto; }
+
+  /* line 851, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter::after {
+    /* hide the arrow */
+    display: none; }
+
+  /* line 856, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter ul {
+    background: transparent;
+    position: static;
+    box-shadow: none;
+    text-align: center; }
+
+  /* line 863, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter li {
+    display: inline-block; }
+
+  /* line 867, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter li.placeholder {
+    display: none !important; }
+
+  /* line 871, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter a {
+    color: #9ea6b9;
+    font-size: 1.4rem;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    /*display: inline-block;
+        padding: 0 1em;
+        width: auto;
+        color: #9a9a9a;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.3rem;*/ }
+
+  /* line 890, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .no-touch .cd-tab-filter a:hover {
+    text-decoration: none;
+    border-bottom: 4px solid #ed1c49; }
+
+  /* line 899, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter a.selected {
+    background: transparent;
+    /* create border bottom using box-shadow property */
+    /*box-shadow: inset 0 -2px 0 #41307c;*/ }
+
+  /* line 906, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter.is-open ul li {
+    display: inline-block; }
+ }
+
+@media only screen and (min-width: 1170px) {
+  /* line 912, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter {
+    /* tabbed navigation on big devices */
+    width: 100%;
+    float: right;
+    margin: 0;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    transition: width 0.3s; }
+
+  /* line 922, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-tab-filter.filter-is-visible {
+    /* reduce width when filter is visible */
+    width: 80%; }
+ }
+
+/* #Gallery to hold all results
+================================================== */
+/* line 933, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-gallery, .booking-section, .footer-results {
+  padding: 26px 5%;
+  width: 100%; }
+
+/*
+.cd-gallery li {
+  margin-bottom: 1.6em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.cd-gallery li.gap {
+  opacity: 0;
+  height: 0;
+  display: inline-block;
+}
+.cd-gallery img {
+  display: block;
+  width: 100%;
+}
+.cd-gallery .cd-fail-message {
+  display: none;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-gallery {
+    padding: 40px 3%;
+  }
+  .cd-gallery ul {
+    text-align: justify;
+  }
+  .cd-gallery ul:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .cd-gallery li {
+    width: 48%;
+    margin-bottom: 2em;
+  }
+}
+*/
+@media only screen and (min-width: 1170px) {
+  /* line 979, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-gallery, .booking-section {
+    padding: 50px 5%;
+    float: right;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    /*
+        -webkit-transition:                 width 0.3s;
+        -moz-transition:                    width 0.3s;
+        transition:                         width 0.3s;
+        */ }
+
+  /* line 992, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .footer-results {
+    padding: 30px 5%;
+    float: right;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear; }
+
+  /* line 1000, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .booking-section.filter-is-visible, .cd-gallery.filter-is-visible, .footer-results.filter-is-visible {
+    width: 80%;
+    padding-left: 0;
+    padding-right: 0; }
+ }
+
+/* -------------------------------- 
+
+xfilter 
+
+-------------------------------- */
+/* line 1017, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 4px 4px 20px transparent;
+  z-index: 2;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s, box-shadow 0.3s;
+  -moz-transition: -moz-transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s; }
+
+/* line 1045, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter::before {
+  /* top colored bar */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 2;
+  background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+  background: linear-gradient(left, #f15a52, #ed1c49 100%);
+  /*
+    background:                 -webkit-linear-gradient(left, $THEME-COLOR, $DARK-COLOR);
+    background:                      -o-linear-gradient(left, $THEME-COLOR, $DARK-COLOR);
+    background:                    -moz-linear-gradient(left, $THEME-COLOR, $DARK-COLOR);
+    background:                         linear-gradient(left, $THEME-COLOR, $DARK-COLOR);
+    */
+  /*
+    i.fa {
+        color: white;
+    }
+    */ }
+
+/*
+.cd-filter form {
+    padding:                                50px 20px;
+
+    .icon-filter {
+        color: $GENERAL-COLOR;
+    }
+}
+*/
+/*
+.cd-filter .icon-filter {
+    color: #fff;
+}
+*/
+/* line 1087, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter .cd-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  line-height: 50px;
+  width: 60px;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  background: #ed1c49;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 3; }
+
+/* line 1105, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.no-touch .cd-filter .cd-close:hover {
+  background: #ed1c49; }
+
+/* line 1109, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter.filter-is-visible {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  /*
+    .icon-filter {
+        color: $GENERAL-COLOR;
+    }
+    */ }
+
+/* line 1124, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter.filter-is-visible .cd-close {
+  opacity: 1; }
+
+/* line 1130, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+a.cd-filter-trigger, a.cd-filter-trigger-shopping, a.cd-filter-trigger-auth {
+  text-decoration: none;
+  outline: none; }
+
+/* line 1135, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter-block {
+  padding: 0 5%; }
+
+@media only screen and (min-width: 1170px) {
+  /* line 1140, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-filter {
+    width: 23%; }
+
+  /* line 1144, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-filter {
+    background: #f1f2f4;
+    /*
+        .icon-filter {
+            color: $GENERAL-COLOR;
+        }
+        */ }
+ }
+
+/* line 1156, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter-trigger-shopping {
+  position: absolute;
+  top: 0;
+  right: 55px; }
+
+/* line 1162, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter-trigger-auth {
+  position: absolute;
+  top: 0;
+  right: 10px; }
+
+/* line 1168, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter-trigger {
+  position: absolute;
+  top: 0;
+  left: 10px; }
+
+/* line 1176, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter-trigger, .cd-filter-trigger-shopping, .cd-filter-trigger-auth {
+  /*position:                               absolute;
+    top:                                    0;
+    left:                                   0;*/
+  width: 60px;
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+  z-index: 3; }
+  /* line 1191, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-filter-trigger .icon-filter, .cd-filter-trigger-shopping .icon-filter, .cd-filter-trigger-auth .icon-filter {
+    display: block;
+    padding-top: 8px;
+    font-size: 21px; }
+
+/* line 1199, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter-trigger.filter-is-visible {
+  pointer-events: none; }
+
+/* line 1206, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.cd-filter-trigger, .cd-filter-trigger-shopping, .cd-filter-trigger-auth {
+  width: auto;
+  text-indent: 0;
+  color: #9a9a9a;
+  font-size: 1.2rem;
+  background-position: left center;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
+  text-align: center; }
+
+@media only screen and (min-width: 1170px) {
+  /* line 1227, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-filter-trigger, .cd-filter-trigger-shopping, .cd-filter-trigger-auth {
+    width: auto;
+    text-indent: 0;
+    color: #9a9a9a;
+    font-size: 1.2rem;
+    background-position: left center;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+    text-align: center; }
+
+  /* line 1245, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-filter-trigger {
+    left: 10px; }
+
+  /* line 1249, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-filter-trigger-auth {
+    right: 10px; }
+
+  /* line 1253, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-filter-trigger-shopping {
+    right: 55px; }
+
+  /* line 1260, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .no-touch .cd-filter-trigger:hover, .cd-filter-trigger-auth:hover, .cd-filter-trigger-shopping:hover {
+    color: #ed1c49;
+    text-decoration: none; }
+
+  /* line 1269, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .cd-filter-trigger.filter-is-visible, .cd-filter-trigger.filter-is-visible i.fa, .cd-filter-trigger.filter-is-visible, .cd-filter-trigger.filter-is-visible:hover {
+    text-decoration: none;
+    color: white; }
+
+  /*
+    .cd-filter-trigger.filter-is-visible i.fa {
+        color:                              #ffffff;
+    }
+
+    .cd-filter-trigger.filter-is-visible, .cd-filter-trigger.filter-is-visible:hover {
+        color:                              #ffffff;
+    }
+    */ }
+
+/* line 1284, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+.offer {
+  background: #fdfb80;
+  border: 5px solid #ffff00; }
+  /* line 1288, C:/Users/yquido/Desktop/travelnet/css/sass/results.scss */
+  .offer .hotel--prices div {
+    background: #fdfb80; }
+
+@keyframes bounceIn {
+  /* line 2, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  0% {
+    transform: scale(0.1);
+    opacity: 0; }
+
+  /* line 7, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+@-webkit-keyframes bounceIn {
+  /* line 14, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  0% {
+    transform: scale(0.1);
+    opacity: 0; }
+
+  /* line 19, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes offer-exclamation-animate {
+  /* line 26, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  0% {
+    color: red; }
+
+  /* line 30, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  100% {
+    color: yellow; } }
+
+@-webkit-keyframes color_change--offer {
+  /* line 41, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  from {
+    color: #ff3d49; }
+
+  /* line 42, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  to {
+    color: #ff9021; } }
+
+@-moz-keyframes color_change {
+  /* line 46, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  from {
+    color: #ff3d49; }
+
+  /* line 47, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  to {
+    color: #ff9021; } }
+
+@-ms-keyframes color_change {
+  /* line 51, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  from {
+    color: #ff3d49; }
+
+  /* line 52, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  to {
+    color: #ff9021; } }
+
+@-o-keyframes color_change {
+  /* line 56, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  from {
+    color: #ff3d49; }
+
+  /* line 57, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  to {
+    color: #ff9021; } }
+
+@keyframes color_change {
+  /* line 61, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  from {
+    color: #ff3d49; }
+
+  /* line 62, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+  to {
+    color: #ff9021; } }
+
+/* line 65, C:/Users/yquido/Desktop/travelnet/css/sass/animations.scss */
+.offer-exclamation i.fa {
+  -webkit-animation: color_change--offer 1s infinite alternate;
+  -moz-animation: color_change--offer 1s infinite alternate;
+  -ms-animation: color_change--offer 1s infinite alternate;
+  -o-animation: color_change--offer 1s infinite alternate;
+  animation: color_change--offer 1s infinite alternate; }
+
+/* line 1, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking-section {
+  padding: 3em 0 0 0;
+  color: #434c57;
+  font-size: 12px; }
+  @media only screen and (min-width: 750px) {
+    .booking-section {
+      font-size: 18px; } }
+  /* line 15, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section input[type="text"], .booking-section input[type="email"], .booking-section textarea {
+    width: 245px;
+    background: #f4f5fa;
+    color: #9a9fbb;
+    font-size: 16px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border: none;
+    outline: none; }
+  /* line 31, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section h4 {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400; }
+  /* line 38, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section i {
+    font-size: 30px;
+    color: #ed1c49; }
+  /* line 44, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section hr {
+    margin-top: 0;
+    width: 100%;
+    height: 5px;
+    margin: auto;
+    background: transparent;
+    border-size: 20px solid transparent;
+    -moz-border-image: -moz-linear-gradient(left, #f15a52 0%, #ed1c49 100%);
+    -webkit-border-image: -webkit-linear-gradient(left, #f15a52 0%, #ed1c49 100%);
+    border-image: linear-gradient(to right, #f15a52 0%, #ed1c49 100%);
+    border-image-slice: 1; }
+  /* line 58, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section label {
+    color: #a69faa;
+    font-weight: 400;
+    line-height: 22px; }
+    @media only screen and (max-width: 550px) {
+      .booking-section label {
+        width: 100px; } }
+  /* line 68, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section .no-visible {
+    visibility: hidden; }
+  /* line 74, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section div {
+    padding: 5px 0; }
+  /* line 79, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section span {
+    margin-left: 5px; }
+  /* line 84, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section .stars i {
+    font-size: 18px; }
+  /* line 88, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section .prices__total {
+    padding: 10px 20px;
+    color: white;
+    background: -moz-linear-gradient(left, #f15a52, #ed1c49 100%);
+    background: -webkit-linear-gradient(left, #f15a52, #ed1c49 100%);
+    background: -o-linear-gradient(left, #f15a52, #ed1c49 100%);
+    background-image: -ms-linear-gradient(left, #f15a52, #ed1c49 100%);
+    background: linear-gradient(left, #f15a52, #ed1c49 100%);
+    font-size: 18px; }
+  /* line 95, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section .booking-header, .booking-section .booking-content {
+    width: 100%;
+    padding: 0 5%;
+    margin: 0 auto; }
+    @media only screen and (min-width: 1170px) {
+      .booking-section .booking-header, .booking-section .booking-content {
+        width: 80%; } }
+  @media only screen and (min-width: 550px) {
+    .booking-section .booking-content .booking-content__prices {
+      border-left: 1px solid #d8dadc; } }
+  /* line 114, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section .booking-content .booking-content__prices div > span, .booking-section .booking-content .booking-content__prices div > p:not(.prices__total) {
+    margin-left: 20px; }
+  /* line 119, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section .booking-content .booking-content__prices small {
+    font-size: 12px;
+    line-height: 14px; }
+  /* line 125, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section .booking-content .booking-content__prices span {
+    font-weight: 300; }
+  /* line 135, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section .booking-section__comments {
+    color: white;
+    background: -moz-linear-gradient(to right, #ed1c49, #f15a52 100%);
+    background: -webkit-linear-gradient(to right, #ed1c49, #f15a52 100%);
+    background: -o-linear-gradient(to right, #ed1c49, #f15a52 100%);
+    background-image: -ms-linear-gradient(to right, #ed1c49, #f15a52 100%);
+    background: linear-gradient(to right, #ed1c49, #f15a52 100%); }
+    /* line 140, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+    .booking-section .booking-section__comments label.tgl {
+      bottom: -2px;
+      margin-right: 10px; }
+    /* line 146, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+    .booking-section .booking-section__comments p, .booking-section .booking-section__comments span {
+      font-size: 15px;
+      line-height: 18px;
+      margin: 0; }
+    /* line 153, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+    .booking-section .booking-section__comments input[type="submit"] {
+      width: 120px;
+      font-size: 14px;
+      padding: 8px;
+      margin-left: 40px;
+      background: #ed1c49;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease; }
+      /* line 165, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+      .booking-section .booking-section__comments input[type="submit"]:hover {
+        opacity: 0.8; }
+    /* line 170, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+    .booking-section .booking-section__comments .features {
+      text-align: right; }
+    /* line 178, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+    .booking-section .booking-section__comments i.fa {
+      color: white; }
+
+/* line 185, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking-section--inputs {
+  display: flex;
+  justify-content: space-between; }
+  /* line 189, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section--inputs label:first-child {
+    width: 90px; }
+  /* line 193, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section--inputs label:not(:first-child) {
+    width: 245px;
+    color: black; }
+
+/* line 199, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking-section__passengers {
+  /*
+	.passengers__room  {
+			&--labels {
+
+			}
+			&--inputs {
+				display: flex;
+				justify-content: space-between;
+
+				label {
+					width: 90px;
+				}
+			}
+		}
+		*/ }
+
+/* line 218, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.inputs--end {
+  display: flex;
+  justify-content: space-around; }
+
+/* line 224, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking-section__info .booking-content div:first-child {
+  display: flex;
+  justify-content: space-between; }
+
+/* line 230, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.special-request {
+  width: 100% !important; }
+
+/* line 234, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking__pays {
+  font-size: 14px; }
+  /* line 237, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking__pays .prices__total {
+    display: inline-block; }
+  /* line 241, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking__pays a {
+    display: block;
+    color: #ed1c49; }
+
+/* line 247, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking__pays--hotel {
+  font-size: 18px; }
+  /* line 249, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking__pays--hotel p {
+    display: inline; }
+  /* line 253, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking__pays--hotel .stars {
+    display: inline; }
+    /* line 256, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+    .booking__pays--hotel .stars i {
+      font-size: 12px; }
+
+/* line 262, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking__details {
+  color: #ed1c49; }
+
+/* line 266, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking__pays-logos a {
+  display: inline-block;
+  padding: 20px; }
+
+/* line 271, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking__choose-pay {
+  border-left: 4px solid #F6F7F8; }
+  /* line 274, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking__choose-pay div {
+    text-align: center;
+    color: #ed1c49; }
+
+/* line 280, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.choose-pays__list {
+  padding: 0;
+  text-align: center;
+  color: #9EA6B9;
+  margin: 0 auto; }
+  /* line 286, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .choose-pays__list a {
+    color: #9EA6B9; }
+    /* line 289, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+    .choose-pays__list a:hover {
+      text-decoration: none;
+      color: #003b52; }
+  /* line 295, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .choose-pays__list li {
+    display: inline-block;
+    width: 40%;
+    padding: 5px 0;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease; }
+    /* line 301, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+    .choose-pays__list li:hover {
+      opacity: 0.6;
+      color: red; }
+  /* line 308, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .choose-pays__list p {
+    margin-top: 4px;
+    font-size: 14px; }
+
+/* line 314, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.limit-pay-date {
+  font-weight: 700;
+  color: yellow; }
+
+/* line 319, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.limit-pay-date--theme {
+  font-weight: 700;
+  color: #ed1c49; }
+
+/* line 324, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+.booking-section__markup {
+  font-size: 15px; }
+  /* line 328, C:/Users/yquido/Desktop/travelnet/css/sass/booking.scss */
+  .booking-section__markup p, .booking-section__markup label {
+    margin: 0; }
+
+/* line 1, C:/Users/yquido/Desktop/travelnet/css/sass/pay__form.scss */
+.payform {
+  background: red;
+  width: 50%;
+  margin-left: 100px; }
+
+/* line 4, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+#compare__hotel {
+  color: #7F7F7F;
+  background: rgba(230, 230, 230, 0.8); }
+  /* line 9, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  #compare__hotel i.fa {
+    font-size: 26px;
+    color: #ed1c49; }
+  /* line 15, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  #compare__hotel a {
+    font-size: 12px;
+    color: #7F7F7F;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease; }
+    /* line 20, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+    #compare__hotel a:hover {
+      opacity: 0.6; }
+  /* line 26, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  #compare__hotel > .modal-dialog {
+    width: 90%;
+    margin-top: 6%;
+    background: none; }
+  /* line 34, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  #compare__hotel .modal-backdrop.in {
+    background: rgba(230, 230, 230, 0.8); }
+  /* line 39, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  #compare__hotel .modal-header {
+    border: none;
+    outline: none;
+    margin-bottom: 50px; }
+  /* line 44, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  #compare__hotel .modal-content {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent; }
+  /* line 49, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  #compare__hotel .modal-body {
+    text-align: left; }
+  /* line 54, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  #compare__hotel .stars {
+    display: block;
+    text-align: center; }
+    /* line 58, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+    #compare__hotel .stars i.fa {
+      font-size: 22px; }
+
+/* line 65, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.compare__hotel {
+  margin: 0 2px;
+  background: white; }
+  /* line 70, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .compare__hotel input[type="submit"] {
+    border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0; }
+  /* line 74, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .compare__hotel img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    width: 100%; }
+
+/* line 81, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.comparehotel__image {
+  position: relative; }
+
+/* line 85, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.comparehotel__link--close {
+  font-weight: 300;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background: white;
+  font-size: 22px !important;
+  line-height: 22px;
+  padding: 1px 5px;
+  text-decoration: none; }
+  /* line 98, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__link--close:hover {
+    opacity: 1;
+    text-decoration: none; }
+
+/* line 104, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.compare__hotel--title {
+  color: #272E3B;
+  font-size: 12px;
+  padding: 12px 6px;
+  line-height: 14px;
+  padding-bottom: 0; }
+
+/* line 112, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.compare__hotel--moreinfo {
+  text-align: center;
+  color: #9EA6B9;
+  font-size: 16px !important;
+  display: block;
+  margin-top: 10px; }
+
+/* line 120, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.compare__hotel--moreinfo i.fa {
+  color: #9EA6B9 !important; }
+
+/* line 124, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.compare__hotel--moreinfo + hr {
+  margin: 15px 0;
+  border-top: 1px solid rgba(127, 127, 127, 0.4);
+  background: transparent; }
+
+/* line 130, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.comparehotel__prices {
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 12px; }
+  /* line 134, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__prices label {
+    display: block;
+    font-weight: normal;
+    margin: 0; }
+  /* line 142, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__prices label:first-child {
+    font-size: 15px; }
+  /* line 146, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__prices:nth-child(odd) {
+    color: #9EA6B9; }
+  /* line 150, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__prices--net {
+    font-size: 18px;
+    color: #272E3B; }
+  /* line 154, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__prices--total {
+    font-size: 16px;
+    color: #ed1c49; }
+
+/* line 160, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.comparehotel__rooms--title {
+  background: #9EA6B9;
+  display: block;
+  padding: 10px 5px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 0; }
+
+/* line 172, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.comparehotel__rooms {
+  background: rgba(230, 230, 230, 0.8);
+  padding: 4px; }
+  /* line 176, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__rooms label {
+    margin: 0;
+    font-weight: normal;
+    font-size: 10px;
+    display: block; }
+  /* line 184, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__rooms > label:first-child {
+    text-transform: uppercase; }
+  /* line 188, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__rooms label:first-child + label {
+    text-transform: uppercase;
+    color: #ed1c49; }
+  /* line 193, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__rooms span {
+    font-size: 14px;
+    color: #272E3B; }
+  /* line 198, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__rooms div {
+    padding: 10px 0; }
+  /* line 202, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+  .comparehotel__rooms hr {
+    margin: 12px 0;
+    border-top: 1px solid rgba(127, 127, 127, 0.4); }
+
+/* line 208, C:/Users/yquido/Desktop/travelnet/css/sass/compare-hotels.scss */
+.comparehotel__button {
+  font-size: 20px;
+  height: 35px;
+  line-height: 35px;
+  text-transform: capitalize; }
+
+/* line 9, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+#moreinfo__modal {
+  color: #434C57;
+  background: rgba(230, 230, 230, 0.8); }
+  /* line 13, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo__modal .modal-backdrop.in {
+    background: rgba(230, 230, 230, 0.8); }
+  /* line 18, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo__modal .modal-header {
+    margin-bottom: 50px; }
+  /* line 23, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo__modal .modal-content {
+    border: none;
+    outline: none;
+    border: 1px solid #9EA6B9;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    margin: 0;
+    padding: 0; }
+  /* line 31, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo__modal .modal-body {
+    text-align: left;
+    margin: 0;
+    padding: 0; }
+  /* line 38, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo__modal > .modal-dialog {
+    width: 98%;
+    margin-top: 6%;
+    background: white; }
+    @media only screen and (min-width: 450px) {
+      #moreinfo__modal > .modal-dialog {
+        width: 85%; } }
+    @media only screen and (min-width: 850px) {
+      #moreinfo__modal > .modal-dialog {
+        width: 88%; } }
+    @media only screen and (min-width: 1000px) {
+      #moreinfo__modal > .modal-dialog {
+        width: 65%; } }
+  /* line 58, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo__modal h3 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+    color: #434C57;
+    text-align: left; }
+
+/* line 68, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.moreinfo__content--close {
+  font-size: 60px;
+  font-weight: 300; }
+
+/* line 74, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.moreinfo__tabs {
+  border-bottom: 1px solid #9ea6b9;
+  text-align: center;
+  padding: 28px;
+  width: 100%; }
+  @media only screen and (min-width: 700px) {
+    .moreinfo__tabs {
+      width: 30%;
+      border-right: 1px solid #9ea6b9; } }
+  /* line 89, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__tabs input[type="submit"] {
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 400;
+    text-transform: capitalize;
+    padding: 10px 8px;
+    border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    -moz-border-radius: 0 0 0 0; }
+  /* line 98, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__tabs .nav-tabs > li {
+    margin: 0 5px;
+    display: block; }
+    @media only screen and (min-width: 700px) {
+      .moreinfo__tabs .nav-tabs > li {
+        float: none;
+        margin: 0;
+        display: block; } }
+    /* line 114, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+    .moreinfo__tabs .nav-tabs > li a {
+      border: none;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: left;
+      font-weight: 400;
+      color: #9ea6b9;
+      transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      -o-transition: all 1s ease; }
+      /* line 134, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+      .moreinfo__tabs .nav-tabs > li a:hover, .moreinfo__tabs .nav-tabs > li a:focus, .moreinfo__tabs .nav-tabs > li a:active, .moreinfo__tabs .nav-tabs > li a:visited {
+        border: none;
+        background: none;
+        text-decoration: none;
+        color: #434c57;
+        cursor: pointer; }
+  /* line 144, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__tabs ul.nav {
+    margin: 10px 0;
+    border: 0; }
+    @media only screen and (min-width: 700px) {
+      .moreinfo__tabs ul.nav {
+        margin: 60px 0; } }
+  /* line 153, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__tabs li {
+    padding: 6px 0; }
+
+/* line 158, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.tabs__navigation {
+  margin: 0;
+  list-style-type: none;
+  padding: 0; }
+
+/* line 167, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.moreinfo__content {
+  padding: 20px; }
+  /* line 170, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__content .tab-content {
+    padding: 0; }
+  /* line 174, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__content label {
+    color: #9ea6b9;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0; }
+  /* line 181, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__content p {
+    color: #434C57;
+    font-size: 14px;
+    font-weight: 400; }
+  /* line 187, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__content p[role="description"] {
+    font-size: 12px; }
+  /* line 191, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__content .moreinfo__content--title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px; }
+  /* line 197, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__content .stars i.fa {
+    font-size: 20px;
+    margin-bottom: 20px; }
+
+/* line 205, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.moreinfo__content--map {
+  padding: 20px; }
+
+/* line 211, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.moreinfo-selected {
+  display: block; }
+
+/* line 219, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+#moreinfo-facilities .tabs_facilities, #moreinfo-info .tabs_facilities {
+  border: none;
+  padding: 15px 0 25px 0; }
+  /* line 223, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo-facilities .tabs_facilities li > a, #moreinfo-info .tabs_facilities li > a {
+    text-align: center;
+    color: #434C57; }
+  /* line 228, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo-facilities .tabs_facilities li.active > a, #moreinfo-info .tabs_facilities li.active > a {
+    color: white;
+    background: #9EA6B9; }
+  /* line 233, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo-facilities .tabs_facilities li, #moreinfo-info .tabs_facilities li {
+    display: block;
+    width: 100%; }
+    /* line 237, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+    #moreinfo-facilities .tabs_facilities li a, #moreinfo-info .tabs_facilities li a {
+      padding: 6px 15px;
+      border: none;
+      border-radius: 0;
+      margin: 0; }
+  /* line 245, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo-facilities .tabs_facilities--content, #moreinfo-info .tabs_facilities--content {
+    padding: 25px;
+    border-left: 1px solid #9ea6b9; }
+
+/* line 253, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.tabs_facilities--list {
+  padding: 0;
+  list-style-type: none;
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 2;
+  /* Firefox */
+  column-count: 2;
+  font-size: 11px;
+  color: black; }
+  /* line 262, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .tabs_facilities--list li:before {
+    content: " – "; }
+
+/* line 270, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+#moreinfo-info .tabs_facilities--content {
+  padding: 10px 25px;
+  font-size: 13px; }
+  /* line 274, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  #moreinfo-info .tabs_facilities--content p {
+    font-size: 11px; }
+
+/* line 281, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.moreinfo__form {
+  color: #434C57; }
+  /* line 284, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__form h4 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 25px; }
+  /* line 290, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__form label {
+    color: #9EA6B9;
+    display: block; }
+  /* line 295, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__form input[type="submit"] {
+    width: 100px;
+    padding: 7px 0;
+    margin-top: 20px;
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize; }
+  /* line 304, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .moreinfo__form input[type="email"] {
+    display: block;
+    color: rgba(0, 0, 0, 0.8);
+    height: 29px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+    font-size: 15px;
+    margin: 6px 0;
+    width: 95%; }
+    @media only screen and (min-width: 850px) {
+      .moreinfo__form input[type="email"] {
+        width: 60%; } }
+    /* line 320, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+    .moreinfo__form input[type="email"] ::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.8); }
+    /* line 324, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+    .moreinfo__form input[type="email"] :-moz-placeholder {
+      /* Firefox 18- */
+      color: rgba(0, 0, 0, 0.8); }
+    /* line 328, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+    .moreinfo__form input[type="email"] ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: rgba(0, 0, 0, 0.8); }
+    /* line 332, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+    .moreinfo__form input[type="email"] :-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.8); }
+
+/* line 338, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.slides-list {
+  list-style-type: none;
+  padding: 0; }
+  /* line 342, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .slides-list li {
+    display: inline-block; }
+  /* line 346, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+  .slides-list img {
+    width: 66px;
+    height: 45px;
+    margin: 4px;
+    padding: 0; }
+
+/* line 354, C:/Users/yquido/Desktop/travelnet/css/sass/moreinfo.scss */
+.slides--big-image img {
+  width: 100%; }
+
+/* line 2, C:/Users/yquido/Desktop/travelnet/css/sass/modals-polytics */
+#polytics p {
+  color: white; }
+
+/* line 5, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+#seebreakdown__modal {
+  color: #0F131A;
+  background: rgba(230, 230, 230, 0.8);
+  font-size: 14px; }
+  /* line 11, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  #seebreakdown__modal i.fa {
+    font-size: 26px;
+    color: #ed1c49; }
+  /* line 17, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  #seebreakdown__modal a {
+    font-size: 12px;
+    color: #434C57;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease; }
+    /* line 22, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+    #seebreakdown__modal a:hover {
+      opacity: 0.6; }
+  /* line 28, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  #seebreakdown__modal > .modal-dialog {
+    width: 95%;
+    margin-top: 6%;
+    background: white;
+    border: 1px solid #9EA6B9;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+    @media only screen and (min-width: 1170px) {
+      #seebreakdown__modal > .modal-dialog {
+        width: 70%; } }
+  /* line 42, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  #seebreakdown__modal .modal-backdrop.in {
+    background: rgba(230, 230, 230, 0.8); }
+  /* line 47, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  #seebreakdown__modal .modal-header {
+    border: none;
+    outline: none; }
+  /* line 52, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  #seebreakdown__modal .modal-content {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: 0 0 0 transparent;
+    -moz-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    padding-bottom: 0; }
+  /* line 58, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  #seebreakdown__modal .modal-body {
+    text-align: left;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 0; }
+  /* line 66, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  #seebreakdown__modal .stars {
+    display: block;
+    margin-bottom: 10px; }
+    /* line 71, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+    #seebreakdown__modal .stars i.fa {
+      font-size: 22px; }
+
+/* line 77, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+.column__separate {
+  padding: 0 5px; }
+  @media only screen and (min-width: 555px) {
+    .column__separate {
+      border-right: 1px solid #9EA6B9; } }
+  /* line 84, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  .column__separate:last-child {
+    border: none; }
+  /* line 88, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+  .column__separate p {
+    text-align: center; }
+
+/* line 93, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+.seebreakdown__date::after {
+  content: " − ";
+  color: #9EA6B9; }
+
+/* line 98, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+.seebreakdown__main-hotel {
+  font-size: 17px;
+  line-height: 20px; }
+
+/* line 105, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+.seebreakdown__date, .seebreakdown__hotel, .seebreakdown__total {
+  color: #ed1c49; }
+
+/* line 109, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+.seebreakdown__price {
+  color: #9EA6B9; }
+
+/* line 113, C:/Users/yquido/Desktop/travelnet/css/sass/_seebreakdown */
+.seebreakdown__total {
+  margin-top: 20px;
+  text-align: right; }
+
+/* line 1, C:/Users/yquido/Desktop/travelnet/css/sass/paginator */
+ul.paginator {
+  list-style-type: none;
+  position: fixed;
+  right: 15px; }
+  /* line 9, C:/Users/yquido/Desktop/travelnet/css/sass/paginator */
+  ul.paginator a {
+    color: #7F7F7F;
+    padding: 2px 6px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease; }
+    /* line 15, C:/Users/yquido/Desktop/travelnet/css/sass/paginator */
+    ul.paginator a:hover {
+      background: #ed1c49;
+      color: white;
+      text-decoration: none; }
+  /* line 23, C:/Users/yquido/Desktop/travelnet/css/sass/paginator */
+  ul.paginator .current-page {
+    font-weight: bold;
+    color: #ed1c49; }
+
+/* line 3, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+.steps {
+  text-align: center;
+  height: 50px;
+  padding: 1.2em;
+  margin: 15px 0;
+  position: relative;
+  z-index: 1; }
+  /* line 12, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+  .steps div {
+    display: inline-block; }
+  /* line 16, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+  .steps p {
+    font-size: 12px;
+    color: #9EA6B9;
+    margin: 0; }
+
+/* line 23, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+.step__square {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  background: #9EA6B9;
+  color: white;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 0 55px; }
+
+/* line 36, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+.step__square.selected {
+  background: #ed1c49; }
+
+/* line 42, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+.step1, .step2, .step3 {
+  text-align: center;
+  z-index: 2; }
+
+/* line 51, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+.step1, .step2, .step3 {
+  position: relative; }
+
+/* line 55, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+.line, .line--gradient, .line--gradient-inverted, .line--default {
+  width: 155px;
+  height: 5px;
+  position: absolute;
+  top: 19px;
+  left: 90px;
+  z-index: 1; }
+  /* line 66, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+  .line--gradient {
+    background: -moz-linear-gradient(to right, #ed1c49, #9EA6B9 100%);
+    background: -webkit-linear-gradient(to right, #ed1c49, #9EA6B9 100%);
+    background: -o-linear-gradient(to right, #ed1c49, #9EA6B9 100%);
+    background-image: -ms-linear-gradient(to right, #ed1c49, #9EA6B9 100%);
+    background: linear-gradient(to right, #ed1c49, #9EA6B9 100%); }
+  /* line 71, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+  .line--gradient-inverted {
+    background: -moz-linear-gradient(to left, #ed1c49, #9EA6B9 100%);
+    background: -webkit-linear-gradient(to left, #ed1c49, #9EA6B9 100%);
+    background: -o-linear-gradient(to left, #ed1c49, #9EA6B9 100%);
+    background-image: -ms-linear-gradient(to left, #ed1c49, #9EA6B9 100%);
+    background: linear-gradient(to left, #ed1c49, #9EA6B9 100%); }
+  /* line 76, C:/Users/yquido/Desktop/travelnet/css/sass/steps-square */
+  .line--default {
+    background-color: #9EA6B9; }
+
+/* line 1, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+.confirmation__book {
+  width: 90%;
+  background: url("../images/ticketpaper.png");
+  margin: 45px auto 25px;
+  padding: 25px 0;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1E2127;
+  text-align: center;
+  border-bottom: 1px solid #E5E5E5; }
+  /* line 14, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+  .confirmation__book p {
+    margin: 5px 0; }
+  /* line 19, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+  .confirmation__book p + p {
+    color: #9A9FAA;
+    font-size: 14px; }
+  @media only screen and (min-width: 800px) {
+    .confirmation__book {
+      width: 685px; } }
+
+/* line 30, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+.confirmation__options {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  color: #9A9FAA;
+  line-height: 26px; }
+  @media only screen and (min-width: 1170px) {
+    .confirmation__options {
+      width: 80%;
+      padding: 0 5%; } }
+  /* line 45, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+  .confirmation__options p {
+    margin: 0; }
+  /* line 50, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+  .confirmation__options label {
+    margin-right: 8px; }
+  /* line 55, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+  .confirmation__options span {
+    color: #7F7F7F; }
+  /* line 60, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+  .confirmation__options i.fa {
+    font-size: 26px; }
+  /* line 64, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+  .confirmation__options a {
+    text-decoration: none;
+    color: #9A9FAA;
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease; }
+    /* line 69, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+    .confirmation__options a:hover {
+      color: black; }
+      /* line 72, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+      .confirmation__options a:hover i.fa {
+        color: black; }
+
+/* line 81, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+.print-ticket {
+  background: -moz-linear-gradient(to right, #ed1c49, #f15a52 100%);
+  background: -webkit-linear-gradient(to right, #ed1c49, #f15a52 100%);
+  background: -o-linear-gradient(to right, #ed1c49, #f15a52 100%);
+  background-image: -ms-linear-gradient(to right, #ed1c49, #f15a52 100%);
+  background: linear-gradient(to right, #ed1c49, #f15a52 100%);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  color: white !important;
+  padding: 0 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+  /* line 89, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+  .print-ticket i.fa {
+    font-size: 13px; }
+  /* line 93, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+  .print-ticket:hover {
+    background: #ed1c49; }
+    /* line 96, C:/Users/yquido/Desktop/travelnet/css/sass/confirmation__book */
+    .print-ticket:hover i.fa {
+      color: white !important; }
