@@ -75,6 +75,7 @@ $CLIP-RULE: 									background-clip;
 	background:                    -moz-linear-gradient($ORIGIN, $START, $STOP 100%);
 	background:              	-webkit-linear-gradient($ORIGIN, $START, $STOP 100%);
     background:                      -o-linear-gradient($ORIGIN, $START, $STOP 100%);
+    background-image:               -ms-linear-gradient($ORIGIN, $START, $STOP 100%);
     background:                         linear-gradient($ORIGIN, $START, $STOP 100%);
 }
 
@@ -104,4 +105,13 @@ $CLIP-RULE: 									background-clip;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+}
+
+@mixin flex($flex) {
+-webkit-box-flex: $flex;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: $flex;         /* OLD - Firefox 19- */
+  //width: 20%;               /* For old syntax, otherwise collapses. */
+  -webkit-flex: $flex;          /* Chrome */
+  -ms-flex: $flex;              /* IE 10 */
+  flex: $flex;
 }
