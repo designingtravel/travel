@@ -1,5 +1,6 @@
 .grid {
   display: flex;
+  display: -webkit-flex;
   //@include flexbox();
   flex-wrap: wrap;
   list-style: none;
@@ -73,6 +74,7 @@
 
 .grid--1of4 > .grid-cell {
   flex: 0 0 25%;
+  -webkit-flex: 0 0 25%;
   //@include flex(0 0 25%);
 }
 
@@ -128,7 +130,12 @@
 }
 
 @media (max-width: 550px) {
-  .grid {
+  /*.grid {
+    flex-direction: column;
+  }
+  */
+
+  .grid-cell {
     flex-direction: column;
   }
 
