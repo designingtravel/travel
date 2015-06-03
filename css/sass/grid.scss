@@ -8,8 +8,9 @@
 }
 
 .grid-cell {
-  //flex: 1;
-  @include flex(1);
+  flex: 1;
+  -webkit-flex: 1;
+  //@include flex(1);
 }
 
 .grid--flexCells > .grid-cell {
