@@ -1,5 +1,6 @@
 .InputAddOn {
-  display: flex;
+  //display: flex;
+  @include flexbox();
   //margin-bottom: 1.5em;
   margin: 5px 0;
   @include round-all-borders(4px);
