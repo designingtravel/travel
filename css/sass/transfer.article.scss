@@ -27,3 +27,29 @@
 		height: 145px;
 	}
 }
+
+/* other layout ¬¬ */
+.transfer--image {
+	float: none;
+
+	@media screen and (min-width: 615px) {
+		float: left;
+	}
+}
+.transfer--content {
+	//width: 60%;
+	float: none;
+
+	@media screen and (min-width: 615px) {
+		float: left;
+		width: 60%;
+	}
+}
+.transfer--prices {
+	text-align: center;
+	float: none;
+
+	@media screen and (min-width: 615px) {
+		float: left;
+	}
+}
