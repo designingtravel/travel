@@ -1,6 +1,8 @@
 .InputAddOn {
   display: flex;
-  margin-bottom: 1.5em;
+  //margin-bottom: 1.5em;
+  margin: 5px 0;
+  @include round-all-borders(4px);
 }
 
 .InputAddOn-field {
@@ -23,8 +25,14 @@
 .InputAddOn-field,
 .InputAddOn-item {
   border: 1px solid rgba(147, 128, 108, 0.25);
-  padding: 0.5em 0.75em;
+  //padding: 0.5em 0.75em;
+  padding: 0.3em 0;
 }
+
+.InputAddOn-field {
+  padding-left: 5px;
+}
+
 .InputAddOn-field:first-child,
 .InputAddOn-item:first-child {
   border-radius: 2px 0 0 2px;

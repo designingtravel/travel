@@ -9,9 +9,9 @@
 		.hotel--header-ui
 			include ../../partials/modules/toggle-button.jade
 			include ../../partials/modules/stars.jade
-article.u-textCenter.hotel
+article.u-textCenter.hotel.clearfix
 	.u-1of3.transfer--image
-		img.img-responsive(src="http://image1.urlforimages.com/1317528/Van_Thumbnailed.jpg")
+		img.img-responsive(src="http://tn2015.businesscatalyst.com/images/van2.jpg")
 	.transfer--content
 		div
 			span Destino: Guadalajara, México.
@@ -23,10 +23,11 @@ article.u-textCenter.hotel
 			span Tipo: Compartido
 		p: <i class="fa fa-bed"></i> Tipos de Habitación
 	.u-1of3.order1.transfer--prices
-		p Precio desde
+		p Precio
+		p desde
 		div
 			p $79 MXN
-			p Promedio P/Noche
+			//p Promedio P/Noche
 		//p $50,487 MXN
 		//p Total de Estancia
 		//p: a(href="#", data-toggle="modal", data-target="#seebreakdown__modal", style="color:black;") Ver desglose

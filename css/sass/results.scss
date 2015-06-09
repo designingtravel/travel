@@ -179,7 +179,8 @@ $ITEM-BORDER-BOTTOM:                        rgb(227, 228, 231);
     font-size: $THIN-FONT;
 }
 
-.hotel--prices {
+.hotel--prices,
+.transfer--prices {
     padding-left:                   0;
     padding-right:                  0;
     color:                          $PRICES-COLOR;
