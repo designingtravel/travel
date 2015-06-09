@@ -1,18 +1,18 @@
 .grid.hotel--header
 	.grid-cell.grid
 		h4.grid-cell CasaMagna Marriot Cancun Resort
-		div.hotel--header-toggle.grid-cell
-			//-include ../../partials/modules/toggle-button.jade
-			//-a(href="#", data-toggle="modal", data-target="#compare__hotel") Comparar
-	.grid-cell.u-1of3(style="text-align:right;")
-		//-include ../../partials/modules/stars.jade
-		//-.hotel--header-ui
+		//-div.hotel--header-toggle.grid-cell
+			include ../../partials/modules/toggle-button.jade
+			a(href="#", data-toggle="modal", data-target="#compare__hotel") Comparar
+	//-.grid-cell.u-1of3(style="text-align:right;")
+		include ../../partials/modules/stars.jade
+		.hotel--header-ui
 			include ../../partials/modules/toggle-button.jade
 			include ../../partials/modules/stars.jade
 article.grid.grid--gutters.grid-flexCells.u-textCenter.hotel
-	.grid-cell.u-1of3.transfer--image
+	.u-1of3.transfer--image(style="float:left;")
 		img.img-responsive(src="http://image1.urlforimages.com/1317528/Van_Thumbnailed.jpg")
-	.grid-cell.order2.hotel--content
+	.hotel--content(style="width:60%;float:left;")
 		div
 			span Destino: Guadalajara, México.
 			a(href="#") Broker: Hotelbeds
@@ -22,7 +22,7 @@ article.grid.grid--gutters.grid-flexCells.u-textCenter.hotel
 		div
 			span Tipo: Compartido
 		p: <i class="fa fa-bed"></i> Tipos de Habitación
-	.grid-cell.u-1of3.order1.hotel--prices
+	.u-1of3.order1.hotel--prices(style="float:left;")
 		p Precio desde
 		div
 			p $79 MXN
