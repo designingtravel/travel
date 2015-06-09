@@ -1,0 +1,52 @@
+.grid.hotel--header
+	.grid-cell.grid
+		h4.grid-cell CasaMagna Marriot Cancun Resort
+		div.hotel--header-toggle.grid-cell
+			//-include ../../partials/modules/toggle-button.jade
+			//-a(href="#", data-toggle="modal", data-target="#compare__hotel") Comparar
+	.grid-cell.u-1of3(style="text-align:right;")
+		//-include ../../partials/modules/stars.jade
+		//-.hotel--header-ui
+			include ../../partials/modules/toggle-button.jade
+			include ../../partials/modules/stars.jade
+article.grid.grid--gutters.grid-flexCells.u-textCenter.hotel
+	.grid-cell.u-1of3.transfer--image
+		img.img-responsive(src="http://image1.urlforimages.com/1317528/Van_Thumbnailed.jpg")
+	.grid-cell.order2.hotel--content
+		div
+			span Destino: Guadalajara, México.
+			a(href="#") Broker: Hotelbeds
+		div
+			p Descripción
+			p Con otros pasajeros Transporte compartido. Servicio superior. Equipaje: 1 maleta permitida por persona. 1 bolso de mano permitida por persona.
+		div
+			span Tipo: Compartido
+		p: <i class="fa fa-bed"></i> Tipos de Habitación
+	.grid-cell.u-1of3.order1.hotel--prices
+		p Precio desde
+		div
+			p $79 MXN
+			p Promedio P/Noche
+		//p $50,487 MXN
+		//p Total de Estancia
+		//p: a(href="#", data-toggle="modal", data-target="#seebreakdown__modal", style="color:black;") Ver desglose
+		p: input.btn-primary(type="submit", value="Reservar")
+hr
+
+
+
+
+
+//-article.Grid
+					.Grid-cell.u-1of3.red.order1
+						img(src="../../images/compara5.jpg", style="text-align:center;")
+					.Grid-cell.green.order2
+						.Demo
+							.Grid.Grid--gutters.orange
+								.Grid-cell
+									.Demo 1/2
+								.Grid-cell
+									.Grid-cell.blue
+										.Demo 1/2
+									.Grid-cell.red
+										.Demo 1/2

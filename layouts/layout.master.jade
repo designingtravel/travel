@@ -1,7 +1,8 @@
 doctype html
 html(lang="es")
 	head
-		include partials/globals/metatags.jade
+		block metatags
+			include partials/globals/metatags.jade
 		block title
 			title Travelnet
 	body

@@ -1,7 +1,7 @@
 extends ../results.master.jade
 
 block title
-	title Hoteles
+	title Trasladosssssssssss
 
 block content
 	main.cd-main-content
@@ -9,7 +9,7 @@ block content
 		include ../../partials/globals/results/menu.jade
 		//-result items
 		.cd-gallery
-			.container-results
+			.transfer--results
 				.order-by
 					label.order-by-title Ordenar por:
 					select.order-by-select
@@ -26,11 +26,11 @@ block content
 						option Ubicación
 						optoin Ubicación Descendente
 						option Ubicación Ascendente
-				h2.found-hotels 108 hoteles encontrados
+				h2.found-hotels 1008 hoteles encontrados
 				p.found-hotels-desc Hoteles Cancún, México jue, 11/dic/2014 al mar, 06/ene/2015, 26 noches
-			.container-results
+			
 				//- items per search
-				//include ../../partials/globals/article.jade
+				include transfer.article.jade
 				//include ../../partials/globals/article.jade
 				//include ../../partials/globals/article.jade
 				//include ../../partials/globals/article.jade
